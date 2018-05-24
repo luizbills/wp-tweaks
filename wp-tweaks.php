@@ -2,7 +2,7 @@
 /*
 Plugin Name: WP Tweaks
 Plugin URI: https://github.com/luizbills/wp-tweaks
-Description: several wordpress tweaks focused in security and performance
+Description: Several opinionated wordpress tweaks focused in security and performance.
 Version: 1.0.0
 Author: Luiz Bills
 Author URI: https://luizpb.com/en
@@ -26,6 +26,7 @@ class WP_Tweaks {
 
 	protected function __construct () {
 		$this->includes();
+		$this->hooks();
 	}
 
 	protected function includes () {
@@ -40,6 +41,14 @@ class WP_Tweaks {
 				require_once self::DIR . '/inc/tweaks/' . $id . '.php';
 			}
 		}
+	}
+
+	public function hooks () {
+		add_action( 'init', [ $this, 'load_plugin_textdomain' ], 0 );
+	}
+
+	public function load_plugin_textdomain () {
+		load_plugin_textdomain( 'wp-tweaks', false, dirname( plugin_basename( self::FILE ) ) . '/languages/' );
 	}
 
 	public static function get_asset_url ( $file_path ) {

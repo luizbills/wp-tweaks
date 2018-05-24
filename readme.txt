@@ -33,11 +33,13 @@ Several opinionated wordpress tweaks focused in security and performance.
 * Remove "+ New" from admin bar
 * Remove some Dashboard Widgets
 * Remove Query String from scripts (javaScript and CSS)
-* Remove <link rel="shortlink" ...> from <head>
+* Remove `&lt;link rel="shortlink" ...&gt;` from <head>
 * Remove Dashboard "welcome panel"
 * Remove WordPress version number in frontend
 
 > Note: Is possible disable any feature.
+
+Github Repo: [https://github.com/luizbills/wp-tweaks](https://github.com/luizbills/wp-tweaks)
 
 == Installation ==
 
