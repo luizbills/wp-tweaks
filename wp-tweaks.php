@@ -20,7 +20,6 @@ class WP_Tweaks {
 	const FILE = __FILE__;
 	const DIR = __DIR__;
 	const PREFIX = 'wp_tweaks_';
-	const TEXT_DOMAIN = 'wp-tweaks';
 
 	protected static $_instance = null;
 	protected static $_assets_dir = 'assets';

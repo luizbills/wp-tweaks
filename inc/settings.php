@@ -7,13 +7,14 @@ if ( ! class_exists( 'WP_Tweaks_Settings' ) ) :
 class WP_Tweaks_Settings {
 
 	protected static $settings_page = null;
+	protected static $page_id = 'wp-tweaks';
 
 	public function __construct () {
 
 		$page = wp_create_admin_page( [
-			'menu_name' => __( 'Tweaks', WP_Tweaks::TEXT_DOMAIN ),
-			'id' => WP_Tweaks::TEXT_DOMAIN,
-			'prefix'    => WP_Tweaks::PREFIX,
+			'menu_name' => __( 'Tweaks', 'wp-tweaks' ),
+			'id' => self::$page_id,
+			'prefix' => WP_Tweaks::PREFIX,
 			'parent' => 'options-general.php'
 		] );
 
@@ -30,82 +31,82 @@ class WP_Tweaks_Settings {
 	public static function get_settings () {
 		return [
 			'clear-file-name' => [
-				'label' => 'Clear uploaded file names',
+				'label' => __( 'Clear uploaded file names', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
-				'after' => 'Enable'
+				'after' => __( 'Enable', 'wp-tweaks' )
 			],
 			'custom-admin-footer-text' => [
-				'label' => 'Custom admin footer text',
+				'label' => __( 'Custom admin footer text', 'wp-tweaks' ),
 				'type' => 'content',
-				'default' => '&copy; {current_year} {site_name} · All rights reserved.',
-				'desc' => 'placeholders: `{current_year}` and `{site_name}`',
+				'default' => __( '&copy; {current_year} {site_name} · All rights reserved.', 'wp-tweaks' ),
+				'desc' => __( 'placeholders: `{current_year}` and `{site_name}`', 'wp-tweaks' ),
 				'height' => 100,
 			],
 			'disable-author-search' => [
-				'label' => 'Remove author pages',
+				'label' => __( 'Remove author pages', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
-				'after' => 'Enable',
-				'desc' => 'disables author search via url (e.g: yoursite.com/?author=1) and author pages'
+				'after' => __( 'Enable', 'wp-tweaks' ),
+				'desc' => __( 'disables author search via url (e.g: yoursite.com/?author=1) and author pages', 'wp-tweaks' )
 			],
 			'disable-emoji' => [
-				'label' => 'Remove wordpress emojis',
+				'label' => __( 'Remove wordpress emojis', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
-				'after' => 'Enable'
+				'after' => __( 'Enable', 'wp-tweaks' )
 			],
 			'disable-meta-widget' => [
-				'label' => 'Remove Meta widget',
+				'label' => __( 'Remove Meta widget', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
-				'after' => 'Enable'
+				'after' => __( 'Enable', 'wp-tweaks' )
 			],
 			'disable-public-rest-api' => [
-				'label' => 'Remove public REST API access',
+				'label' => __( 'Remove public REST API access', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
-				'after' => 'Enable',
-				'desc' => 'only logged in users will have access to REST API'
+				'after' => __( 'Enable', 'wp-tweaks' ),
+				'desc' => __( 'only logged in users will have access to REST API', 'wp-tweaks' )
 			],
 			'disable-website-field' => [
-				'label' => 'Remove "website" field in comment form',
+				'label' => __( 'Remove "website" field in comment form', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
-				'after' => 'Enable'
+				'after' => __( 'Enable', 'wp-tweaks' )
 			],
 			'disable-wp-embed' => [
-				'label' => 'Remove oEmbed support',
+				'label' => __( 'Remove oEmbed support', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
-				'after' => 'Enable'
+				'after' => __( 'Enable', 'wp-tweaks' )
 			],
 			'disable-xmlrpc' => [
-				'label' => 'Remove XML-RPC support',
+				'label' => __( 'Remove XML-RPC support', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
-				'after' => 'Enable'
+				'after' => __( 'Enable', 'wp-tweaks' )
 			],
 			'hide-admin-bar' => [
-				'label' => 'Show admin bar for admin users only',
+				'label' => __( 'Show admin bar for admin users only', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
-				'after' => 'Enable'
+				'after' => __( 'Enable', 'wp-tweaks' )
 			],
 			'hide-update-notice' => [
-				'label' => 'Hide WordPress Update Nag to All But Admins',
+				'label' => __( 'Hide WordPress Update Nag to All But Admins', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
-				'after' => 'Enable'
+				'after' => __( 'Enable', 'wp-tweaks' )
 			],
 			'jquery-cdn' => [
-				'label' => 'Use jQuery from Google CDN',
+				'label' => __( 'Use jQuery from Google CDN', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
-				'after' => 'Enable'
+				'after' => __( 'Enable', 'wp-tweaks' )
 			],
 			'_jquery-version' => [
-				'label' => 'jQuery version',
+				'label' => __( 'jQuery version', 'wp-tweaks' ),
 				'type' => 'text',
 				'default' => '3.3.1',
 				'props' => [
@@ -113,52 +114,52 @@ class WP_Tweaks_Settings {
 				]
 			],
 			'remove-admin-bar-logo' => [
-				'label' => 'Remove WordPress logo from admin bar',
+				'label' => __( 'Remove WordPress logo from admin bar', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
-				'after' => 'Enable'
+				'after' => __( 'Enable', 'wp-tweaks' )
 			],
 			'remove-admin-bar-new-content' => [
-				'label' => 'Remove "+ New" from admin bar',
+				'label' => __( 'Remove "+ New" from admin bar', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
-				'after' => 'Enable'
+				'after' => __( 'Enable', 'wp-tweaks' )
 			],
 			'remove-dashboard-widgets' => [
-				'label' => 'Remove some default Dashboard widgets (useless for clients)',
+				'label' => __( 'Remove some default Dashboard widgets (useless for clients)', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
-				'after' => 'Enable'
+				'after' => __( 'Enable', 'wp-tweaks' )
 			],
 			'remove-query-strings' => [
-				'label' => 'Remove Query String from frontend scripts',
+				'label' => __( 'Remove Query String from frontend scripts', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
-				'after' => 'Enable'
+				'after' => __( 'Enable', 'wp-tweaks' )
 			],
 			'remove-shortlink' => [
-				'label' => 'Remove &lt;link rel="shortlink"&gt;',
+				'label' => __( 'Remove &lt;link rel="shortlink"&gt;', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
-				'after' => 'Enable'
+				'after' => __( 'Enable', 'wp-tweaks' )
 			],
 			'remove-welcome-panel' => [
-				'label' => 'Remove Dashboard "welcome panel"',
+				'label' => __( 'Remove Dashboard "welcome panel"', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
-				'after' => 'Enable'
+				'after' => __( 'Enable', 'wp-tweaks' )
 			],
 			'remove-wordpress-version' => [
-				'label' => 'Remove WordPress version number in frontend',
+				'label' => __( 'Remove WordPress version number in frontend', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
-				'after' => 'Enable'
+				'after' => __( 'Enable', 'wp-tweaks' )
 			],
 		];
 	}
 
 	public function add_settings_link ( $links ) {
-		$settings_link = '<a href="options-general.php?page=' . WP_Tweaks::TEXT_DOMAIN . '">' . __( 'Settings', WP_Tweaks::TEXT_DOMAIN ) . '</a>';
+		$settings_link = '<a href="options-general.php?page=' . self::$page_id . '">' . __( 'Settings', 'wp-tweaks' ) . '</a>';
 		array_unshift( $links, $settings_link );
 		return $links;
 	}
