@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Tweaks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-24 12:35+0000\n"
+"POT-Creation-Date: 2018-07-18 23:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -22,12 +22,13 @@ msgstr ""
 msgid "Clear uploaded file names"
 msgstr ""
 
-#: inc/settings.php:37 inc/settings.php:50 inc/settings.php:57
-#: inc/settings.php:63 inc/settings.php:69 inc/settings.php:76
+#: inc/settings.php:37 inc/settings.php:50 inc/settings.php:56
+#: inc/settings.php:63 inc/settings.php:69 inc/settings.php:75
 #: inc/settings.php:82 inc/settings.php:88 inc/settings.php:94
-#: inc/settings.php:100 inc/settings.php:106 inc/settings.php:120
+#: inc/settings.php:100 inc/settings.php:106 inc/settings.php:112
 #: inc/settings.php:126 inc/settings.php:132 inc/settings.php:138
 #: inc/settings.php:144 inc/settings.php:150 inc/settings.php:156
+#: inc/settings.php:162
 msgid "Enable"
 msgstr ""
 
@@ -44,87 +45,91 @@ msgid "placeholders: `{current_year}` and `{site_name}`"
 msgstr ""
 
 #: inc/settings.php:47
+msgid "Dashboard with just one column"
+msgstr ""
+
+#: inc/settings.php:53
 msgid "Remove author pages"
 msgstr ""
 
-#: inc/settings.php:51
+#: inc/settings.php:57
 msgid ""
 "disables author search via url (e.g: yoursite.com/?author=1) and author pages"
 msgstr ""
 
-#: inc/settings.php:54
-msgid "Remove wordpress emojis"
-msgstr ""
-
 #: inc/settings.php:60
-msgid "Remove Meta widget"
+msgid "Disable WordPress emojis"
 msgstr ""
 
 #: inc/settings.php:66
+msgid "Remove \"meta widget\""
+msgstr ""
+
+#: inc/settings.php:72
 msgid "Remove public REST API access"
 msgstr ""
 
-#: inc/settings.php:70
+#: inc/settings.php:76
 msgid "only logged in users will have access to REST API"
 msgstr ""
 
-#: inc/settings.php:73
+#: inc/settings.php:79
 msgid "Remove \"website\" field in comment form"
 msgstr ""
 
-#: inc/settings.php:79
+#: inc/settings.php:85
 msgid "Remove oEmbed support"
 msgstr ""
 
-#: inc/settings.php:85
+#: inc/settings.php:91
 msgid "Remove XML-RPC support"
 msgstr ""
 
-#: inc/settings.php:91
+#: inc/settings.php:97
 msgid "Show admin bar for admin users only"
 msgstr ""
 
-#: inc/settings.php:97
-msgid "Hide WordPress Update Nag to All But Admins"
-msgstr ""
-
 #: inc/settings.php:103
-msgid "Use jQuery from Google CDN"
+msgid "Hide WordPress update nag to all but admins"
 msgstr ""
 
 #: inc/settings.php:109
+msgid "Use jQuery from Google CDN"
+msgstr ""
+
+#: inc/settings.php:115
 msgid "jQuery version"
 msgstr ""
 
-#: inc/settings.php:117
+#: inc/settings.php:123
 msgid "Remove WordPress logo from admin bar"
 msgstr ""
 
-#: inc/settings.php:123
-msgid "Remove \"+ New\" from admin bar"
-msgstr ""
-
 #: inc/settings.php:129
-msgid "Remove some default Dashboard widgets (useless for clients)"
+msgid "Remove \"+ New\" button from admin bar"
 msgstr ""
 
 #: inc/settings.php:135
-msgid "Remove Query String from frontend scripts"
+msgid "Remove some default dashboard widgets (useless for clients)"
 msgstr ""
 
 #: inc/settings.php:141
-msgid "Remove &lt;link rel=\"shortlink\"&gt;"
+msgid "Remove query string from static scripts"
 msgstr ""
 
 #: inc/settings.php:147
-msgid "Remove Dashboard \"welcome panel\""
+msgid "Remove <link rel=\"shortlink\">"
 msgstr ""
 
 #: inc/settings.php:153
+msgid "Remove Dashboard \"welcome panel\""
+msgstr ""
+
+#: inc/settings.php:159
 msgid "Remove WordPress version number in frontend"
 msgstr ""
 
-#: inc/settings.php:162
+#: inc/settings.php:168
 msgid "Settings"
 msgstr ""
 
@@ -133,7 +138,8 @@ msgid "WP Tweaks"
 msgstr ""
 
 #. Description of the plugin
-msgid "several wordpress tweaks focused in security and performance"
+msgid ""
+"Several opinionated wordpress tweaks focused in security and performance."
 msgstr ""
 
 #. URI of the plugin
