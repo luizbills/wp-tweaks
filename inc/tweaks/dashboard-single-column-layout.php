@@ -1,6 +1,6 @@
 <?php
 /**
- * Change admin footer text
+ * Dashboard with only one column
  *
  * @package wp-tweaks
  */
