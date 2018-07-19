@@ -2,7 +2,7 @@
 /*
 Plugin Name: WP Tweaks
 Plugin URI: https://github.com/luizbills/wp-tweaks
-Description: Several opinionated wordpress tweaks focused in security and performance.
+Description: Several opinionated WordPress tweaks focused in security and performance.
 Version: 1.1.0
 Author: Luiz Bills
 Author URI: https://luizpb.com/en
