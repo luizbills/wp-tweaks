@@ -21,6 +21,8 @@
 # The slug of your WordPress.org plugin
 PLUGIN_SLUG="wp-tweaks"
 
+PLUGIN_ASSETS_DIR="_wp-assets"
+
 # GITHUB user who owns the repo
 GITHUB_REPO_OWNER="luizbills"
 
@@ -101,7 +103,6 @@ rm -Rf .git
 rm -Rf .github
 rm -Rf tests
 rm -Rf apigen
-rm -Rf _wp-assets # don't deploy WordPress plugin banners and icons
 rm -f .gitattributes
 rm -f .gitignore
 rm -f .gitmodules
@@ -118,9 +119,14 @@ rm -f .coveralls.yml
 rm -f .editorconfig
 rm -f .scrutinizer.yml
 rm -f apigen.neon
-# rm -f CHANGELOG.txt
 rm -f CONTRIBUTING.md
 rm -f release-wp-plugin.sh # don't deploy this file
+
+# don't deploy WordPress plugin banners and icons
+if [[ -n PLUGIN_ASSETS_DIR ]];
+then
+    rm -Rf ${PLUGIN_ASSETS_DIR}
+fi
 
 # MOVE INTO SVN DIR
 cd "$ROOT_PATH$TEMP_SVN_REPO"
@@ -146,7 +152,8 @@ svn add --force * --auto-props --parents --depth infinity -q
 MISSING_PATHS=$( svn status | sed -e '/^!/!d' -e 's/^!//' )
 
 # iterate over filepaths
-for MISSING_PATH in $MISSING_PATHS; do
+for MISSING_PATH in $MISSING_PATHS;
+do
     svn rm --force "$MISSING_PATH"
 done
 
