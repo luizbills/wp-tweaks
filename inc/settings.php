@@ -109,7 +109,8 @@ class WP_Tweaks_Settings {
 				'label' => esc_html__( 'Use jQuery from Google CDN', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
-				'after' => esc_html__( 'Enable', 'wp-tweaks' )
+				'after' => esc_html__( 'Enable', 'wp-tweaks' ),
+				'desc' => esc_html__( 'this option also disables `jquery-migrate`', 'wp-tweaks' )
 			],
 			'_jquery-version' => [
 				'label' => esc_html__( 'jQuery version', 'wp-tweaks' ),
