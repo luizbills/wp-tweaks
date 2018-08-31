@@ -1,6 +1,6 @@
 === WP Tweaks ===
 Contributors: luizbills
-Tags: security, performance, tweaks, optimization, disable, remove, rest api, xmlrpc, emoji, version, query string, admin bar
+Tags: security, performance, tweaks, wp, wordpress, optimization, disable, remove, rest api, xmlrpc, emoji, version, query string, admin bar
 Donate link: https://www.luizpb.com/en/
 Requires at least: 4.7
 Tested up to: 4.9
