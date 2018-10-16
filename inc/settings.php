@@ -151,7 +151,7 @@ class WP_Tweaks_Settings {
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
 			],
 			'remove-shortlink' => [
-				'label' => esc_html__( 'Remove <link rel="shortlink">', 'wp-tweaks' ),
+				'label' => esc_html__( 'Remove', 'wp-tweaks' ) . esc_html( ' <link rel="shortlink">' ),
 				'type' => 'checkbox',
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
