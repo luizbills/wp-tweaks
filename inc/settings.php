@@ -105,6 +105,12 @@ class WP_Tweaks_Settings {
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
 			],
+			'hide-wp-version-in-admin-footer' => [
+				'label' => esc_html__( 'Hide WordPress version in admin footer to all but admins', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => 'on',
+				'after' => esc_html__( 'Enable', 'wp-tweaks' )
+			],
 			'jquery-cdn' => [
 				'label' => esc_html__( 'Use jQuery from Google CDN', 'wp-tweaks' ),
 				'type' => 'checkbox',
