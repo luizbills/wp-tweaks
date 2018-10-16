@@ -1,0 +1,154 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Tweaks\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-18 23:25+0000\n"
+"PO-Revision-Date: 2018-10-16 18:17+0000\n"
+"Last-Translator: playgroundwp <luizpbills@gmail.com>\n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: inc/settings.php:15
+msgid "Tweaks"
+msgstr ""
+
+#: inc/settings.php:34
+msgid "Clear uploaded file names"
+msgstr ""
+
+#: inc/settings.php:37 inc/settings.php:50 inc/settings.php:56
+#: inc/settings.php:63 inc/settings.php:69 inc/settings.php:75
+#: inc/settings.php:82 inc/settings.php:88 inc/settings.php:94
+#: inc/settings.php:100 inc/settings.php:106 inc/settings.php:112
+#: inc/settings.php:126 inc/settings.php:132 inc/settings.php:138
+#: inc/settings.php:144 inc/settings.php:150 inc/settings.php:156
+#: inc/settings.php:162
+msgid "Enable"
+msgstr ""
+
+#: inc/settings.php:40
+msgid "Custom admin footer text"
+msgstr ""
+
+#: inc/settings.php:42
+msgid "&copy; {current_year} {site_name} · All rights reserved."
+msgstr ""
+
+#: inc/settings.php:43
+msgid "placeholders: `{current_year}` and `{site_name}`"
+msgstr ""
+
+#: inc/settings.php:47
+msgid "Dashboard with just one column"
+msgstr ""
+
+#: inc/settings.php:53
+msgid "Remove author pages"
+msgstr ""
+
+#: inc/settings.php:57
+msgid ""
+"disables author search via url (e.g: yoursite.com/?author=1) and author pages"
+msgstr ""
+
+#: inc/settings.php:60
+msgid "Disable WordPress emojis"
+msgstr ""
+
+#: inc/settings.php:66
+msgid "Remove \"meta widget\""
+msgstr ""
+
+#: inc/settings.php:72
+msgid "Remove public REST API access"
+msgstr ""
+
+#: inc/settings.php:76
+msgid "only logged in users will have access to REST API"
+msgstr ""
+
+#: inc/settings.php:79
+msgid "Remove \"website\" field in comment form"
+msgstr ""
+
+#: inc/settings.php:85
+msgid "Remove oEmbed support"
+msgstr ""
+
+#: inc/settings.php:91
+msgid "Remove XML-RPC support"
+msgstr ""
+
+#: inc/settings.php:97
+msgid "Show admin bar for admin users only"
+msgstr ""
+
+#: inc/settings.php:103
+msgid "Hide WordPress update nag to all but admins"
+msgstr ""
+
+#: inc/settings.php:109
+msgid "Use jQuery from Google CDN"
+msgstr ""
+
+#: inc/settings.php:115
+msgid "jQuery version"
+msgstr ""
+
+#: inc/settings.php:123
+msgid "Remove WordPress logo from admin bar"
+msgstr ""
+
+#: inc/settings.php:129
+msgid "Remove \"+ New\" button from admin bar"
+msgstr ""
+
+#: inc/settings.php:135
+msgid "Remove some default dashboard widgets (useless for clients)"
+msgstr ""
+
+#: inc/settings.php:141
+msgid "Remove query string from static scripts"
+msgstr ""
+
+#: inc/settings.php:147
+msgid "Remove <link rel=\"shortlink\">"
+msgstr ""
+
+#: inc/settings.php:153
+msgid "Remove Dashboard \"welcome panel\""
+msgstr ""
+
+#: inc/settings.php:159
+msgid "Remove WordPress version number in frontend"
+msgstr ""
+
+#: inc/settings.php:168
+msgid "Settings"
+msgstr ""
+
+#. Name of the plugin
+msgid "WP Tweaks"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Several opinionated wordpress tweaks focused in security and performance."
+msgstr ""
+
+#. URI of the plugin
+msgid "https://github.com/luizbills/wp-tweaks"
+msgstr ""
+
+#. Author of the plugin
+msgid "Luiz Bills"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://luizpb.com/en"
+msgstr ""
