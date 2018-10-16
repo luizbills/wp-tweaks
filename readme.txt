@@ -5,7 +5,7 @@ Donate link: https://www.luizpb.com/en/
 Requires at least: 4.7
 Tested up to: 4.9
 Requires PHP: 5.4
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPL v3
 License URI: https://github.com/luizbills/wp-tweaks/blob/master/LICENSE
 
@@ -50,9 +50,17 @@ Github Repo: [https://github.com/luizbills/wp-tweaks](https://github.com/luizbil
 
 == Changelog ==
 
+= 1.2.0 - 10/16/2018 =
+
+* New Feature: hide WordPress version in admin footer
+* Tweak: jQuery default version now is 2.2.4
+* Tweak: added description to informs the jQuery stable versions
+* Tweak: informs that jQuery Migrate also is disabled when using jQuery from CDN
+* Fix typos
+
 = 1.1.0 - 07/18/2018 =
 
-* New feature: dashboard page with only one column
+* New Feature: dashboard page with only one column
 * Fix some typos
 
 = 1.0.0 - 05/23/2018 =

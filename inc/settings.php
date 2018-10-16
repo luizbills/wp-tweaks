@@ -10,7 +10,6 @@ class WP_Tweaks_Settings {
 	protected static $page_id = 'wp-tweaks';
 
 	public function __construct () {
-
 		$page = wp_create_admin_page( [
 			'menu_name' => esc_html__( 'Tweaks', 'wp-tweaks' ),
 			'id' => self::$page_id,
@@ -39,8 +38,8 @@ class WP_Tweaks_Settings {
 			'custom-admin-footer-text' => [
 				'label' => esc_html__( 'Custom admin footer text', 'wp-tweaks' ),
 				'type' => 'content',
-				'default' => esc_html__( '&copy; {current_year} {site_name} · All rights reserved.', 'wp-tweaks' ),
-				'desc' => esc_html__( 'placeholders: `{current_year}` and `{site_name}`', 'wp-tweaks' ),
+				'default' => sprintf( esc_html__( '&copy; %1$s %2$s · All Rights Reserved.', 'wp-tweaks' ), '{current_year}', '{site_name}' ),
+				'desc' => sprintf( esc_html__( '%1$s prints the current year. %2$s prints your site name.', 'wp-tweaks' ), '`{current_year}`', '`{site_name}`' ),
 				'height' => 100,
 			],
 			'dashboard-single-column-layout' => [
@@ -105,6 +104,12 @@ class WP_Tweaks_Settings {
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
 			],
+			'hide-wp-version-in-admin-footer' => [
+				'label' => esc_html__( 'Hide WordPress version in admin footer to all but admins', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => 'on',
+				'after' => esc_html__( 'Enable', 'wp-tweaks' )
+			],
 			'jquery-cdn' => [
 				'label' => esc_html__( 'Use jQuery from Google CDN', 'wp-tweaks' ),
 				'type' => 'checkbox',
@@ -146,7 +151,7 @@ class WP_Tweaks_Settings {
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
 			],
 			'remove-shortlink' => [
-				'label' => esc_html__( 'Remove <link rel="shortlink">', 'wp-tweaks' ),
+				'label' => esc_html__( 'Remove', 'wp-tweaks' ) . esc_html( ' <link rel="shortlink">' ),
 				'type' => 'checkbox',
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )

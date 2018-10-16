@@ -1,14 +1,13 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Tweaks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-16 18:57+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: \n"
-"Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"PO-Revision-Date: 2018-10-16 18:57+0000\n"
+"Last-Translator: playgroundwp <luizpbills@gmail.com>\n"
+"Language-Team: Português do Brasil\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,11 +15,11 @@ msgstr ""
 
 #: inc/settings.php:14
 msgid "Tweaks"
-msgstr ""
+msgstr "Ajustes"
 
 #: inc/settings.php:33
 msgid "Clear uploaded file names"
-msgstr ""
+msgstr "Limpar nome dos arquivos enviados"
 
 #: inc/settings.php:36 inc/settings.php:49 inc/settings.php:55
 #: inc/settings.php:62 inc/settings.php:68 inc/settings.php:74
@@ -30,141 +29,147 @@ msgstr ""
 #: inc/settings.php:145 inc/settings.php:151 inc/settings.php:157
 #: inc/settings.php:163 inc/settings.php:169
 msgid "Enable"
-msgstr ""
+msgstr "Ativar"
 
 #: inc/settings.php:39
 msgid "Custom admin footer text"
-msgstr ""
+msgstr "Texto do rodapé da área administrativa"
 
 #: inc/settings.php:41
 #, php-format
 msgid "&copy; %1$s %2$s · All Rights Reserved."
-msgstr ""
+msgstr "&copy; %1$s %2$s · Todos os direitos reservados."
 
 #: inc/settings.php:42
 #, php-format
 msgid "%1$s prints the current year. %2$s prints your site name."
-msgstr ""
+msgstr "%1$s mostra o ano atual. %2$s mostra o nome do seu site."
 
 #: inc/settings.php:46
 msgid "Dashboard with only one column"
-msgstr ""
+msgstr "Painel com apenas uma coluna"
 
 #: inc/settings.php:52
 msgid "Remove author pages"
-msgstr ""
+msgstr "Remover páginas de autor"
 
 #: inc/settings.php:56
 msgid ""
 "disables author search via url (e.g: yoursite.com/?author=1) and author pages"
 msgstr ""
+"Desativa a pesquisa por autor via url (ex: seusite.com/?author=1) e páginas "
+"de autor "
 
 #: inc/settings.php:59
 msgid "Disable WordPress emojis"
-msgstr ""
+msgstr "Desativar emojis do WordPress"
 
 #: inc/settings.php:65
 msgid "Remove \"meta widget\""
-msgstr ""
+msgstr "Remover \"widget meta\""
 
 #: inc/settings.php:71
 msgid "Remove public REST API access"
-msgstr ""
+msgstr "Remover acesso publico à REST API"
 
 #: inc/settings.php:75
 msgid "only logged in users will have access to REST API"
-msgstr ""
+msgstr "apenas usuários autentificados terão acesso à REST API"
 
 #: inc/settings.php:78
 msgid "Remove \"website\" field in comment form"
-msgstr ""
+msgstr "Remover campo \"site\" no formulário de comentário"
 
 #: inc/settings.php:84
 msgid "Remove oEmbed support"
-msgstr ""
+msgstr "Remover suporte ao oEmbed"
 
 #: inc/settings.php:90
 msgid "Remove XML-RPC support"
-msgstr ""
+msgstr "Remover suporte ao XML-RPC"
 
 #: inc/settings.php:96
 msgid "Show admin bar for admin users only"
-msgstr ""
+msgstr "Mostrar barra de administrador apenas para administradores"
 
 #: inc/settings.php:102
 msgid "Hide WordPress update nag to all but admins"
-msgstr ""
+msgstr "Mostrar notificação de atualizações apenas para administradores"
 
 #: inc/settings.php:108
 msgid "Hide WordPress version in admin footer to all but admins"
 msgstr ""
+"Mostrar versão do WordPress no rodapé da área administrativa apenas para "
+"administradores"
 
 #: inc/settings.php:114
 msgid "Use jQuery from Google CDN"
-msgstr ""
+msgstr "Usar jQuery do CDN da Google"
 
 #: inc/settings.php:118
 msgid "this option also disables `jquery-migrate`"
-msgstr ""
+msgstr "esta opção também desativa o `jquery-migrate`"
 
 #: inc/settings.php:121
 msgid "jQuery version"
-msgstr ""
+msgstr "Versão do jQuery"
 
 #: inc/settings.php:127
 msgid "current stable versions: "
-msgstr ""
+msgstr "versões estáveis:"
 
 #: inc/settings.php:130
 msgid "Remove WordPress logo from admin bar"
-msgstr ""
+msgstr "Remover logo do WordPress da barra de administrador "
 
 #: inc/settings.php:136
 msgid "Remove \"+ New\" button from admin bar"
-msgstr ""
+msgstr "Remover botão \"+ Novo\" da barra de administrador"
 
 #: inc/settings.php:142
 msgid "Remove some default dashboard widgets (useless for clients)"
 msgstr ""
+"Remover alguns widgets padrões do Painel (inúteis para usuários leigos)"
 
 #: inc/settings.php:148
 msgid "Remove query string from static scripts"
-msgstr ""
+msgstr "Remover query string dos códigos estáticos"
 
 #: inc/settings.php:154
 msgctxt "verb"
 msgid "Remove"
-msgstr ""
+msgstr "Remover"
 
 #: inc/settings.php:160
 msgid "Remove Dashboard \"welcome panel\""
-msgstr ""
+msgstr "Remover \"Boas-vindas\" do Painel"
 
 #: inc/settings.php:166
 msgid "Remove WordPress version number in frontend"
-msgstr ""
+msgstr "Remover versão do WordPress no frontend"
 
 #: inc/settings.php:175
 msgid "Settings"
-msgstr ""
+msgstr "Configurações"
 
 #. Name of the plugin
 msgid "WP Tweaks"
-msgstr ""
+msgstr "WP Ajustes"
 
 #. Description of the plugin
 msgid ""
 "Several opinionated WordPress tweaks focused in security and performance."
 msgstr ""
+"Vários ajustes opinativos no WordPress focados em segurança e desempenho."
 
 #. URI of the plugin
 msgid "https://github.com/luizbills/wp-tweaks"
-msgstr ""
+msgstr "https://github.com/luizbills/wp-tweaks"
 
 #. Author of the plugin
 msgid "Luiz Bills"
-msgstr ""
+msgstr "Luiz Bills"
 
 #. Author URI of the plugin
 msgid "https://luizpb.com/en"
-msgstr ""
+msgstr "https://luizpb.com"
