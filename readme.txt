@@ -5,7 +5,7 @@ Donate link: https://www.luizpb.com/en/
 Requires at least: 4.7
 Tested up to: 4.9
 Requires PHP: 5.4
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPL v3
 License URI: https://github.com/luizbills/wp-tweaks/blob/master/LICENSE
 
