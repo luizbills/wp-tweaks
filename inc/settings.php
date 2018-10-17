@@ -168,6 +168,12 @@ class WP_Tweaks_Settings {
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
 			],
+			'posts-navigation-schema' => [
+				'label' => esc_html__( 'Add Schema markup to posts navigations.', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => 'on',
+				'after' => esc_html__( 'Enable', 'wp-tweaks' )
+			],
 		];
 	}
 
