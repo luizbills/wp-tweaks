@@ -138,6 +138,12 @@ class WP_Tweaks_Settings {
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
 			],
+			'remove-admin-bar-howdy' => [
+				'label' => esc_html__( 'Remove Howdy from admin bar', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => 'on',
+				'after' => esc_html__( 'Enable', 'wp-tweaks' )
+			],
 			'remove-dashboard-widgets' => [
 				'label' => esc_html__( 'Remove some default dashboard widgets (useless for clients)', 'wp-tweaks' ),
 				'type' => 'checkbox',
