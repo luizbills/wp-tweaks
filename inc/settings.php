@@ -168,6 +168,12 @@ class WP_Tweaks_Settings {
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
 			],
+			'editor-rich-edit' => [
+				'label' => esc_html__( 'Overrides the function user_can_richedit and only checks the user preferences instead of doing UA sniffing.', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => 'on',
+				'after' => esc_html__( 'Enable', 'wp-tweaks' )
+			],
 		];
 	}
 
