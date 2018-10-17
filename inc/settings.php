@@ -168,6 +168,12 @@ class WP_Tweaks_Settings {
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
 			],
+			'remove-update-notifications-from-non-admins' => [
+				'label' => esc_html__( 'Remove update notifications from non-admins.', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => 'on',
+				'after' => esc_html__( 'Enable', 'wp-tweaks' )
+			],
 		];
 	}
 
