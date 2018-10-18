@@ -37,9 +37,8 @@ class WP_Tweaks {
 		// tweaks
 		foreach ( WP_Tweaks_Settings::get_settings() as $id => $_ ) {
 			if ( '_' === $id[0] ) continue;
-			if ( ! empty( WP_Tweaks_Settings::get_option( $id ) ) ) {
-				require_once self::DIR . '/inc/tweaks/' . $id . '.php';
-			}
+			if ( apply_filters( "wp_tweaks_skip_{$id}", false ) ) continue;
+			require_once self::DIR . '/inc/tweaks/' . $id . '.php';
 		}
 	}
 
