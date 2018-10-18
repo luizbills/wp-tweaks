@@ -1,0 +1,12 @@
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+[*.{php,text,sh,pot,po}]
+charset = utf-8
+
+[*.php]
+indent_style = tab
+trim_trailing_whitespace = true
