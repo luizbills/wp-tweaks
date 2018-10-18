@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# By Mike Jolley, based on work by Barry Kooij ;)
+# By Luiz Bills based on work by Barry Kooij and Mike Jolley
 # License: GPL v3
 
 # This program is free software: you can redistribute it and/or modify
@@ -19,15 +19,17 @@
 # ----- START EDITING HERE -----
 
 # The slug of your WordPress.org plugin
-PLUGIN_SLUG="wp-tweaks"
-
-PLUGIN_ASSETS_DIR="_wp-assets"
+WP_PLUGIN_SLUG="wp-tweaks"
 
 # GITHUB user who owns the repo
 GITHUB_REPO_OWNER="luizbills"
 
 # GITHUB Repository name
 GITHUB_REPO_NAME="wp-tweaks"
+
+# folder with plugin banner and screenshots
+# note: you should commit these assets separately
+PLUGIN_ASSETS_DIR="_wp-assets"
 
 # ----- STOP EDITING HERE -----
 
@@ -54,9 +56,9 @@ clear
 
 # VARS
 ROOT_PATH=$(pwd)"/"
-TEMP_GITHUB_REPO=${PLUGIN_SLUG}"-git"
-TEMP_SVN_REPO=${PLUGIN_SLUG}"-svn"
-SVN_REPO="http://plugins.svn.wordpress.org/"${PLUGIN_SLUG}"/"
+TEMP_GITHUB_REPO=${WP_PLUGIN_SLUG}"-git"
+TEMP_SVN_REPO=${WP_PLUGIN_SLUG}"-svn"
+SVN_REPO="http://plugins.svn.wordpress.org/"${WP_PLUGIN_SLUG}"/"
 GIT_REPO="git@github.com:"${GITHUB_REPO_OWNER}"/"${GITHUB_REPO_NAME}".git"
 
 # DELETE OLD TEMP DIRS
@@ -91,7 +93,7 @@ git checkout ${BRANCH} || { echo "Unable to checkout branch."; exit 1; }
 if [[ -f "composer.json" ]];
 then
 	echo "Installing composer packages"
-	composer install || { echo "Unable to install composer packages."; exit 1; }
+	composer install --no-dev || { echo "Unable to install composer packages."; exit 1; }
 fi
 
 echo ""
@@ -102,25 +104,20 @@ echo "Removing unwanted files"
 rm -Rf .git
 rm -Rf .github
 rm -Rf tests
-rm -Rf apigen
 rm -f .gitattributes
 rm -f .gitignore
 rm -f .gitmodules
 rm -f .travis.yml
-rm -f Gruntfile.js
 rm -f package.json
-rm -f .jscrsrc
-rm -f .jshintrc
 rm -f composer.json
+rm -f composer.lock
 rm -f phpunit.xml
 rm -f phpunit.xml.dist
 rm -f README.md
 rm -f .coveralls.yml
 rm -f .editorconfig
-rm -f .scrutinizer.yml
-rm -f apigen.neon
 rm -f CONTRIBUTING.md
-rm -f release-wp-plugin.sh # don't deploy this file
+rm -f "${0}" # don't deploy this file
 
 # don't deploy WordPress plugin banners and icons
 if [[ -n PLUGIN_ASSETS_DIR ]];
@@ -168,7 +165,7 @@ svn status
 
 # PROMPT USER
 echo ""
-read -p "PRESS [ENTER] TO COMMIT RELEASE "${VERSION}" TO WORDPRESS.ORG AND GITHUB"
+read -p "PRESS [ENTER] TO COMMIT RELEASE "${VERSION}" TO WORDPRESS.ORG"
 echo ""
 
 # DEPLOY
