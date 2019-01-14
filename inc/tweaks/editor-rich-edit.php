@@ -6,16 +6,9 @@
  * @package wp-tweaks
  */
 
-add_filter('user_can_richedit', 'wp_tweaks_user_can_richedit_custom');
-
-function wp_tweaks_user_can_richedit_custom() {
-  global $wp_rich_edit;
- 
-  if (get_user_option('rich_editing') == 'true' || !is_user_logged_in()) {
-    $wp_rich_edit = true;
-    return true;
-  }
- 
-  $wp_rich_edit = false;
-  return false;
+add_filter( 'user_can_richedit', 'wp_tweaks_user_can_richedit_custom' );
+function wp_tweaks_user_can_richedit_custom ( $value ) {
+	global $wp_rich_edit;
+	$wp_rich_edit = is_user_logged_in() && 'true' === get_user_option( 'rich_editing' );
+	return $wp_rich_edit;
 }
