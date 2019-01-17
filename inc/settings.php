@@ -173,7 +173,7 @@ class WP_Tweaks_Settings {
 
 	public function add_settings_link ( $links ) {
 		$settings_link = '<a href="options-general.php?page=' . self::$page_id . '">' . esc_html__( 'Settings', 'wp-tweaks' ) . '</a>';
-		array_unshift( $links, $settings_link );
+		$links[] = $settings_link;
 		return $links;
 	}
 
