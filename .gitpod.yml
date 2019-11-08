@@ -1,0 +1,5 @@
+image: gitpod/mysql
+
+ports:
+- port: 8080
+  onOpen: open-preview
