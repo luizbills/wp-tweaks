@@ -1,3 +1,8 @@
+# Gitpod docker image for WordPress
+# Author: Luiz Bills
+# License: MIT
+# Version: 0.1
+
 FROM gitpod/workspace-mysql
 
 ### General Settings ###
@@ -7,7 +12,6 @@ ENV APACHE_DOCROOT="public_html"
 # - download config files
 # - install WordPress setup scripts
 USER gitpod
-ADD https://api.github.com/repos/luizbills/gitpod-wordpress/compare/master...HEAD /dev/null
 RUN git clone https://github.com/luizbills/gitpod-wordpress $HOME/gitpod-wordpress \
     && cat $HOME/gitpod-wordpress/conf/.bashrc.sh >> $HOME/.bashrc
 
@@ -31,10 +35,13 @@ RUN apt-get update \
         php${PHP_VERSION}-cli \
         php${PHP_VERSION}-mbstring \
         php${PHP_VERSION}-curl \
+        php${PHP_VERSION}-gd \
+        php${PHP_VERSION}-intl \
         php${PHP_VERSION}-mysql \
         php${PHP_VERSION}-xml \
         php${PHP_VERSION}-json \
         php${PHP_VERSION}-zip \
+        php${PHP_VERSION}-soap \
         php${PHP_VERSION}-bcmath \
         php${PHP_VERSION}-opcache \
         php-xdebug \
