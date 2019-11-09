@@ -1,7 +1,6 @@
-# Gitpod docker image for WordPress
-# Author: Luiz Bills
-# License: MIT
-# Version: 0.1
+# Gitpod docker image for WordPress | https://github.com/luizbills/gitpod-wordpress
+# License: MIT (c) 2019 Luiz Paulo "Bills"
+# Version: 0.2
 
 FROM gitpod/workspace-mysql
 
@@ -11,10 +10,14 @@ ENV APACHE_DOCROOT="public_html"
 
 # - download config files
 # - install WordPress setup scripts
+# - install latest LTS NodeJS version
+# - update NPM
 USER gitpod
 ADD https://api.github.com/repos/luizbills/gitpod-wordpress/compare/master...HEAD /dev/null
 RUN git clone https://github.com/luizbills/gitpod-wordpress $HOME/gitpod-wordpress \
-    && cat $HOME/gitpod-wordpress/conf/.bashrc.sh >> $HOME/.bashrc
+    && cat $HOME/gitpod-wordpress/conf/.bashrc.sh >> $HOME/.bashrc \
+    && nvm install stable --lts \
+    && npm i -g npm
 
 # - install Apache
 # - install PHP
