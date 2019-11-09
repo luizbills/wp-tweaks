@@ -1,5 +1,12 @@
-image: gitpod/workspace-mysql
+image:
+  file: .gitpod.dockerfile
 
 ports:
 - port: 8080
   onOpen: open-preview
+- port: 3306
+  onOpen: ignore
+
+tasks:
+- init: wp_setup_plugin # or wp_setup_theme
+  command: apachectl start
