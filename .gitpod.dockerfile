@@ -6,7 +6,7 @@ ENV APACHE_DOCROOT="public_html"
 
 ### Download Config Files ###
 USER gitpod
-RUN git clone https://github.com/luizbills/gitpod-wordpress $HOME/gitpod-wordpress
+RUN git clone https://github.com/luizbills/gitpod-wordpress $HOME/gitpod-wordpress/
 
 # Install WordPress setup scripts
 USER gitpod
