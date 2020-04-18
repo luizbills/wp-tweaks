@@ -2,10 +2,10 @@
 Contributors: luizbills
 Tags: security, performance, tweaks, wp, wordpress, optimization, disable, remove, rest api, xmlrpc, emoji, version, query string, admin bar
 Donate link: https://www.luizpb.com/en/
-Requires at least: 4.7
-Tested up to: 4.9
+Requires at least: 4.9
+Tested up to: 5.4
 Requires PHP: 5.4
-Stable tag: 1.2.0
+Stable tag: 1.3.0
 License: GPL v3
 License URI: https://github.com/luizbills/wp-tweaks/blob/master/LICENSE
 
@@ -28,7 +28,6 @@ Several opinionated WordPress tweaks focused in security and performance.
 * Disable xmlrpc.php
 * Show admin bar for admin users only
 * Hide WordPress update nag to all but admins
-* Use jQuery from a CDN
 * Remove "WordPress logo" from admin bar
 * Remove "+ New" button from admin bar
 * Remove some dashboard widgets
@@ -49,6 +48,10 @@ Github Repo: [https://github.com/luizbills/wp-tweaks](https://github.com/luizbil
 1. Go to Settings > Tweaks to configure the plugin.
 
 == Changelog ==
+
+= 1.3.0 - 10/16/2018 =
+
+* Removed "jQuery CDN" option
 
 = 1.2.0 - 10/16/2018 =
 
