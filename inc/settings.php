@@ -110,15 +110,6 @@ class WP_Tweaks_Settings {
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
 			],
-			'_jquery-version' => [
-				'label' => esc_html__( 'jQuery version', 'wp-tweaks' ),
-				'type' => 'text',
-				'default' => '2.2.4',
-				'props' => [
-					'class' => 'small-text'
-				],
-				'desc' => esc_html__( 'current stable versions: ', 'wp-tweaks' ) . '`1.12.4`, `2.2.4` or `3.3.1`.',
-			],
 			'remove-admin-bar-logo' => [
 				'label' => esc_html__( 'Remove WordPress logo from admin bar', 'wp-tweaks' ),
 				'type' => 'checkbox',
