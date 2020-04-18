@@ -1,7 +1,6 @@
 # Gitpod docker image for WordPress | https://github.com/luizbills/gitpod-wordpress
 # License: MIT (c) 2019 Luiz Paulo "Bills"
-# Version: 0.2.1
-
+# Version: 0.4
 FROM gitpod/workspace-mysql
 
 ### General Settings ###
@@ -20,8 +19,6 @@ RUN git clone https://github.com/luizbills/gitpod-wordpress $HOME/gitpod-wordpre
 
 # - install Apache
 # - install PHP
-# - install WP-CLI
-# - install Xdebug
 USER root
 RUN apt-get update \
     && apt-get -y install apache2 \
@@ -50,12 +47,19 @@ RUN apt-get update \
         php-xdebug \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* \
     && cat $HOME/gitpod-wordpress/conf/php.ini >> /etc/php/${PHP_VERSION}/apache2/php.ini \
-    && a2dismod mpm_event \
-    && a2enmod mpm_prefork \
     && a2dismod php* \
-    && a2enmod php${PHP_VERSION} \
-    && wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
+    && a2dismod mpm_* \
+    && a2enmod mpm_prefork \
+    && a2enmod php${PHP_VERSION}
+
+# - install WP-CLI
+# - install Xdebug
+# - install MailHog
+USER root
+RUN wget -q https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
         -O $HOME/wp-cli.phar \
+    && wget -q https://raw.githubusercontent.com/wp-cli/wp-cli/v2.3.0/utils/wp-completion.bash \
+        -O $HOME/wp-cli-completion.bash \
     && chmod +x $HOME/wp-cli.phar \
     && mv $HOME/wp-cli.phar /usr/local/bin/wp \
     && chown gitpod:gitpod /usr/local/bin/wp
@@ -64,12 +68,12 @@ RUN apt-get update \
 # - download Adminer from https://www.adminer.org/
 # - create a endpoint with phpinfo()
 USER gitpod
-RUN wget https://wordpress.org/latest.zip -O $HOME/wordpress.zip \
+RUN wget -q https://wordpress.org/latest.zip -O $HOME/wordpress.zip \
     && unzip -qn $HOME/wordpress.zip -d $HOME \
     && unlink $HOME/wordpress.zip \
     && cp $HOME/gitpod-wordpress/conf/.htaccess $HOME/wordpress/.htaccess \
     && mkdir $HOME/wordpress/database/ \
-    && wget https://github.com/vrana/adminer/releases/download/v4.7.4/adminer-4.7.4-mysql.php \
+    && wget -q https://github.com/vrana/adminer/releases/download/v4.7.4/adminer-4.7.4-mysql.php \
         -O $HOME/wordpress/database/index.php \
     && mkdir $HOME/wordpress/phpinfo/ \
     && echo "<?php phpinfo(); ?>" > $HOME/wordpress/phpinfo/index.php
