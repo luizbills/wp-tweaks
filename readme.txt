@@ -2,10 +2,10 @@
 Contributors: luizbills
 Tags: security, performance, tweaks, wp, wordpress, optimization, disable, remove, rest api, xmlrpc, emoji, version, query string, admin bar
 Donate link: https://www.luizpb.com/en/
-Requires at least: 4.9
+Requires at least: 4.0
 Tested up to: 5.4
 Requires PHP: 5.4
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPL v3
 License URI: https://github.com/luizbills/wp-tweaks/blob/master/LICENSE
 
@@ -49,7 +49,11 @@ Github Repo: [https://github.com/luizbills/wp-tweaks](https://github.com/luizbil
 
 == Changelog ==
 
-= 1.3.0 - 10/16/2018 =
+= 1.3.1 - 04/18/2020 =
+
+* Fix PHP Warning
+
+= 1.3.0 - 04/18/2020 =
 
 * Removed "jQuery CDN" option
 
