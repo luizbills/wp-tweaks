@@ -70,7 +70,7 @@ class WP_Tweaks_Settings {
 			'disable-public-rest-api' => [
 				'label' => esc_html__( 'Remove public REST API access', 'wp-tweaks' ),
 				'type' => 'checkbox',
-				'default' => 'on',
+				'default' => '',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' ),
 				'desc' => esc_html__( 'only logged in users will have access to REST API', 'wp-tweaks' )
 			],
