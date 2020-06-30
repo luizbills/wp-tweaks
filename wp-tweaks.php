@@ -3,7 +3,7 @@
 Plugin Name: WP Tweaks
 Plugin URI: https://github.com/luizbills/wp-tweaks
 Description: Several opinionated WordPress tweaks focused in security and performance.
-Version: 1.3.1
+Version: 1.3.2
 Author: Luiz Bills
 Author URI: https://luizpb.com/en
 Text Domain: wp-tweaks
@@ -16,7 +16,7 @@ if ( ! class_exists( 'WP_Tweaks' ) ) :
 
 class WP_Tweaks {
 
-	const VERSION = '1.3.1';
+	const VERSION = '1.3.2';
 	const FILE = __FILE__;
 	const DIR = __DIR__;
 	const PREFIX = 'wp_tweaks_';
@@ -39,7 +39,9 @@ class WP_Tweaks {
 			if ( '_' === $id[0] ) continue;
 			if ( apply_filters( "wp_tweaks_skip_{$id}", false ) ) continue;
 			$file = self::DIR . "/inc/tweaks/{$id}.php";
-			if ( file_exists( $file ) ) include_once $file;
+			if ( file_exists( $file ) && ! empty( self::get_option( $id ) ) ) {
+				include_once $file;
+			}
 		}
 	}
 
@@ -53,10 +55,6 @@ class WP_Tweaks {
 
 	public static function get_asset_url ( $file_path ) {
 		return plugins_url( self::$_assets_dir . '/' . $file_path, self::FILE );
-	}
-
-	public static function set_option ( $key, $value ) {
-		return set_option( self::PREFIX . $key, $value );
 	}
 
 	public static function get_option ( $key ) {
