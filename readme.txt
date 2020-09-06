@@ -49,7 +49,7 @@ Github Repo: [https://github.com/luizbills/wp-tweaks](https://github.com/luizbil
 
 == Changelog ==
 
-= 1.3.1 - 04/18/2020 =
+= 1.3.2 - 04/18/2020 =
 
 * Fixed: Can not disable some options
 
