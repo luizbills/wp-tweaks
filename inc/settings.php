@@ -92,6 +92,12 @@ class WP_Tweaks_Settings {
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
 			],
+			'disallow-file-edit' => [
+				'label' => esc_html__( 'Disallow file edit', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => 'on',
+				'after' => esc_html__( 'Enable', 'wp-tweaks' )
+			],
 			'hide-admin-bar' => [
 				'label' => esc_html__( 'Show admin bar for admin users only', 'wp-tweaks' ),
 				'type' => 'checkbox',
