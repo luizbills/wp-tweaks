@@ -5,7 +5,7 @@ Donate link: https://www.luizpb.com/en/
 Requires at least: 4.0
 Tested up to: 5.4
 Requires PHP: 5.4
-Stable tag: 1.4.0
+Stable tag: 1.5.0
 License: GPL v3
 License URI: https://github.com/luizbills/wp-tweaks/blob/master/LICENSE
 
@@ -48,6 +48,10 @@ Github Repo: [https://github.com/luizbills/wp-tweaks](https://github.com/luizbil
 1. Go to Settings > Tweaks to configure the plugin.
 
 == Changelog ==
+
+= 1.5.0 - 04/18/2020 =
+
+* New Feature: Disallow file edit
 
 = 1.4.0 - 04/18/2020 =
 
