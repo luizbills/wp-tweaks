@@ -1,6 +1,6 @@
 # Gitpod docker image for WordPress | https://github.com/luizbills/gitpod-wordpress
-# License: MIT (c) 2019 Luiz Paulo "Bills"
-# Version: 0.6
+# License: MIT (c) 2020 Luiz Paulo "Bills"
+# Version: 0.6.1
 FROM gitpod/workspace-mysql
 
 ### General Settings ###
@@ -9,7 +9,7 @@ ENV APACHE_DOCROOT="public_html"
 
 ### Setups, Node, NPM ###
 USER gitpod
-ADD https://api.wordpress.org/secret-key/1.1/salt?rnd=165712 /dev/null
+ADD https://api.wordpress.org/secret-key/1.1/salt?rnd=1659198 /dev/null
 RUN git clone https://github.com/luizbills/gitpod-wordpress $HOME/gitpod-wordpress && \
     cat $HOME/gitpod-wordpress/conf/.bashrc.sh >> $HOME/.bashrc && \
     . $HOME/.bashrc && \
