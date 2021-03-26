@@ -48,12 +48,19 @@ class WP_Tweaks_Settings {
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' ),
 			],
-			'disable-author-search' => [
-				'label' => esc_html__( 'Remove author pages', 'wp-tweaks' ),
+			'disable-author-query' => [
+				'label' => esc_html__( 'Disable author query', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' ),
-				'desc' => esc_html__( 'disables author search via url (e.g: yoursite.com/?author=1) and author pages', 'wp-tweaks' )
+				'desc' => esc_html__( 'disables author search via url (e.g: yoursite.com/?author=1)', 'wp-tweaks' )
+			],
+			'disable-author-pages' => [
+				'label' => esc_html__( 'Disable author pages', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => '',
+				'after' => esc_html__( 'Enable', 'wp-tweaks' ),
+				'desc' => esc_html__( 'disables author pages (e.g: yoursite.com/author/admin)', 'wp-tweaks' )
 			],
 			'disable-emoji' => [
 				'label' => esc_html__( 'Disable WordPress emojis', 'wp-tweaks' ),
