@@ -108,9 +108,6 @@ rm -f .gitattributes
 rm -f .gitignore
 rm -f .gitmodules
 rm -f .travis.yml
-rm -f package.json
-rm -f composer.json
-rm -f composer.lock
 rm -f phpunit.xml
 rm -f phpunit.xml.dist
 rm -f README.md
