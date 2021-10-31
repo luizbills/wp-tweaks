@@ -24,11 +24,15 @@ RUN go get github.com/mailhog/MailHog && \
     cp $GOPATH/bin/mhsendmail /usr/local/bin/mhsendmail && \
     ln $GOPATH/bin/mhsendmail /usr/sbin/sendmail && \
     ln $GOPATH/bin/mhsendmail /usr/bin/mail &&\
+    ### Apache ###
+    apt-get update && apt-get -qy install apache2 && \
+    chown -R gitpod:gitpod /var/run/apache2 /var/lock/apache2 /var/log/apache2 && \
+    echo "include ${HOME}/gitpod-wordpress/conf/apache.conf" > /etc/apache2/apache2.conf && \
+    echo ". ${HOME}/gitpod-wordpress/conf/apache.env.sh" > /etc/apache2/envvars && \
     ### PHP ###
     add-apt-repository ppa:ondrej/php && \
     apt-get update && \
     apt-get -qy install \
-        apache2 \
         libapache2-mod-php \
         php${PHP_VERSION} \
         php${PHP_VERSION}-common \
@@ -47,10 +51,6 @@ RUN go get github.com/mailhog/MailHog && \
         php-xdebug && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* && \
     cat /home/gitpod/gitpod-wordpress/conf/php.ini >> /etc/php/${PHP_VERSION}/apache2/php.ini && \
-    ### Apache ###
-    chown -R gitpod:gitpod /var/run/apache2 /var/lock/apache2 /var/log/apache2 && \
-    echo "include ${HOME}/gitpod-wordpress/conf/apache.conf" > /etc/apache2/apache2.conf && \
-    echo ". ${HOME}/gitpod-wordpress/conf/apache.env.sh" > /etc/apache2/envvars && \
     ### Setup PHP in Apache ###
     a2dismod php* && \
     a2dismod mpm_* && \
