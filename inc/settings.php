@@ -94,7 +94,7 @@ class WP_Tweaks_Settings {
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
 			],
 			'disable-xmlrpc' => [
-				'label' => esc_html__( 'Remove XML-RPC support', 'wp-tweaks' ),
+				'label' => esc_html__( 'Remove XML-RPC and Pingbacks support', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
