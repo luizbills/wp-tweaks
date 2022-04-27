@@ -49,7 +49,7 @@ Github Repo: [https://github.com/luizbills/wp-tweaks](https://github.com/luizbil
 
 == Changelog ==
 
-= 1.6.0 - 2021-04-27 =
+= 1.6.0 - 2022-04-27 =
 
 * Tested with WordPress 5.9
 * Now is possible to remove 'Comments' from admin bar (default: Off)
