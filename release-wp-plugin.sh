@@ -63,13 +63,7 @@ GIT_REPO="https://github.com/"${GITHUB_REPO_OWNER}"/"${GITHUB_REPO_NAME}".git"
 
 # DELETE OLD TEMP DIRS
 rm -Rf $ROOT_PATH$TEMP_GITHUB_REPO
-
-# CHECKOUT SVN DIR IF NOT EXISTS
-if [[ ! -d $TEMP_SVN_REPO ]];
-then
-	echo "Checking out WordPress.org plugin repository"
-	svn checkout $SVN_REPO $TEMP_SVN_REPO || { echo "Unable to checkout repo."; exit 1; }
-fi
+rm -Rf $ROOT_PATH$TEMP_SVN_REPO
 
 # CLONE GIT DIR
 echo "Cloning GIT repository from GITHUB"
@@ -101,18 +95,28 @@ read -p "PRESS [ENTER] TO DEPLOY BRANCH "${BRANCH}
 
 # REMOVE UNWANTED FILES & FOLDERS
 echo "Removing unwanted files"
-rm -fv ./.* 2>/dev/null # remove all dot files
-rm -Rf tests
-rm -f phpunit.xml
-rm -f phpunit.xml.dist
-rm -f README.md
-rm -f CONTRIBUTING.md
-rm -f "${0}" # don't deploy this file
+rm -Rfv ./.* 2> /dev/null || true # remove all dot files
+rm -Rf ./tests
+rm -f ./phpunit.xml
+rm -f ./phpunit.xml.dist
+rm -f ./README.md
+rm -f ./CONTRIBUTING.md
+rm -f ./"${0}" # don't deploy this file
+echo "Removed unwanted files"
 
 # don't deploy WordPress plugin banners and icons
 if [[ -n PLUGIN_ASSETS_DIR ]];
 then
     rm -Rf ${PLUGIN_ASSETS_DIR}
+fi
+
+cd $ROOT_PATH
+
+# CHECKOUT SVN DIR IF NOT EXISTS
+if [[ ! -d $TEMP_SVN_REPO ]];
+then
+	echo "Checking out WordPress.org plugin repository"
+	svn checkout $SVN_REPO $TEMP_SVN_REPO || { echo "Unable to checkout repo."; exit 1; }
 fi
 
 # MOVE INTO SVN DIR
