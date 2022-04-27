@@ -101,18 +101,11 @@ read -p "PRESS [ENTER] TO DEPLOY BRANCH "${BRANCH}
 
 # REMOVE UNWANTED FILES & FOLDERS
 echo "Removing unwanted files"
-rm -Rf .git
-rm -Rf .github
+rm -fv ./.* 2>/dev/null # remove all dot files
 rm -Rf tests
-rm -f .gitattributes
-rm -f .gitignore
-rm -f .gitmodules
-rm -f .travis.yml
 rm -f phpunit.xml
 rm -f phpunit.xml.dist
 rm -f README.md
-rm -f .coveralls.yml
-rm -f .editorconfig
 rm -f CONTRIBUTING.md
 rm -f "${0}" # don't deploy this file
 

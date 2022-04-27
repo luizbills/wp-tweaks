@@ -3,9 +3,9 @@ Contributors: luizbills
 Tags: security, performance, tweaks, wp, wordpress, optimization, disable, remove, rest api, xmlrpc, emoji, version, query string, admin bar
 Donate link: https://www.luizpb.com/en/
 Requires at least: 4.0
-Tested up to: 5.7
+Tested up to: 5.9
 Requires PHP: 5.4
-Stable tag: 1.5.1
+Stable tag: 1.5.2
 License: GPL v3
 License URI: https://github.com/luizbills/wp-tweaks/blob/master/LICENSE
 
@@ -48,6 +48,13 @@ Github Repo: [https://github.com/luizbills/wp-tweaks](https://github.com/luizbil
 1. Go to Settings > Tweaks to configure the plugin.
 
 == Changelog ==
+
+= 1.6.0 - 2021-04-27 =
+
+* Tested with WordPress 5.9
+* Now is possible to remove 'Comments' from admin bar (default: Off)
+* Improved and fixed portuguese translation
+* Small enchantments
 
 = 1.5.1 - 2021-03-26 =
 

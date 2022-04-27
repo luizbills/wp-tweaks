@@ -3,7 +3,7 @@
 Plugin Name: WP Tweaks
 Plugin URI: https://github.com/luizbills/wp-tweaks
 Description: Several opinionated WordPress tweaks focused in security and performance.
-Version: 1.5.1
+Version: 1.6.0
 Author: Luiz Bills
 Author URI: https://luizpb.com/en
 Text Domain: wp-tweaks
@@ -25,8 +25,8 @@ class WP_Tweaks {
 	protected static $_assets_dir = 'assets';
 
 	protected function __construct () {
-		$this->includes();
 		$this->hooks();
+		$this->includes();
 	}
 
 	protected function includes () {
@@ -46,11 +46,15 @@ class WP_Tweaks {
 	}
 
 	public function hooks () {
-		add_action( 'init', [ $this, 'load_plugin_textdomain' ], 0 );
+		add_action( 'init', [ $this, 'load_plugin_translations' ], 0 );
 	}
 
-	public function load_plugin_textdomain () {
-		load_plugin_textdomain( 'wp-tweaks', false, dirname( plugin_basename( self::FILE ) ) . '/languages/' );
+	public function load_plugin_translations () {
+		load_plugin_textdomain(
+			'wp-tweaks',
+			false,
+			dirname( plugin_basename( __FILE__ ) ) . '/languages'
+		);
 	}
 
 	public static function get_asset_url ( $file_path ) {

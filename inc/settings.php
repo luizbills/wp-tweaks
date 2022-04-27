@@ -10,6 +10,10 @@ class WP_Tweaks_Settings {
 	protected static $page_id = 'wp-tweaks';
 
 	public function __construct () {
+		add_action( 'init', [ $this, 'init' ] );
+	}
+
+	public function init () {
 		$page = wp_create_admin_page( [
 			'menu_name' => esc_html__( 'Tweaks', 'wp-tweaks' ),
 			'id' => self::$page_id,
@@ -24,7 +28,7 @@ class WP_Tweaks_Settings {
 			$page->add_field( $options );
 		}
 
-		add_filter( 'plugin_action_links_'.  plugin_basename( WP_Tweaks::FILE ), [ $this, 'add_settings_link' ] );
+		add_filter( 'plugin_action_links_' . plugin_basename( WP_Tweaks::FILE ), [ $this, 'add_settings_link' ] );
 	}
 
 	public static function get_settings () {
@@ -53,14 +57,20 @@ class WP_Tweaks_Settings {
 				'type' => 'checkbox',
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' ),
-				'desc' => esc_html__( 'disables author search via url (e.g: yoursite.com/?author=1)', 'wp-tweaks' )
+				'desc' => sprintf(
+					esc_html__( 'disables author search via url (e.g: %s)', 'wp-tweaks' ),
+					home_url( '?author=1' )
+				)
 			],
 			'disable-author-pages' => [
 				'label' => esc_html__( 'Disable author pages', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => '',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' ),
-				'desc' => esc_html__( 'disables author pages (e.g: yoursite.com/author/admin)', 'wp-tweaks' )
+				'desc' => sprintf(
+					esc_html__( 'disables author pages (e.g: %s)', 'wp-tweaks' ),
+					home_url( '/author/admin' )
+				)
 			],
 			'disable-emoji' => [
 				'label' => esc_html__( 'Disable WordPress emojis', 'wp-tweaks' ),
@@ -123,8 +133,14 @@ class WP_Tweaks_Settings {
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
 			],
+			'remove-admin-bar-comments' => [
+				'label' => esc_html__( 'Remove "Comments" from admin bar', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => 'off',
+				'after' => esc_html__( 'Enable', 'wp-tweaks' )
+			],
 			'remove-admin-bar-logo' => [
-				'label' => esc_html__( 'Remove WordPress logo from admin bar', 'wp-tweaks' ),
+				'label' => esc_html__( 'Remove "WordPress Logo" from admin bar', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
@@ -175,9 +191,8 @@ class WP_Tweaks_Settings {
 	}
 
 	public function add_settings_link ( $links ) {
-		$settings_link = '<a href="options-general.php?page=' . self::$page_id . '">' . esc_html__( 'Settings', 'wp-tweaks' ) . '</a>';
-		$links[] = $settings_link;
-		return $links;
+		$settings_link = '<a href="options-general.php?page=' . intval( self::$page_id ) . '">' . esc_html__( 'Settings', 'wp-tweaks' ) . '</a>';
+		return array_merge( [ $settings_link ], $links );
 	}
 
 	public static function get_option ( $key ) {

@@ -1,2 +1,3 @@
 # loco translate pot backup
 *.pot~
+*.po~
