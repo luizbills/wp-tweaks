@@ -11,5 +11,7 @@ function wp_tweaks_remove_dashboard_widgets () {
 	remove_meta_box( 'dashboard_secondary', 'dashboard', 'normal' );
 	remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
 	remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
-	remove_meta_box( 'dashboard_site_health', 'dashboard', 'normal' );
+	if ( ! current_user_can('administrator') ) {
+		remove_meta_box( 'dashboard_site_health', 'dashboard', 'normal' );
+	}
 }

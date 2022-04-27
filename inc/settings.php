@@ -10,7 +10,7 @@ class WP_Tweaks_Settings {
 	protected static $page_id = 'wp-tweaks';
 
 	public function __construct () {
-		add_action( 'init', [ $this, 'init' ] );
+		add_action( 'init', [ $this, 'init' ], 1 );
 	}
 
 	public function init () {
@@ -29,6 +29,16 @@ class WP_Tweaks_Settings {
 		}
 
 		add_filter( 'plugin_action_links_' . plugin_basename( WP_Tweaks::FILE ), [ $this, 'add_settings_link' ] );
+
+		// tweaks
+		foreach ( WP_Tweaks_Settings::get_settings() as $id => $_ ) {
+			if ( '_' === $id[0] ) continue;
+			if ( apply_filters( "wp_tweaks_skip_{$id}", false ) ) continue;
+			$file = WP_Tweaks::DIR . "/inc/tweaks/{$id}.php";
+			if ( file_exists( $file ) && ! empty( self::get_option( $id ) ) ) {
+				include_once $file;
+			}
+		}
 	}
 
 	public static function get_settings () {
@@ -100,7 +110,7 @@ class WP_Tweaks_Settings {
 			'disable-wp-embed' => [
 				'label' => esc_html__( 'Remove oEmbed support', 'wp-tweaks' ),
 				'type' => 'checkbox',
-				'default' => 'on',
+				'default' => '',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
 			],
 			'disable-xmlrpc' => [
@@ -196,9 +206,7 @@ class WP_Tweaks_Settings {
 	}
 
 	public static function get_option ( $key ) {
-		if ( ! is_null( self::$settings_page ) ) {
-			return self::$settings_page->get_field_value( $key );
-		}
+		return self::$settings_page->get_field_value( $key );
 		return false;
 	}
 

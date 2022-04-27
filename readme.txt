@@ -53,6 +53,7 @@ Github Repo: [https://github.com/luizbills/wp-tweaks](https://github.com/luizbil
 
 * Tested with WordPress 5.9
 * Now is possible to remove 'Comments' from admin bar (default: Off)
+* Now the option "Remove oEmbed support" is Off by default
 * Improved and fixed portuguese translation
 * Small enchantments
 

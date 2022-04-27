@@ -16,7 +16,7 @@ if ( ! class_exists( 'WP_Tweaks' ) ) :
 
 class WP_Tweaks {
 
-	const VERSION = '1.5.1';
+	const VERSION = '1.6.0';
 	const FILE = __FILE__;
 	const DIR = __DIR__;
 	const PREFIX = 'wp_tweaks_';
@@ -33,16 +33,6 @@ class WP_Tweaks {
 		require_once self::DIR . '/vendor/better-wordpress-admin-api/framework/init.php';
 		require_once self::DIR . '/inc/helpers.php';
 		require_once self::DIR . '/inc/settings.php';
-
-		// tweaks
-		foreach ( WP_Tweaks_Settings::get_settings() as $id => $_ ) {
-			if ( '_' === $id[0] ) continue;
-			if ( apply_filters( "wp_tweaks_skip_{$id}", false ) ) continue;
-			$file = self::DIR . "/inc/tweaks/{$id}.php";
-			if ( file_exists( $file ) && ! empty( self::get_option( $id ) ) ) {
-				include_once $file;
-			}
-		}
 	}
 
 	public function hooks () {
