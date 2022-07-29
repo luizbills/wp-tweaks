@@ -28,6 +28,9 @@ function wp_tweaks_add_debug_warning () {
         }
         ?>
         <style>
+            .wpt_notice {
+                border-left-color: #fab005;
+            }
             .wpt_constant {
                 font-family: monospace;
                 color: #e67700;
