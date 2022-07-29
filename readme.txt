@@ -1,13 +1,13 @@
 === WP Tweaks ===
 Contributors: luizbills
-Tags: security, performance, tweaks, wp, wordpress, optimization, disable, remove, rest api, xmlrpc, emoji, version, query string, admin bar
-Donate link: https://www.luizpb.com/en/
+Tags: security, performance, tweaks, optimization, xmlrpc, emoji
+Donate link: https://www.luizpb.com/donate/
 Requires at least: 4.0
-Tested up to: 5.9
+Tested up to: 6.0
 Requires PHP: 5.4
-Stable tag: 1.6.0
-License: GPL v3
-License URI: https://github.com/luizbills/wp-tweaks/blob/master/LICENSE
+Stable tag: 1.7.0
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Several opinionated WordPress tweaks focused in security and performance.
 
@@ -37,9 +37,15 @@ Several opinionated WordPress tweaks focused in security and performance.
 * Remove WordPress version number in &lt;head&gt;
 * and more...
 
-> Note: is possible disable any feature.
+**Note**: is possible disable any feature.
 
-Github Repo: [https://github.com/luizbills/wp-tweaks](https://github.com/luizbills/wp-tweaks)
+= Contribuitions =
+
+For bugs, suggestions or contribuitions, open a issue in our [Github Repository](https://github.com/luizbills/shipping-simulator-for-woocommerce/issues) or create a topic in [WordPress Plugin Forum](https://wordpress.org/support/plugin/shipping-simulator-for-woocommerce/).
+
+= Donations =
+
+Support this plugin on [https://luizpb.com/donate/](https://luizpb.com/donate/)
 
 == Installation ==
 
@@ -48,6 +54,10 @@ Github Repo: [https://github.com/luizbills/wp-tweaks](https://github.com/luizbil
 1. Go to Settings > Tweaks to configure the plugin.
 
 == Changelog ==
+
+= 1.7.0 - 2022-07-29 =
+
+* The plugin now warns admin users that some WordPress constants (like WP_DEBUG) are enabled.
 
 = 1.6.0 - 2022-04-27 =
 
