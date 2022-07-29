@@ -57,7 +57,10 @@ Support this plugin on [https://luizpb.com/donate/](https://luizpb.com/donate/)
 
 = 1.7.0 - 2022-07-29 =
 
-* The plugin now warns admin users that some WordPress constants (like WP_DEBUG) are enabled.
+* Security: Now is possible display a generic error message when a user fails to login (instead of hints). This option is enabled by default.
+* Misc: Now is possible change the menu "Posts" to "Blog". This option is disabled by default.
+* Security: The plugin now warns administrators that some WordPress constants (like WP_DEBUG) are enabled. This option is ALWAYS enabled.
+* Tested with WordPress 6.0
 
 = 1.6.0 - 2022-04-27 =
 

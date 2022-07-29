@@ -46,6 +46,12 @@ class WP_Tweaks_Settings {
 
 	public static function get_settings () {
 		return [
+			'change-posts-menu-name' => [
+				'label' => esc_html__( 'Change menu "Posts" to "Blog"', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => '',
+				'after' => esc_html__( 'Enable', 'wp-tweaks' )
+			],
 			'clear-file-name' => [
 				'label' => esc_html__( 'Clear uploaded file names', 'wp-tweaks' ),
 				'type' => 'checkbox',

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Tweaks\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-tweaks\n"
-"POT-Creation-Date: 2022-07-29T12:08:47-03:00\n"
-"PO-Revision-Date: 2022-07-29 12:10-0300\n"
+"POT-Creation-Date: 2022-07-29T12:23:38-03:00\n"
+"PO-Revision-Date: 2022-07-29 12:24-0300\n"
 "Last-Translator: \n"
 "Language-Team: Português do Brasil\n"
 "Language: pt_BR\n"
@@ -41,8 +41,8 @@ msgid "Tweaks"
 msgstr "Ajustes"
 
 #: inc/settings.php:50
-msgid "Generic login error message"
-msgstr "Mensagem de erro genérica no login"
+msgid "Change menu \"Posts\" to \"Blog\""
+msgstr "Mudar menu \"Posts\" para \"Blog\""
 
 #: inc/settings.php:53 inc/settings.php:59 inc/settings.php:72
 #: inc/settings.php:78 inc/settings.php:88 inc/settings.php:98
@@ -52,6 +52,7 @@ msgstr "Mensagem de erro genérica no login"
 #: inc/settings.php:159 inc/settings.php:165 inc/settings.php:171
 #: inc/settings.php:177 inc/settings.php:183 inc/settings.php:189
 #: inc/settings.php:195 inc/settings.php:201 inc/settings.php:207
+#: inc/settings.php:213
 msgid "Enable"
 msgstr "Ativar"
 
@@ -124,63 +125,67 @@ msgid "Disallow file edit"
 msgstr "Proibir edição de arquivos"
 
 #: inc/settings.php:138
+msgid "Generic login error message"
+msgstr "Mensagem de erro genérica no login"
+
+#: inc/settings.php:144
 msgid "Show admin bar for admin users only"
 msgstr "Mostrar barra de administrador apenas para administradores"
 
-#: inc/settings.php:144
+#: inc/settings.php:150
 msgid "Hide WordPress update nag to all but admins"
 msgstr "Mostrar notificação de atualizações apenas para administradores"
 
-#: inc/settings.php:150
+#: inc/settings.php:156
 msgid "Hide WordPress version in admin footer to all but admins"
 msgstr ""
 "Mostrar versão do WordPress no rodapé da área administrativa apenas para "
 "administradores"
 
-#: inc/settings.php:156
+#: inc/settings.php:162
 msgid "Remove \"Comments\" from admin bar"
 msgstr "Remover \"Comentários\" da barra de administrador"
 
-#: inc/settings.php:162
+#: inc/settings.php:168
 msgid "Remove \"WordPress Logo\" from admin bar"
 msgstr "Remover \"Logo do WordPress\" da barra de administrador"
 
-#: inc/settings.php:168
+#: inc/settings.php:174
 msgid "Remove \"+ New\" button from admin bar"
 msgstr "Remover botão \"+ Novo\" da barra de administrador"
 
-#: inc/settings.php:174
+#: inc/settings.php:180
 msgid "Remove some default dashboard widgets (useless for clients)"
 msgstr ""
 "Remover alguns widgets padrões do Painel (inúteis para usuários leigos)"
 
-#: inc/settings.php:180
+#: inc/settings.php:186
 msgid "Remove \"Howdy\" from admin bar"
 msgstr "Remover \"Olá\" da barra de administrador"
 
-#: inc/settings.php:186
+#: inc/settings.php:192
 msgid "Remove query string from static scripts"
 msgstr "Remover query string dos códigos estáticos"
 
-#: inc/settings.php:192
+#: inc/settings.php:198
 msgid "Remove"
 msgstr "Remover"
 
-#: inc/settings.php:198
+#: inc/settings.php:204
 msgid "Remove Dashboard \"welcome panel\""
 msgstr "Remover \"Boas-vindas\" do Painel"
 
-#: inc/settings.php:204
+#: inc/settings.php:210
 msgid "Remove WordPress version number in frontend"
 msgstr "Remover versão do WordPress no frontend"
 
-#: inc/settings.php:213
+#: inc/settings.php:219
 msgid "Settings"
 msgstr "Configurações"
 
-#: inc/tweaks/change-login-errors.php:9
-msgid "Your username or password is incorrect!"
-msgstr "Seu nome de usuário ou sua senha está incorreta!"
+#: inc/tweaks/change-posts-menu-name.php:13
+msgid "Blog"
+msgstr "Blog"
 
 #: inc/tweaks/debug-warning.php:14
 msgid "Caution!"
@@ -201,3 +206,7 @@ msgstr "Pingbacks não são suportados"
 #: inc/tweaks/disable-xmlrpc.php:34
 msgid "Not Allowed!"
 msgstr "Não permitido!"
+
+#: inc/tweaks/generic-login-errors.php:9
+msgid "Your username or password is incorrect!"
+msgstr "Seu nome de usuário ou sua senha está incorreta!"
