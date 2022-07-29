@@ -1,173 +1,26 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Tweaks\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-16 18:57+0000\n"
-"PO-Revision-Date: 2022-04-27 12:33+0000\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-tweaks\n"
+"POT-Creation-Date: 2022-07-29T11:45:30-03:00\n"
+"PO-Revision-Date: 2022-07-29 11:46-0300\n"
 "Last-Translator: \n"
 "Language-Team: Português do Brasil\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.1; wp-5.9.3"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Loco-Version: 2.6.1; wp-5.9.3\n"
 
-#: inc/settings.php:46
-#, php-format
-msgid "%1$s prints the current year. %2$s prints your site name."
-msgstr "%1$s mostra o ano atual. %2$s mostra o nome do seu site."
+#. Plugin Name of the plugin
+msgid "WP Tweaks"
+msgstr "WP Ajustes"
 
-#: inc/settings.php:45
-#, php-format
-msgid "&copy; %1$s %2$s · All Rights Reserved."
-msgstr "&copy; %1$s %2$s · Todos os Direitos Reservados."
-
-#: wp-tweaks.php:58 inc/settings.php:37
-msgid "Clear uploaded file names"
-msgstr "Limpar nome dos arquivos enviados"
-
-#: inc/settings.php:43
-msgid "Custom admin footer text"
-msgstr "Texto do rodapé da área administrativa"
-
-#: inc/settings.php:50
-msgid "Dashboard with only one column"
-msgstr "Painel com apenas uma coluna"
-
-#: inc/settings.php:66
-msgid "Disable author pages"
-msgstr "Desativar páginas de autores"
-
-#: inc/settings.php:56
-msgid "Disable author query"
-msgstr "Desativar query de autores"
-
-#: inc/settings.php:76
-msgid "Disable WordPress emojis"
-msgstr "Desativar emojis do WordPress"
-
-#: inc/settings.php:71
-#, php-format
-msgid "disables author pages (e.g: %s)"
-msgstr "desativa páginas de autores (ex: %s)"
-
-#: inc/settings.php:61
-#, php-format
-msgid "disables author search via url (e.g: %s)"
-msgstr "desativa a pesquisa de autores por url (ex: %s)"
-
-#: inc/settings.php:113
-msgid "Disallow file edit"
-msgstr "Proibir edição de arquivos"
-
-#: inc/settings.php:40 inc/settings.php:53 inc/settings.php:59
-#: inc/settings.php:69 inc/settings.php:79 inc/settings.php:85
-#: inc/settings.php:91 inc/settings.php:98 inc/settings.php:104
-#: inc/settings.php:110 inc/settings.php:116 inc/settings.php:122
-#: inc/settings.php:128 inc/settings.php:134 inc/settings.php:140
-#: inc/settings.php:146 inc/settings.php:152 inc/settings.php:158
-#: inc/settings.php:164 inc/settings.php:170 inc/settings.php:176
-#: inc/settings.php:182 inc/settings.php:188
-msgid "Enable"
-msgstr "Ativar"
-
-#: inc/settings.php:125
-msgid "Hide WordPress update nag to all but admins"
-msgstr "Mostrar notificação de atualizações apenas para administradores"
-
-#: inc/settings.php:131
-msgid "Hide WordPress version in admin footer to all but admins"
-msgstr ""
-"Mostrar versão do WordPress no rodapé da área administrativa apenas para "
-"administradores"
-
-#. URI of the plugin
+#. Plugin URI of the plugin
 msgid "https://github.com/luizbills/wp-tweaks"
 msgstr "https://github.com/luizbills/wp-tweaks"
-
-#. Author URI of the plugin
-msgid "https://luizpb.com/en"
-msgstr "https://luizpb.com"
-
-#. Author of the plugin
-msgid "Luiz Bills"
-msgstr "Luiz Bills"
-
-#: inc/tweaks/disable-xmlrpc.php:34
-msgid "Not Allowed!"
-msgstr "Não permitido!"
-
-#: inc/settings.php:92
-msgid "only logged in users will have access to REST API"
-msgstr "apenas usuários autentificados terão acesso à REST API"
-
-#: inc/tweaks/disable-xmlrpc.php:33
-msgid "Pingbacks are not supported"
-msgstr "Pingbacks não são suportados"
-
-#: inc/settings.php:173
-msgid "Remove"
-msgstr "Remover"
-
-#: inc/settings.php:149
-msgid "Remove \"+ New\" button from admin bar"
-msgstr "Remover botão \"+ Novo\" da barra de administrador"
-
-#: inc/settings.php:137
-msgid "Remove \"Comments\" from admin bar"
-msgstr "Remover \"Comentários\" da barra de administrador"
-
-#: inc/settings.php:161
-msgid "Remove \"Howdy\" from admin bar"
-msgstr "Remover \"Olá\" da barra de administrador"
-
-#: inc/settings.php:82
-msgid "Remove \"meta widget\""
-msgstr "Remover \"widget meta\""
-
-#: inc/settings.php:95
-msgid "Remove \"website\" field in comment form"
-msgstr "Remover campo \"site\" no formulário de comentário"
-
-#: inc/settings.php:143
-#| msgid "Remove WordPress logo from admin bar"
-msgid "Remove \"WordPress Logo\" from admin bar"
-msgstr "Remover \"Logo do WordPress\" da barra de administrador "
-
-#: inc/settings.php:179
-msgid "Remove Dashboard \"welcome panel\""
-msgstr "Remover \"Boas-vindas\" do Painel"
-
-#: inc/settings.php:101
-msgid "Remove oEmbed support"
-msgstr "Remover suporte ao oEmbed"
-
-#: inc/settings.php:88
-msgid "Remove public REST API access"
-msgstr "Remover acesso publico à REST API"
-
-#: inc/settings.php:167
-msgid "Remove query string from static scripts"
-msgstr "Remover query string dos códigos estáticos"
-
-#: inc/settings.php:155
-msgid "Remove some default dashboard widgets (useless for clients)"
-msgstr ""
-"Remover alguns widgets padrões do Painel (inúteis para usuários leigos)"
-
-#: inc/settings.php:185
-msgid "Remove WordPress version number in frontend"
-msgstr "Remover versão do WordPress no frontend"
-
-#: inc/settings.php:107
-msgid "Remove XML-RPC and Pingbacks support"
-msgstr "Remover suporte à XML-RPC e Pingbacks"
-
-#: inc/settings.php:194
-msgid "Settings"
-msgstr "Configurações"
 
 #. Description of the plugin
 msgid ""
@@ -175,14 +28,168 @@ msgid ""
 msgstr ""
 "Vários ajustes opinativos no WordPress focados em segurança e desempenho."
 
-#: inc/settings.php:119
-msgid "Show admin bar for admin users only"
-msgstr "Mostrar barra de administrador apenas para administradores"
+#. Author of the plugin
+msgid "Luiz Bills"
+msgstr "Luiz Bills"
+
+#. Author URI of the plugin
+msgid "https://luizpb.com/en"
+msgstr "https://luizpb.com"
 
 #: inc/settings.php:18
 msgid "Tweaks"
 msgstr "Ajustes"
 
-#. Name of the plugin
-msgid "WP Tweaks"
-msgstr "WP Ajustes"
+#: inc/settings.php:50
+msgid "Clear uploaded file names"
+msgstr "Limpar nome dos arquivos enviados"
+
+#: inc/settings.php:53 inc/settings.php:66 inc/settings.php:72
+#: inc/settings.php:82 inc/settings.php:92 inc/settings.php:98
+#: inc/settings.php:104 inc/settings.php:111 inc/settings.php:117
+#: inc/settings.php:123 inc/settings.php:129 inc/settings.php:135
+#: inc/settings.php:141 inc/settings.php:147 inc/settings.php:153
+#: inc/settings.php:159 inc/settings.php:165 inc/settings.php:171
+#: inc/settings.php:177 inc/settings.php:183 inc/settings.php:189
+#: inc/settings.php:195 inc/settings.php:201
+msgid "Enable"
+msgstr "Ativar"
+
+#: inc/settings.php:56
+msgid "Custom admin footer text"
+msgstr "Texto do rodapé da área administrativa"
+
+#: inc/settings.php:58
+msgid "&copy; %1$s %2$s · All Rights Reserved."
+msgstr "&copy; %1$s %2$s · Todos os Direitos Reservados."
+
+#: inc/settings.php:59
+msgid "%1$s prints the current year. %2$s prints your site name."
+msgstr "%1$s mostra o ano atual. %2$s mostra o nome do seu site."
+
+#: inc/settings.php:63
+msgid "Dashboard with only one column"
+msgstr "Painel com apenas uma coluna"
+
+#: inc/settings.php:69
+msgid "Disable author query"
+msgstr "Desativar query de autores"
+
+#: inc/settings.php:74
+msgid "disables author search via url (e.g: %s)"
+msgstr "desativa a pesquisa de autores por url (ex: %s)"
+
+#: inc/settings.php:79
+msgid "Disable author pages"
+msgstr "Desativar páginas de autores"
+
+#: inc/settings.php:84
+msgid "disables author pages (e.g: %s)"
+msgstr "desativa páginas de autores (ex: %s)"
+
+#: inc/settings.php:89
+msgid "Disable WordPress emojis"
+msgstr "Desativar emojis do WordPress"
+
+#: inc/settings.php:95
+msgid "Remove \"meta widget\""
+msgstr "Remover \"widget meta\""
+
+#: inc/settings.php:101
+msgid "Remove public REST API access"
+msgstr "Remover acesso publico à REST API"
+
+#: inc/settings.php:105
+msgid "only logged in users will have access to REST API"
+msgstr "apenas usuários autentificados terão acesso à REST API"
+
+#: inc/settings.php:108
+msgid "Remove \"website\" field in comment form"
+msgstr "Remover campo \"site\" no formulário de comentário"
+
+#: inc/settings.php:114
+msgid "Remove oEmbed support"
+msgstr "Remover suporte ao oEmbed"
+
+#: inc/settings.php:120
+msgid "Remove XML-RPC and Pingbacks support"
+msgstr "Remover suporte à XML-RPC e Pingbacks"
+
+#: inc/settings.php:126
+msgid "Disallow file edit"
+msgstr "Proibir edição de arquivos"
+
+#: inc/settings.php:132
+msgid "Show admin bar for admin users only"
+msgstr "Mostrar barra de administrador apenas para administradores"
+
+#: inc/settings.php:138
+msgid "Hide WordPress update nag to all but admins"
+msgstr "Mostrar notificação de atualizações apenas para administradores"
+
+#: inc/settings.php:144
+msgid "Hide WordPress version in admin footer to all but admins"
+msgstr ""
+"Mostrar versão do WordPress no rodapé da área administrativa apenas para "
+"administradores"
+
+#: inc/settings.php:150
+msgid "Remove \"Comments\" from admin bar"
+msgstr "Remover \"Comentários\" da barra de administrador"
+
+#: inc/settings.php:156
+msgid "Remove \"WordPress Logo\" from admin bar"
+msgstr "Remover \"Logo do WordPress\" da barra de administrador "
+
+#: inc/settings.php:162
+msgid "Remove \"+ New\" button from admin bar"
+msgstr "Remover botão \"+ Novo\" da barra de administrador"
+
+#: inc/settings.php:168
+msgid "Remove some default dashboard widgets (useless for clients)"
+msgstr ""
+"Remover alguns widgets padrões do Painel (inúteis para usuários leigos)"
+
+#: inc/settings.php:174
+msgid "Remove \"Howdy\" from admin bar"
+msgstr "Remover \"Olá\" da barra de administrador"
+
+#: inc/settings.php:180
+msgid "Remove query string from static scripts"
+msgstr "Remover query string dos códigos estáticos"
+
+#: inc/settings.php:186
+msgid "Remove"
+msgstr "Remover"
+
+#: inc/settings.php:192
+msgid "Remove Dashboard \"welcome panel\""
+msgstr "Remover \"Boas-vindas\" do Painel"
+
+#: inc/settings.php:198
+msgid "Remove WordPress version number in frontend"
+msgstr "Remover versão do WordPress no frontend"
+
+#: inc/settings.php:207
+msgid "Settings"
+msgstr "Configurações"
+
+#: inc/tweaks/debug-warning.php:14
+msgid "Caution!"
+msgstr "Atenção!"
+
+#: inc/tweaks/debug-warning.php:15
+msgid ""
+"The WordPress constants below are enabled and it is highly recommended that "
+"you disable them in production environments."
+msgstr ""
+"As constantes do WordPress abaixo estão ativadas e é altamente recomendado "
+"que você desative-as em ambientes de produção."
+
+#: inc/tweaks/disable-xmlrpc.php:33
+msgid "Pingbacks are not supported"
+msgstr "Pingbacks não são suportados"
+
+#: inc/tweaks/disable-xmlrpc.php:34
+msgid "Not Allowed!"
+msgstr "Não permitido!"
