@@ -39,7 +39,7 @@ class WP_Tweaks_Settings {
 				include_once $file;
 			}
 
-			// always enable tweaks
+			// always enabled tweaks
 			include_once WP_Tweaks::DIR . '/inc/tweaks/debug-warning.php';
 		}
 	}
