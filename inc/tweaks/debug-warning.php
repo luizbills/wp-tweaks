@@ -30,7 +30,8 @@ function wp_tweaks_add_debug_warning () {
         <style>
             .wpt_constant {
                 font-family: monospace;
-                color: #d9480f;
+                color: #e67700;
+                background-color: #fff3bf;
                 line-height: 1;
                 font-weight: 700;
                 display: inline-block;
@@ -38,7 +39,6 @@ function wp_tweaks_add_debug_warning () {
                 margin-right: .5rem;
                 margin-top: .5rem;
                 border-radius: 4px;
-                background-color: #ffe8cc;
             }
         </style>
         <div class='notice notice-warning wpt_notice'><p><?php echo $content ?></p></div>
