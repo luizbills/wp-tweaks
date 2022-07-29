@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+DOMAIN="wp-tweaks";
+
+# Requires WP-CLI
+wp i18n make-pot . languages/$DOMAIN.pot

@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-PLUGIN_SLUG="wp-tweaks";
-
-# Requires WP-CLI
-wp i18n make-pot . languages/$PLUGIN_SLUG.pot
