@@ -5,7 +5,7 @@ Donate link: https://www.luizpb.com/donate/
 Requires at least: 4.0
 Tested up to: 6.0
 Requires PHP: 5.4
-Stable tag: 1.7.0
+Stable tag: 1.7.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -54,6 +54,11 @@ Support this plugin on [https://luizpb.com/donate/](https://luizpb.com/donate/)
 1. Go to Settings > Tweaks to configure the plugin.
 
 == Changelog ==
+
+= 1.7.1 - 2022-07-29 =
+
+* Fix: Option 'Remove Dashboard "welcome panel"' was not working.
+* Misc: Improve colors on warning about debug constants.
 
 = 1.7.0 - 2022-07-29 =
 
