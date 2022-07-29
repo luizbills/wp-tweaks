@@ -41,7 +41,7 @@ Several opinionated WordPress tweaks focused in security and performance.
 
 = Contribuitions =
 
-For bugs, suggestions or contribuitions, open a issue in our [Github Repository](https://github.com/luizbills/shipping-simulator-for-woocommerce/issues) or create a topic in [WordPress Plugin Forum](https://wordpress.org/support/plugin/shipping-simulator-for-woocommerce/).
+For bugs, suggestions or contribuitions, open a issue in our [Github Repository](https://github.com/luizbills/wp-tweaks/issues) or create a topic in [WordPress Plugin Forum](https://wordpress.org/support/plugin/wp-tweaks/).
 
 = Donations =
 
