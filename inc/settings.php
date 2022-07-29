@@ -128,6 +128,12 @@ class WP_Tweaks_Settings {
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
 			],
+			'generic-login-errors' => [
+				'label' => esc_html__( 'Generic login error message', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => 'on',
+				'after' => esc_html__( 'Enable', 'wp-tweaks' ),
+			],
 			'hide-admin-bar' => [
 				'label' => esc_html__( 'Show admin bar for admin users only', 'wp-tweaks' ),
 				'type' => 'checkbox',

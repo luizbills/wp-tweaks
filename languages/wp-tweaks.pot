@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-07-29T11:45:30-03:00\n"
+"POT-Creation-Date: 2022-07-29T12:08:47-03:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: wp-tweaks\n"
@@ -39,17 +39,17 @@ msgid "Tweaks"
 msgstr ""
 
 #: inc/settings.php:50
-msgid "Clear uploaded file names"
+msgid "Generic login error message"
 msgstr ""
 
 #: inc/settings.php:53
-#: inc/settings.php:66
+#: inc/settings.php:59
 #: inc/settings.php:72
-#: inc/settings.php:82
-#: inc/settings.php:92
+#: inc/settings.php:78
+#: inc/settings.php:88
 #: inc/settings.php:98
 #: inc/settings.php:104
-#: inc/settings.php:111
+#: inc/settings.php:110
 #: inc/settings.php:117
 #: inc/settings.php:123
 #: inc/settings.php:129
@@ -65,123 +65,132 @@ msgstr ""
 #: inc/settings.php:189
 #: inc/settings.php:195
 #: inc/settings.php:201
+#: inc/settings.php:207
 msgid "Enable"
 msgstr ""
 
 #: inc/settings.php:56
+msgid "Clear uploaded file names"
+msgstr ""
+
+#: inc/settings.php:62
 msgid "Custom admin footer text"
 msgstr ""
 
-#: inc/settings.php:58
+#: inc/settings.php:64
 msgid "&copy; %1$s %2$s · All Rights Reserved."
 msgstr ""
 
-#: inc/settings.php:59
+#: inc/settings.php:65
 msgid "%1$s prints the current year. %2$s prints your site name."
 msgstr ""
 
-#: inc/settings.php:63
+#: inc/settings.php:69
 msgid "Dashboard with only one column"
 msgstr ""
 
-#: inc/settings.php:69
+#: inc/settings.php:75
 msgid "Disable author query"
 msgstr ""
 
-#: inc/settings.php:74
+#: inc/settings.php:80
 msgid "disables author search via url (e.g: %s)"
 msgstr ""
 
-#: inc/settings.php:79
+#: inc/settings.php:85
 msgid "Disable author pages"
 msgstr ""
 
-#: inc/settings.php:84
+#: inc/settings.php:90
 msgid "disables author pages (e.g: %s)"
 msgstr ""
 
-#: inc/settings.php:89
+#: inc/settings.php:95
 msgid "Disable WordPress emojis"
 msgstr ""
 
-#: inc/settings.php:95
+#: inc/settings.php:101
 msgid "Remove \"meta widget\""
 msgstr ""
 
-#: inc/settings.php:101
+#: inc/settings.php:107
 msgid "Remove public REST API access"
 msgstr ""
 
-#: inc/settings.php:105
+#: inc/settings.php:111
 msgid "only logged in users will have access to REST API"
 msgstr ""
 
-#: inc/settings.php:108
+#: inc/settings.php:114
 msgid "Remove \"website\" field in comment form"
 msgstr ""
 
-#: inc/settings.php:114
+#: inc/settings.php:120
 msgid "Remove oEmbed support"
 msgstr ""
 
-#: inc/settings.php:120
+#: inc/settings.php:126
 msgid "Remove XML-RPC and Pingbacks support"
 msgstr ""
 
-#: inc/settings.php:126
+#: inc/settings.php:132
 msgid "Disallow file edit"
 msgstr ""
 
-#: inc/settings.php:132
+#: inc/settings.php:138
 msgid "Show admin bar for admin users only"
 msgstr ""
 
-#: inc/settings.php:138
+#: inc/settings.php:144
 msgid "Hide WordPress update nag to all but admins"
 msgstr ""
 
-#: inc/settings.php:144
+#: inc/settings.php:150
 msgid "Hide WordPress version in admin footer to all but admins"
 msgstr ""
 
-#: inc/settings.php:150
+#: inc/settings.php:156
 msgid "Remove \"Comments\" from admin bar"
 msgstr ""
 
-#: inc/settings.php:156
+#: inc/settings.php:162
 msgid "Remove \"WordPress Logo\" from admin bar"
 msgstr ""
 
-#: inc/settings.php:162
+#: inc/settings.php:168
 msgid "Remove \"+ New\" button from admin bar"
 msgstr ""
 
-#: inc/settings.php:168
+#: inc/settings.php:174
 msgid "Remove some default dashboard widgets (useless for clients)"
 msgstr ""
 
-#: inc/settings.php:174
+#: inc/settings.php:180
 msgid "Remove \"Howdy\" from admin bar"
 msgstr ""
 
-#: inc/settings.php:180
+#: inc/settings.php:186
 msgid "Remove query string from static scripts"
 msgstr ""
 
-#: inc/settings.php:186
+#: inc/settings.php:192
 msgid "Remove"
 msgstr ""
 
-#: inc/settings.php:192
+#: inc/settings.php:198
 msgid "Remove Dashboard \"welcome panel\""
 msgstr ""
 
-#: inc/settings.php:198
+#: inc/settings.php:204
 msgid "Remove WordPress version number in frontend"
 msgstr ""
 
-#: inc/settings.php:207
+#: inc/settings.php:213
 msgid "Settings"
+msgstr ""
+
+#: inc/tweaks/change-login-errors.php:9
+msgid "Your username or password is incorrect!"
 msgstr ""
 
 #: inc/tweaks/debug-warning.php:14
