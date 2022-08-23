@@ -18,7 +18,7 @@ if ( ! class_exists( 'WP_Tweaks' ) ) :
 
 class WP_Tweaks {
 
-	const VERSION = '1.6.0';
+	const VERSION = '1.7';
 	const FILE = __FILE__;
 	const DIR = __DIR__;
 	const PREFIX = 'wp_tweaks_';
