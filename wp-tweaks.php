@@ -1,16 +1,18 @@
 <?php
-/*
-Plugin Name: WP Tweaks
-Plugin URI: https://github.com/luizbills/wp-tweaks
-Description: Several opinionated WordPress tweaks focused in security and performance.
-Version: 1.7.1
-Author: Luiz Bills
-Author URI: https://luizpb.com/en
-License: GPLv3
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: wp-tweaks
-Domain Path: /languages
-*/
+/**
+ * Plugin Name: WP Tweaks
+ * Plugin URI: https://github.com/luizbills/wp-tweaks
+ * Description: Several opinionated WordPress tweaks focused in security and performance.
+ * Version: 1.7.1
+ * Requires at least: 4.0
+ * Requires PHP: 5.4
+ * Author: Luiz Bills
+ * Author URI: https://luizpb.com/en
+ * License: GPLv3
+ * License URI: http://www.gnu.org/licenses/gpl-3.0.html
+ * Text Domain: wp-tweaks
+ * Domain Path: /languages
+ */
 
 if ( ! defined( 'WPINC' ) ) die();
 
