@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Tweaks\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-tweaks\n"
-"POT-Creation-Date: 2022-07-29T12:23:38-03:00\n"
-"PO-Revision-Date: 2022-07-29 12:24-0300\n"
+"POT-Creation-Date: 2022-12-11T14:53:25-03:00\n"
+"PO-Revision-Date: 2022-12-11 14:55-0300\n"
 "Last-Translator: \n"
 "Language-Team: Português do Brasil\n"
 "Language: pt_BR\n"
@@ -47,12 +47,12 @@ msgstr "Mudar menu \"Posts\" para \"Blog\""
 #: inc/settings.php:53 inc/settings.php:59 inc/settings.php:72
 #: inc/settings.php:78 inc/settings.php:88 inc/settings.php:98
 #: inc/settings.php:104 inc/settings.php:110 inc/settings.php:117
-#: inc/settings.php:123 inc/settings.php:129 inc/settings.php:135
-#: inc/settings.php:141 inc/settings.php:147 inc/settings.php:153
-#: inc/settings.php:159 inc/settings.php:165 inc/settings.php:171
-#: inc/settings.php:177 inc/settings.php:183 inc/settings.php:189
-#: inc/settings.php:195 inc/settings.php:201 inc/settings.php:207
-#: inc/settings.php:213
+#: inc/settings.php:124 inc/settings.php:130 inc/settings.php:136
+#: inc/settings.php:142 inc/settings.php:148 inc/settings.php:155
+#: inc/settings.php:161 inc/settings.php:167 inc/settings.php:173
+#: inc/settings.php:179 inc/settings.php:185 inc/settings.php:191
+#: inc/settings.php:197 inc/settings.php:203 inc/settings.php:209
+#: inc/settings.php:215 inc/settings.php:221 inc/settings.php:227
 msgid "Enable"
 msgstr "Ativar"
 
@@ -109,77 +109,95 @@ msgid "only logged in users will have access to REST API"
 msgstr "apenas usuários autentificados terão acesso à REST API"
 
 #: inc/settings.php:114
+msgid "Remove users endpoint from REST API"
+msgstr "Remover endpoint users da REST API"
+
+#: inc/settings.php:118
+msgid "Disable users enumeration via REST API."
+msgstr "Desativar a enumeração de usuários pela REST API"
+
+#: inc/settings.php:121
 msgid "Remove \"website\" field in comment form"
 msgstr "Remover campo \"site\" no formulário de comentário"
 
-#: inc/settings.php:120
+#: inc/settings.php:127
 msgid "Remove oEmbed support"
 msgstr "Remover suporte ao oEmbed"
 
-#: inc/settings.php:126
+#: inc/settings.php:133
 msgid "Remove XML-RPC and Pingbacks support"
 msgstr "Remover suporte à XML-RPC e Pingbacks"
 
-#: inc/settings.php:132
+#: inc/settings.php:139
 msgid "Disallow file edit"
 msgstr "Proibir edição de arquivos"
 
-#: inc/settings.php:138
+#: inc/settings.php:145
+msgid "Disallow your site in iframes"
+msgstr "Proibir seu site dentro de iframes"
+
+#: inc/settings.php:149
+msgid ""
+"Disallow to render your site in a <frame>, <iframe>, <embed> or <object>."
+msgstr ""
+"Proibe renderizar seu site em um <frame>, <iframe>, <embed> ou <object>."
+
+#: inc/settings.php:152
 msgid "Generic login error message"
 msgstr "Mensagem de erro genérica no login"
 
-#: inc/settings.php:144
+#: inc/settings.php:158
 msgid "Show admin bar for admin users only"
 msgstr "Mostrar barra de administrador apenas para administradores"
 
-#: inc/settings.php:150
+#: inc/settings.php:164
 msgid "Hide WordPress update nag to all but admins"
 msgstr "Mostrar notificação de atualizações apenas para administradores"
 
-#: inc/settings.php:156
+#: inc/settings.php:170
 msgid "Hide WordPress version in admin footer to all but admins"
 msgstr ""
 "Mostrar versão do WordPress no rodapé da área administrativa apenas para "
 "administradores"
 
-#: inc/settings.php:162
+#: inc/settings.php:176
 msgid "Remove \"Comments\" from admin bar"
 msgstr "Remover \"Comentários\" da barra de administrador"
 
-#: inc/settings.php:168
+#: inc/settings.php:182
 msgid "Remove \"WordPress Logo\" from admin bar"
 msgstr "Remover \"Logo do WordPress\" da barra de administrador"
 
-#: inc/settings.php:174
+#: inc/settings.php:188
 msgid "Remove \"+ New\" button from admin bar"
 msgstr "Remover botão \"+ Novo\" da barra de administrador"
 
-#: inc/settings.php:180
+#: inc/settings.php:194
 msgid "Remove some default dashboard widgets (useless for clients)"
 msgstr ""
 "Remover alguns widgets padrões do Painel (inúteis para usuários leigos)"
 
-#: inc/settings.php:186
+#: inc/settings.php:200
 msgid "Remove \"Howdy\" from admin bar"
 msgstr "Remover \"Olá\" da barra de administrador"
 
-#: inc/settings.php:192
+#: inc/settings.php:206
 msgid "Remove query string from static scripts"
 msgstr "Remover query string dos códigos estáticos"
 
-#: inc/settings.php:198
+#: inc/settings.php:212
 msgid "Remove"
 msgstr "Remover"
 
-#: inc/settings.php:204
+#: inc/settings.php:218
 msgid "Remove Dashboard \"welcome panel\""
 msgstr "Remover \"Boas-vindas\" do Painel"
 
-#: inc/settings.php:210
+#: inc/settings.php:224
 msgid "Remove WordPress version number in frontend"
 msgstr "Remover versão do WordPress no frontend"
 
-#: inc/settings.php:219
+#: inc/settings.php:233
 msgid "Settings"
 msgstr "Configurações"
 
