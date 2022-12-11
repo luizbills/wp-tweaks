@@ -10,6 +10,8 @@
 
 Several opinionated WordPress tweaks focused in security and performance.
 
+[![Donate](https://img.shields.io/badge/SUPPORT%20ME-DONATE-2b8a3e?style=for-the-badge)](https://luizpb.com/donate/)
+
 ### FEATURES
 
 - Produces clean filenames for uploads
@@ -33,7 +35,3 @@ Several opinionated WordPress tweaks focused in security and performance.
 - and more...
 
 **Note**: You can disable any feature.
-
-### Donations
-
-[![Donate](https://img.shields.io/badge/SUPPORT%20ME-DONATE-2b8a3e?style=for-the-badge)](https://luizpb.com/donate/)
