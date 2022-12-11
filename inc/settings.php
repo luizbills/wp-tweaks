@@ -134,6 +134,13 @@ class WP_Tweaks_Settings {
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
 			],
+			'disallow-iframes' => [
+				'label' => esc_html__( 'Disallow your site in iframes', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => '',
+				'after' => esc_html__( 'Enable', 'wp-tweaks' ),
+				'desc' => esc_html__( 'Disallow to render your site in a <frame>, <iframe>, <embed> or <object>.', 'wp-tweaks' )
+			],
 			'generic-login-errors' => [
 				'label' => esc_html__( 'Generic login error message', 'wp-tweaks' ),
 				'type' => 'checkbox',
