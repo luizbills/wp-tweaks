@@ -110,6 +110,13 @@ class WP_Tweaks_Settings {
 				'after' => esc_html__( 'Enable', 'wp-tweaks' ),
 				'desc' => esc_html__( 'only logged in users will have access to REST API', 'wp-tweaks' )
 			],
+			'disable-rest-api-users-endpoint' => [
+				'label' => esc_html__( 'Remove users endpoint from REST API', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => 'on',
+				'after' => esc_html__( 'Enable', 'wp-tweaks' ),
+				'desc' => esc_html__( 'Disable users enumeration via REST API.', 'wp-tweaks' )
+			],
 			'disable-website-field' => [
 				'label' => esc_html__( 'Remove "website" field in comment form', 'wp-tweaks' ),
 				'type' => 'checkbox',
