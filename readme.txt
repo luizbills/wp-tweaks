@@ -5,7 +5,7 @@ Donate link: https://www.luizpb.com/donate/
 Requires at least: 4.0
 Tested up to: 6.1
 Requires PHP: 5.4
-Stable tag: 1.7.1
+Stable tag: 1.8.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -54,6 +54,11 @@ Support this plugin on [https://luizpb.com/donate/](https://luizpb.com/donate/)
 1. Go to Settings > Tweaks to configure the plugin.
 
 == Changelog ==
+
+= 1.8.0 - 2022-12-11 =
+
+* Security: Now is possible disallow to render your site in a <frame>, <iframe>, <embed> or <object> outside of your site. Useful to avoid **click-jacking** attacks.
+* Security: Now is possible disable the `/users` endpoint in the REST API, to prevent users enumeration.
 
 = 1.7.1 - 2022-07-29 =
 
