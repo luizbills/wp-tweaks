@@ -1,6 +1,6 @@
 <?php
 /**
- * Display
+ * Display generic error message in login form
  *
  * @package wp-tweaks
  */
