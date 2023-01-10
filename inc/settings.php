@@ -39,8 +39,8 @@ class WP_Tweaks_Settings {
 				include_once $file;
 			}
 
-			// always enabled tweaks
-			include_once WP_Tweaks::DIR . '/inc/tweaks/debug-warning.php';
+			// warn about debug constants
+			include_once WP_Tweaks::DIR . '/inc/debug-warning.php';
 		}
 	}
 
@@ -61,8 +61,9 @@ class WP_Tweaks_Settings {
 			'custom-admin-footer-text' => [
 				'label' => esc_html__( 'Custom admin footer text', 'wp-tweaks' ),
 				'type' => 'content',
-				'default' => sprintf( esc_html__( '&copy; %1$s %2$s · All Rights Reserved.', 'wp-tweaks' ), '{current_year}', '{site_name}' ),
-				'desc' => sprintf( esc_html__( '%1$s prints the current year. %2$s prints your site name.', 'wp-tweaks' ), '`{current_year}`', '`{site_name}`' ),
+				'default' => sprintf( '%1$s %2$s %3$s · ' . esc_html__( 'All Rights Reserved.', 'wp-tweaks' ), '{copyright}', '{current_year}', '{site_name}' ),
+				/* translators: %1$s, %2$s and %3$s are variables */
+				'desc' => sprintf( esc_html__( '%1$s prints the copyright symbol. %2$s prints the current year. %3$s prints your site name.', 'wp-tweaks' ), '`{copyright}`', '`{current_year}`', '`{site_name}`' ),
 				'height' => 100,
 			],
 			'dashboard-single-column-layout' => [
@@ -77,6 +78,7 @@ class WP_Tweaks_Settings {
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' ),
 				'desc' => sprintf(
+					/* translators: %s is an example URL */
 					esc_html__( 'disables author search via url (e.g: %s)', 'wp-tweaks' ),
 					home_url( '?author=1' )
 				)
@@ -87,12 +89,19 @@ class WP_Tweaks_Settings {
 				'default' => '',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' ),
 				'desc' => sprintf(
+					/* translators: %s is an example URL */
 					esc_html__( 'disables author pages (e.g: %s)', 'wp-tweaks' ),
 					home_url( '/author/admin' )
 				)
 			],
-			'disable-emoji' => [
+			'disable-emojis' => [
 				'label' => esc_html__( 'Disable WordPress emojis', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => 'on',
+				'after' => esc_html__( 'Enable', 'wp-tweaks' )
+			],
+			'disable-jquery-migrate' => [
+				'label' => esc_html__( 'Disable jQuery Migrate', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
