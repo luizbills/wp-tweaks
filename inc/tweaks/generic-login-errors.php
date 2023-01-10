@@ -4,7 +4,7 @@
  *
  * @package wp-tweaks
  */
-add_filter( 'login_errors', 'wp_tweaks_login_errors' );
-function wp_tweaks_login_errors () {
-    return esc_html__( 'Your username or password is incorrect!', 'wp-tweaks' );
+add_filter( 'login_errors', 'wp_tweaks_login_errors', 1 );
+function wp_tweaks_login_errors ( $errors ) {
+    return '<strong>' . __( 'ERROR', 'wp-tweaks' ) . '</strong>: ' . esc_html__( 'Incorrect email address or password.', 'wp-tweaks' );
 }
