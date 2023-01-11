@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Tweaks 1.9.0\n"
+"Project-Id-Version: WP Tweaks 1.9.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-tweaks\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-01-11T00:07:30-03:00\n"
+"POT-Creation-Date: 2023-01-11T08:54:51-03:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: wp-tweaks\n"
@@ -65,19 +65,18 @@ msgstr ""
 #: inc/settings.php:146
 #: inc/settings.php:152
 #: inc/settings.php:158
-#: inc/settings.php:165
-#: inc/settings.php:171
-#: inc/settings.php:177
-#: inc/settings.php:183
-#: inc/settings.php:189
-#: inc/settings.php:195
-#: inc/settings.php:201
-#: inc/settings.php:207
-#: inc/settings.php:213
-#: inc/settings.php:219
-#: inc/settings.php:225
-#: inc/settings.php:231
-#: inc/settings.php:237
+#: inc/settings.php:164
+#: inc/settings.php:170
+#: inc/settings.php:176
+#: inc/settings.php:182
+#: inc/settings.php:188
+#: inc/settings.php:194
+#: inc/settings.php:200
+#: inc/settings.php:206
+#: inc/settings.php:212
+#: inc/settings.php:218
+#: inc/settings.php:224
+#: inc/settings.php:230
 msgid "Enable"
 msgstr ""
 
@@ -165,75 +164,67 @@ msgid "Disallow file edit"
 msgstr ""
 
 #: inc/settings.php:155
-msgid "Disallow your site in iframes"
-msgstr ""
-
-#: inc/settings.php:159
-msgid "Disallow to render your site in a <frame>, <iframe>, <embed> or <object>."
-msgstr ""
-
-#: inc/settings.php:162
 msgid "Generic login error message"
 msgstr ""
 
-#: inc/settings.php:168
+#: inc/settings.php:161
 msgid "Show admin bar for admin users only"
 msgstr ""
 
-#: inc/settings.php:174
+#: inc/settings.php:167
 msgid "Hide WordPress update nag to all but admins"
 msgstr ""
 
-#: inc/settings.php:180
+#: inc/settings.php:173
 msgid "Hide WordPress version in admin footer to all but admins"
 msgstr ""
 
-#: inc/settings.php:186
+#: inc/settings.php:179
 msgid "Remove \"Comments\" from admin bar"
 msgstr ""
 
-#: inc/settings.php:192
+#: inc/settings.php:185
 msgid "Remove \"WordPress Logo\" from admin bar"
 msgstr ""
 
-#: inc/settings.php:198
+#: inc/settings.php:191
 msgid "Remove \"+ New\" button from admin bar"
 msgstr ""
 
-#: inc/settings.php:204
+#: inc/settings.php:197
 msgid "Remove some default dashboard widgets (useless for clients)"
 msgstr ""
 
-#: inc/settings.php:210
+#: inc/settings.php:203
 msgid "Remove \"Howdy\" from admin bar"
 msgstr ""
 
-#: inc/settings.php:216
+#: inc/settings.php:209
 msgid "Remove query string from static scripts"
 msgstr ""
 
-#: inc/settings.php:222
+#: inc/settings.php:215
 msgid "Remove"
 msgstr ""
 
-#: inc/settings.php:228
+#: inc/settings.php:221
 msgid "Remove Dashboard \"welcome panel\""
 msgstr ""
 
-#: inc/settings.php:234
+#: inc/settings.php:227
 msgid "Remove WordPress version number in frontend"
 msgstr ""
 
-#: inc/settings.php:240
+#: inc/settings.php:233
 msgid "Security Headers"
 msgstr ""
 
 #. translators: %s is the securityHeaders.io URL
-#: inc/settings.php:251
+#: inc/settings.php:244
 msgid "You can utilise this headers to make your site more secure. Once you have setup each header, check it using [securityHeaders.io](%s)."
 msgstr ""
 
-#: inc/settings.php:265
+#: inc/settings.php:258
 msgid "Settings"
 msgstr ""
 

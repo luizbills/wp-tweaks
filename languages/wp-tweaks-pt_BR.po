@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Tweaks\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-tweaks\n"
-"POT-Creation-Date: 2023-01-11T00:07:30-03:00\n"
-"PO-Revision-Date: 2023-01-11 00:08-0300\n"
+"POT-Creation-Date: 2023-01-11T08:54:51-03:00\n"
+"PO-Revision-Date: 2023-01-11 08:55-0300\n"
 "Last-Translator: \n"
 "Language-Team: Português do Brasil\n"
 "Language: pt_BR\n"
@@ -61,11 +61,10 @@ msgstr "Mudar menu \"Posts\" para \"Blog\""
 #: inc/settings.php:108 inc/settings.php:114 inc/settings.php:120
 #: inc/settings.php:127 inc/settings.php:134 inc/settings.php:140
 #: inc/settings.php:146 inc/settings.php:152 inc/settings.php:158
-#: inc/settings.php:165 inc/settings.php:171 inc/settings.php:177
-#: inc/settings.php:183 inc/settings.php:189 inc/settings.php:195
-#: inc/settings.php:201 inc/settings.php:207 inc/settings.php:213
-#: inc/settings.php:219 inc/settings.php:225 inc/settings.php:231
-#: inc/settings.php:237
+#: inc/settings.php:164 inc/settings.php:170 inc/settings.php:176
+#: inc/settings.php:182 inc/settings.php:188 inc/settings.php:194
+#: inc/settings.php:200 inc/settings.php:206 inc/settings.php:212
+#: inc/settings.php:218 inc/settings.php:224 inc/settings.php:230
 msgid "Enable"
 msgstr "Ativar"
 
@@ -138,7 +137,7 @@ msgstr "Remover endpoint users da REST API"
 
 #: inc/settings.php:128
 msgid "Disable users enumeration via REST API."
-msgstr "Desativar a enumeração de usuários pela REST API"
+msgstr "Desativar a enumeração de usuários pela REST API."
 
 #: inc/settings.php:131
 msgid "Remove \"website\" field in comment form"
@@ -157,76 +156,66 @@ msgid "Disallow file edit"
 msgstr "Proibir edição de arquivos"
 
 #: inc/settings.php:155
-msgid "Disallow your site in iframes"
-msgstr "Proibir seu site dentro de iframes"
-
-#: inc/settings.php:159
-msgid ""
-"Disallow to render your site in a <frame>, <iframe>, <embed> or <object>."
-msgstr ""
-"Proibe renderizar seu site em um <frame>, <iframe>, <embed> ou <object>."
-
-#: inc/settings.php:162
 msgid "Generic login error message"
 msgstr "Mensagem de erro genérica no login"
 
-#: inc/settings.php:168
+#: inc/settings.php:161
 msgid "Show admin bar for admin users only"
 msgstr "Mostrar barra de administrador apenas para administradores"
 
-#: inc/settings.php:174
+#: inc/settings.php:167
 msgid "Hide WordPress update nag to all but admins"
 msgstr "Mostrar notificação de atualizações apenas para administradores"
 
-#: inc/settings.php:180
+#: inc/settings.php:173
 msgid "Hide WordPress version in admin footer to all but admins"
 msgstr ""
 "Mostrar versão do WordPress no rodapé da área administrativa apenas para "
 "administradores"
 
-#: inc/settings.php:186
+#: inc/settings.php:179
 msgid "Remove \"Comments\" from admin bar"
 msgstr "Remover \"Comentários\" da barra de administrador"
 
-#: inc/settings.php:192
+#: inc/settings.php:185
 msgid "Remove \"WordPress Logo\" from admin bar"
 msgstr "Remover \"Logo do WordPress\" da barra de administrador"
 
-#: inc/settings.php:198
+#: inc/settings.php:191
 msgid "Remove \"+ New\" button from admin bar"
 msgstr "Remover botão \"+ Novo\" da barra de administrador"
 
-#: inc/settings.php:204
+#: inc/settings.php:197
 msgid "Remove some default dashboard widgets (useless for clients)"
 msgstr ""
 "Remover alguns widgets padrões do Painel (inúteis para usuários leigos)"
 
-#: inc/settings.php:210
+#: inc/settings.php:203
 msgid "Remove \"Howdy\" from admin bar"
 msgstr "Remover \"Olá\" da barra de administrador"
 
-#: inc/settings.php:216
+#: inc/settings.php:209
 msgid "Remove query string from static scripts"
 msgstr "Remover query string dos códigos estáticos"
 
-#: inc/settings.php:222
+#: inc/settings.php:215
 msgid "Remove"
 msgstr "Remover"
 
-#: inc/settings.php:228
+#: inc/settings.php:221
 msgid "Remove Dashboard \"welcome panel\""
 msgstr "Remover \"Boas-vindas\" do Painel"
 
-#: inc/settings.php:234
+#: inc/settings.php:227
 msgid "Remove WordPress version number in frontend"
 msgstr "Remover versão do WordPress no frontend"
 
-#: inc/settings.php:240
+#: inc/settings.php:233
 msgid "Security Headers"
 msgstr "Headers de Segurança"
 
 #. translators: %s is the securityHeaders.io URL
-#: inc/settings.php:251
+#: inc/settings.php:244
 msgid ""
 "You can utilise this headers to make your site more secure. Once you have "
 "setup each header, check it using [securityHeaders.io](%s)."
@@ -234,7 +223,7 @@ msgstr ""
 "Você pode utilizar esses headers para tornar seu site mais seguro. Após "
 "configurar cada header, confira-os usando [securityHeaders.io](%s)."
 
-#: inc/settings.php:265
+#: inc/settings.php:258
 msgid "Settings"
 msgstr "Configurações"
 
@@ -257,6 +246,14 @@ msgstr "ERRO"
 #: inc/tweaks/generic-login-errors.php:9
 msgid "Incorrect email address or password."
 msgstr "Usuário ou senha incorretos."
+
+#~ msgid "Disallow your site in iframes"
+#~ msgstr "Proibir seu site dentro de iframes"
+
+#~ msgid ""
+#~ "Disallow to render your site in a <frame>, <iframe>, <embed> or <object>."
+#~ msgstr ""
+#~ "Proibe renderizar seu site em um <frame>, <iframe>, <embed> ou <object>."
 
 #~ msgid "Your username or password is incorrect!"
 #~ msgstr "Seu nome de usuário ou sua senha está incorreta!"
