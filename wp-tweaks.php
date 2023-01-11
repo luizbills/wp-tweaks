@@ -34,7 +34,7 @@ class WP_Tweaks {
 	}
 
 	protected function includes () {
-		require_once self::DIR . '/vendor/better-wordpress-admin-api/framework/init.php';
+		require_once self::DIR . '/inc/better-wordpress-admin-api/framework/init.php';
 		require_once self::DIR . '/inc/helpers.php';
 		require_once self::DIR . '/inc/settings.php';
 	}
