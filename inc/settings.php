@@ -237,7 +237,7 @@ class WP_Tweaks_Settings {
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
 			],
 			'security-headers' => [
-				'label' => 'Add Security Headers',
+				'label' => esc_html__( 'Security Headers', 'wp-tweaks' ),
 				'type' => 'checkbox_multi',
 				'choices' => [
 					'x-frame-options' => 'X-Frame-Options',
@@ -246,7 +246,17 @@ class WP_Tweaks_Settings {
 					'x-xss-protection' => 'X-XSS-Protection',
 					'content-security-policy' => 'Content-Security-Policy',
 				],
-				'desc' => 'You can utilise this headers to make your site more secure. Once you have setup each header, check it using [securityHeaders.io](https://securityHeaders.io).'
+				'desc' => sprintf(
+					/* translators: %s is the securityHeaders.io URL */
+					esc_html__( 'You can utilise this headers to make your site more secure. Once you have setup each header, check it using [securityHeaders.io](%s).', 'wp-tweaks' ),
+					add_query_arg(
+						[
+							'q' => home_url(),
+							'followRedirects' => 'on'
+						],
+						'https://securityHeaders.io'
+					)
+				),
 			]
 		];
 	}
