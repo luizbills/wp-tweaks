@@ -58,7 +58,8 @@ Support this plugin on [https://luizpb.com/donate/](https://luizpb.com/donate/)
 = 1.9.0 - 2023-01-10 =
 
 * Feature: Disable jQuery Migrate (enabled by default).
-* Feature: Security Headers.
+* Feature: Security Headers (disabled by default).
+* Tweak: improve some options.
 
 = 1.8.0 - 2022-12-11 =
 
