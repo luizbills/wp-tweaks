@@ -5,31 +5,34 @@
  * @package wp-tweaks
  */
 
-add_filter( 'xmlrpc_enabled', '__return_false' );
+add_filter( 'xmlrpc_enabled', '__return_false', 99 );
+add_filter( 'pings_open', '__return_false', 99 );
+add_filter( 'pre_update_option_enable_xmlrpc', '__return_false', 99 );
+add_filter( 'pre_option_enable_xmlrpc', '__return_zero', 99 );
+
 remove_action( 'wp_head', 'rsd_link' );
 remove_action( 'wp_head', 'wlwmanifest_link' );
 
-add_filter( 'xmlrpc_methods', 'disablePingback' );
-function wp_tweaks_disable_pingback ( $methods ) {
-	unset( $methods['pingback.ping'] );
-	return $methods;
+add_filter( 'xmlrpc_methods', 'wp_tweaks_unset_pingback_methods', 99 );
+function wp_tweaks_unset_pingback_methods ( $methods ) {
+	return [];
 }
 
-add_filter( 'wp_headers', 'wp_tweaks_remove_pingback_headers' );
+add_filter( 'wp_headers', 'wp_tweaks_remove_pingback_headers', 99 );
 function wp_tweaks_remove_pingback_headers ( $headers ) {
 	unset( $headers['X-Pingback'] );
 	return $headers;
 }
 
-add_filter( 'bloginfo_url', 'wp_tweaks_remove_pingback_url', 10, 2 );
+add_filter( 'bloginfo_url', 'wp_tweaks_remove_pingback_url', 99, 2 );
 function wp_tweaks_remove_pingback_url ( $output, $show ) {
-	return $show === 'pingback_url' ? '' : $output;
+	return 'pingback_url' === $show ? '' : $output;
 }
 
 add_filter( 'xmlrpc_call', 'wp_tweaks_remove_pingback_xmlrpc' );
 function wp_tweaks_remove_pingback_xmlrpc ( $action ) {
 	if ( $action === 'pingback.ping' ) {
-		wp_die( 
+		wp_die(
 			__( 'Pingbacks are not supported', 'wp-tweaks' ),
 			__( 'Not Allowed!', 'wp-tweaks' ),
 			[ 'response' => 403 ]
