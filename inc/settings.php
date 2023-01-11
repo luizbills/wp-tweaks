@@ -34,6 +34,7 @@ class WP_Tweaks_Settings {
 		foreach ( WP_Tweaks_Settings::get_settings() as $id => $_ ) {
 			if ( '_' === $id[0] ) continue;
 			if ( apply_filters( "wp_tweaks_skip_{$id}", false ) ) continue;
+
 			$file = WP_Tweaks::DIR . "/inc/tweaks/{$id}.php";
 			if ( file_exists( $file ) && ! empty( self::get_option( $id ) ) ) {
 				include_once $file;
@@ -235,6 +236,18 @@ class WP_Tweaks_Settings {
 				'default' => 'on',
 				'after' => esc_html__( 'Enable', 'wp-tweaks' )
 			],
+			'security-headers' => [
+				'label' => 'Add Security Headers',
+				'type' => 'checkbox_multi',
+				'choices' => [
+					'x-frame-options' => 'X-Frame-Options',
+					'strict-transport-security' => 'Strict-Transport-Security',
+					'x-content-type-options' => 'X-Content-Type-Options',
+					'x-xss-protection' => 'X-XSS-Protection',
+					'content-security-policy' => 'Content-Security-Policy',
+				],
+				'desc' => 'You can utilise this headers to make your site more secure. Once you have setup each header, check it using [securityHeaders.io](https://securityHeaders.io).'
+			]
 		];
 	}
 
