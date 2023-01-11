@@ -15,3 +15,6 @@ function wp_tweaks_disable_rest_api ( $flag ) {
 
 // remove <link rel="https://api.w.org/" ...> from <head>
 remove_action( 'wp_head', 'rest_output_link_wp_head' );
+
+// remove headers
+remove_action( 'template_redirect', 'rest_output_link_header', 11, 0 );
