@@ -1,6 +1,6 @@
 <?php
 /**
- * Disable xmlrpc.php
+ * Disable xmlrpc.php and pingbacks
  *
  * @package wp-tweaks
  */
@@ -49,3 +49,12 @@ function wp_tweaks_remove_trackback_rewrite_rules ( $rules ) {
 	}
 	return $rules;
 }
+
+add_action( 'admin_init', 'wp_tweaks_remove_trackbacks_support' );
+function wp_tweaks_remove_trackbacks_support () {
+    foreach ( get_post_types() as $post_type ) {
+        if ( post_type_supports( $post_type, 'comments' ) ) {
+            remove_post_type_support( $post_type, 'trackbacks' );
+        }
+    }
+} );
