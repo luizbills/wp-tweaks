@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-01-11T08:54:51-03:00\n"
+"POT-Creation-Date: 2023-01-16T10:07:02-03:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: wp-tweaks\n"
@@ -39,7 +39,7 @@ msgid "Caution!"
 msgstr ""
 
 #: inc/debug-warning.php:15
-msgid "The WordPress constants below are enabled and it is highly recommended that you disable them in production environments."
+msgid "The following WordPress constants are enabled and it is highly recommended that you disable them in production environments."
 msgstr ""
 
 #: inc/settings.php:18

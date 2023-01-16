@@ -12,7 +12,7 @@ function wp_tweaks_add_debug_warning () {
     $save_queries = defined( 'SAVEQUERIES' ) ? SAVEQUERIES : false;
     if ( $wp_debug || $save_queries ) {
         $title = esc_html__( 'Caution!', 'wp-tweaks' );
-        $message = esc_html__( 'The WordPress constants below are enabled and it is highly recommended that you disable them in production environments.', 'wp-tweaks' );
+        $message = esc_html__( 'The following WordPress constants are enabled and it is highly recommended that you disable them in production environments.', 'wp-tweaks' );
         $content = "<strong>$title</strong><br>$message<br>";
         $constants = [ 'WP_DEBUG', 'SAVEQUERIES' ];
         if ( $wp_debug ) {
