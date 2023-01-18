@@ -71,7 +71,7 @@ Support this plugin on [https://luizpb.com/donate/](https://luizpb.com/donate/)
 
 = 1.8.0 - 2022-12-11 =
 
-* Security: Now is possible disallow to render your site in a <frame>, <iframe>, <embed> or <object> outside of your site. Useful to avoid **click-jacking** attacks.
+* Security: Now is possible disallow to render your site in a `<frame>`, `<iframe>`, `<embed>` or `<object>` outside of your site. Useful to avoid **click-jacking** attacks.
 * Security: Now is possible disable the `/users` endpoint in the REST API, to prevent users enumeration.
 
 = 1.7.1 - 2022-07-29 =
