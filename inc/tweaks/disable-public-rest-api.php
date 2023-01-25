@@ -4,6 +4,7 @@
  *
  * @package wp-tweaks
  */
+if ( ! defined( 'WPINC' ) ) die();
 
 add_filter( 'rest_authentication_errors', 'wp_tweaks_disable_rest_api' );
 function wp_tweaks_disable_rest_api ( $flag ) {

@@ -4,6 +4,7 @@
  *
  * @package wp-tweaks
  */
+if ( ! defined( 'WPINC' ) ) die();
 
 add_action( 'admin_menu', 'wp_tweaks_change_menu_posts' );
 function wp_tweaks_change_menu_posts () {

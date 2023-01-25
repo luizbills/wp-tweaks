@@ -4,6 +4,7 @@
  *
  * @package wp-tweaks
  */
+if ( ! defined( 'WPINC' ) ) die();
 
 if ( is_admin() ) return;
 

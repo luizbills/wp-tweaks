@@ -4,6 +4,7 @@
  *
  * @package wp-tweaks
  */
+if ( ! defined( 'WPINC' ) ) die();
 
 add_action( 'admin_notices', 'wp_tweaks_add_debug_warning', 5 );
 function wp_tweaks_add_debug_warning () {

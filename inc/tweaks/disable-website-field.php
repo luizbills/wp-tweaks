@@ -4,6 +4,7 @@
  *
  * @package wp-tweaks
  */
+if ( ! defined( 'WPINC' ) ) die();
 
 add_filter( 'comment_form_default_fields', 'wp_tweaks_disable_website_field' );
 function wp_tweaks_disable_website_field ( $field ) {

@@ -4,6 +4,7 @@
  *
  * @package wp-tweaks
  */
+if ( ! defined( 'WPINC' ) ) die();
 
 add_filter( 'screen_layout_columns', 'wp_tweaks_dashboard_single_column' );
 function wp_tweaks_dashboard_single_column ( $columns ) {

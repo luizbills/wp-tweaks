@@ -4,6 +4,7 @@
  *
  * @package wp-tweaks
  */
+if ( ! defined( 'WPINC' ) ) die();
 
 add_action( 'wp', 'wp_tweaks_disable_author_query' );
 function wp_tweaks_disable_author_query () {

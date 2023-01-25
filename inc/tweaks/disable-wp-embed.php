@@ -4,6 +4,7 @@
  *
  * @package wp-tweaks
 */
+if ( ! defined( 'WPINC' ) ) die();
 
 // Remove the REST API endpoint.
 remove_action( 'rest_api_init', 'wp_oembed_register_route' );

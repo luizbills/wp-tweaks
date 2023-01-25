@@ -4,6 +4,7 @@
  *
  * @package wp-tweaks
  */
+if ( ! defined( 'WPINC' ) ) die();
 
 add_action( 'admin_init', 'wp_tweaks_remove_welcome_panel' );
 function wp_tweaks_remove_welcome_panel () {

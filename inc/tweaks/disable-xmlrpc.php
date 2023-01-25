@@ -4,6 +4,7 @@
  *
  * @package wp-tweaks
  */
+if ( ! defined( 'WPINC' ) ) die();
 
 add_filter( 'xmlrpc_enabled', '__return_false', 99 );
 add_filter( 'pings_open', '__return_false', 99 );

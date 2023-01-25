@@ -4,6 +4,7 @@
  *
  * @package wp-tweaks
  */
+if ( ! defined( 'WPINC' ) ) die();
 
 add_action( 'admin_bar_menu', 'wp_tweaks_remove_howdy', 11 );
 function wp_tweaks_remove_howdy ( $wp_admin_bar ) {

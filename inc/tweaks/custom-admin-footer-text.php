@@ -4,6 +4,7 @@
  *
  * @package wp-tweaks
  */
+if ( ! defined( 'WPINC' ) ) die();
 
 add_filter( 'admin_footer_text', 'wp_tweaks_custom_admin_footer_text' );
 function wp_tweaks_custom_admin_footer_text () {

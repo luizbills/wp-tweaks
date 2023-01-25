@@ -4,6 +4,8 @@
  *
  * @package wp-tweaks
  */
+if ( ! defined( 'WPINC' ) ) die();
+
 add_filter( 'rest_endpoints', 'wp_tweaks_disable_rest_api_users_endpoint' );
 function wp_tweaks_disable_rest_api_users_endpoint ( $endpoints ) {
 	if ( isset( $endpoints['/wp/v2/users'] ) ) {

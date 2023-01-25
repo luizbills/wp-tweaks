@@ -4,6 +4,7 @@
  *
  * @package wp-tweaks
  */
+if ( ! defined( 'WPINC' ) ) die();
 
 add_action( 'wp_headers', 'wp_tweaks_security_headers' );
 function wp_tweaks_security_headers ( $headers ) {

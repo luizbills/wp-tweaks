@@ -8,6 +8,7 @@
  *
  * @package wp-tweaks
  */
+if ( ! defined( 'WPINC' ) ) die();
 
 add_filter( 'sanitize_file_name', 'wp_tweaks_clear_file_name' );
 function wp_tweaks_clear_file_name ( $filename ) {

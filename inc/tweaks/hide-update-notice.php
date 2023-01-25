@@ -4,6 +4,7 @@
  *
  * @package wp-tweaks
  */
+if ( ! defined( 'WPINC' ) ) die();
 
 add_action( 'admin_head', 'wp_tweaks_hide_update_notice', 1 );
 function wp_tweaks_hide_update_notice () {

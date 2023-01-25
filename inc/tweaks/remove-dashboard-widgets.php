@@ -5,6 +5,8 @@
  *
  * @package wp-tweaks
  */
+if ( ! defined( 'WPINC' ) ) die();
+
 add_action( 'admin_init', 'wp_tweaks_remove_dashboard_widgets' );
 function wp_tweaks_remove_dashboard_widgets () {
 	remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );

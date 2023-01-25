@@ -4,5 +4,6 @@
  *
  * @package wp-tweaks
  */
+if ( ! defined( 'WPINC' ) ) die();
 
 unregister_widget( 'WP_Widget_Meta' );
