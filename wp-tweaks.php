@@ -27,8 +27,22 @@ class WP_Tweaks {
 	protected static $settings = null;
 
 	protected function __construct () {
-		$this->hooks();
 		$this->includes();
+		$this->hooks();
+	}
+
+	protected function hooks () {
+		add_action( 'init', [ $this, 'load_plugin_translations' ], 0 );
+		add_action( 'init', [ $this, 'load_tweaks' ] );
+	}
+
+	public function includes () {
+		require_once self::DIR . '/inc/lib/class-parsedown.php';
+		require_once self::DIR . '/inc/helpers.php';
+		require_once self::DIR . '/inc/classes/class-wp-tweaks-markdown.php';
+		require_once self::DIR . '/inc/classes/class-wp-tweaks-options-page.php';
+		require_once self::DIR . '/inc/classes/class-wp-tweaks-settings.php';
+
 		self::$settings = new WP_Tweaks_Settings();
 	}
 
@@ -48,24 +62,11 @@ class WP_Tweaks {
 		}
 	}
 
-	protected function includes () {
-		require_once self::DIR . '/inc/lib/class-parsedown.php';
-		require_once self::DIR . '/inc/helpers.php';
-		require_once self::DIR . '/inc/classes/class-wp-tweaks-markdown.php';
-		require_once self::DIR . '/inc/classes/class-wp-tweaks-options-page.php';
-		require_once self::DIR . '/inc/classes/class-wp-tweaks-settings.php';
-	}
-
-	protected function hooks () {
-		add_action( 'init', [ $this, 'load_plugin_translations' ], 0 );
-		add_action( 'init', [ $this, 'load_tweaks' ] );
-	}
-
 	public function load_plugin_translations () {
 		load_plugin_textdomain(
 			'wp-tweaks',
 			false,
-			dirname( plugin_basename( __FILE__ ) ) . '/languages'
+			dirname( plugin_basename( self::FILE ) ) . '/languages'
 		);
 	}
 

@@ -248,23 +248,21 @@ class WP_Tweaks_Settings extends WP_Tweaks_Options_Page {
 		return $field;
 	}
 
-	/**
-	 * @param array $options
-	 * @return bool
-	 */
+	public function handle_options () {
+		error_log( __METHOD__ );
+		parent::handle_options();
+	}
+
 	public function update_options ( $options ) {
+		error_log( __METHOD__ );
 		$updated = 0;
 		foreach ( $options as $key => $data ) {
-			error_log( $key . ' = ' . print_r( $data, true ) );
 			$updated += update_option( $key, $data['value'] ) ? 1 : 0;
 		}
+		error_log( "updated $updated options" );
 		return $updated > 0;
 	}
 
-	/**
-	 * @param string $field_id
-	 * @return mixed
-	 */
 	public function get_option ( $field_id ) {
 		$default = $this->get_field_default_value( $field_id );
 		return get_option( $this->field_prefix . $field_id, $default );

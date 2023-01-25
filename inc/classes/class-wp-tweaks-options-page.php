@@ -247,22 +247,22 @@ class WP_Tweaks_Options_Page {
 		);
 
 		$this->init_hooks();
-		$this->init_fields();
-		$this->init_admin_menu();
 	}
 
 	/**
 	 * @return void
 	 */
 	protected function init_hooks () {
-		add_action( 'init', [ $this, 'handle_options' ] );
+		add_action( 'init', [ $this, 'init_fields' ], 5 );
+		add_action( 'init', [ $this, 'handle_options' ], 5 );
 		add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
+		add_action( 'admin_menu', [ $this, 'add_menu_page' ], $this->menu_priority );
 	}
 
 	/**
 	 * @return void
 	 */
-	protected function init_fields () {
+	public function init_fields () {
 		$this->fields = apply_filters(
 			$this->hook_prefix . 'get_fields',
 			$this->fields ? $this->fields : $this->get_fields(),
@@ -330,13 +330,6 @@ class WP_Tweaks_Options_Page {
 		}
 
 		return apply_filters( $this->hook_prefix . 'prepare_field', $field );
-	}
-
-	/**
-	 * @return void
-	 */
-	protected function init_admin_menu () {
-		add_action( 'admin_menu', [ $this, 'add_menu_page' ], $this->menu_priority );
 	}
 
 	/**
