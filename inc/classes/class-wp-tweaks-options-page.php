@@ -227,6 +227,9 @@ class WP_Tweaks_Options_Page {
 	 * @return void
 	 */
 	public function init () {
+		if ( ! did_action( 'init' ) ) {
+			throw new \Exception( 'Please, don\'t use the ' . get_class( $this ) . ' class before "init" hook.' );
+		}
 		if ( ! $this->id ) {
 			throw new \Exception( 'Missing $id in ' . get_class( $this ) );
 		}
@@ -246,15 +249,15 @@ class WP_Tweaks_Options_Page {
 			$this->strings
 		);
 
+		$this->init_fields();
 		$this->init_hooks();
+		$this->handle_options();
 	}
 
 	/**
 	 * @return void
 	 */
 	protected function init_hooks () {
-		add_action( 'init', [ $this, 'init_fields' ], 5 );
-		add_action( 'init', [ $this, 'handle_options' ], 5 );
 		add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
 		add_action( 'admin_menu', [ $this, 'add_menu_page' ], $this->menu_priority );
 	}

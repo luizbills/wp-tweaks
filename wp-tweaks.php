@@ -33,7 +33,7 @@ class WP_Tweaks {
 
 	protected function hooks () {
 		add_action( 'init', [ $this, 'load_plugin_translations' ], 0 );
-		add_action( 'init', [ $this, 'load_tweaks' ] );
+		add_action( 'init', [ $this, 'load_tweaks' ], 10 );
 	}
 
 	public function includes () {
@@ -42,11 +42,11 @@ class WP_Tweaks {
 		require_once self::DIR . '/inc/classes/class-wp-tweaks-markdown.php';
 		require_once self::DIR . '/inc/classes/class-wp-tweaks-options-page.php';
 		require_once self::DIR . '/inc/classes/class-wp-tweaks-settings.php';
-
-		self::$settings = new WP_Tweaks_Settings();
 	}
 
 	public function load_tweaks () {
+		self::$settings = new WP_Tweaks_Settings();
+
 		foreach ( self::$settings->get_fields() as $field ) {
 			$id = $field['id'] ?? '';
 			if ( ! $id || '_' === substr( $id, 0, 1 ) ) continue;

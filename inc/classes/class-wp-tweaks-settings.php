@@ -249,17 +249,14 @@ class WP_Tweaks_Settings extends WP_Tweaks_Options_Page {
 	}
 
 	public function handle_options () {
-		error_log( __METHOD__ );
 		parent::handle_options();
 	}
 
 	public function update_options ( $options ) {
-		error_log( __METHOD__ );
 		$updated = 0;
 		foreach ( $options as $key => $data ) {
 			$updated += update_option( $key, $data['value'] ) ? 1 : 0;
 		}
-		error_log( "updated $updated options" );
 		return $updated > 0;
 	}
 
