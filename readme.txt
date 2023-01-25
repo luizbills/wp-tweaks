@@ -144,6 +144,10 @@ Support this plugin on [https://luizpb.com/donate/](https://luizpb.com/donate/)
 
 == Upgrade Notice ==
 
+= 2.0.0 =
+
+* The plugin now requires PHP 7.4+
+
 = 1.0.0 =
 
 * Initial release.
