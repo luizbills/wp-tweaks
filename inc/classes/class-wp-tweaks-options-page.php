@@ -249,8 +249,8 @@ class WP_Tweaks_Options_Page {
 			$this->strings
 		);
 
-		$this->init_fields();
 		$this->init_hooks();
+		$this->init_fields();
 		$this->handle_options();
 	}
 
