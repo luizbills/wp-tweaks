@@ -4,8 +4,8 @@ Tags: security, performance, tweaks, optimization, xmlrpc, emoji
 Donate link: https://www.luizpb.com/donate/
 Requires at least: 4.0
 Tested up to: 6.1
-Requires PHP: 5.4
-Stable tag: 1.9.2
+Requires PHP: 7.4
+Stable tag: 2.0.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -54,6 +54,12 @@ Support this plugin on [https://luizpb.com/donate/](https://luizpb.com/donate/)
 1. Go to Settings > Tweaks to configure the plugin.
 
 == Changelog ==
+
+= 2.0.0 - 2023-01-25 =
+
+* The plugin now requires PHP 7.4+
+* The "Custom admin footer text" option now accepts Markdown.
+* Clear the plugin options when the plugin is uninstalled.
 
 = 1.9.2 - 2023-01-18 =
 
