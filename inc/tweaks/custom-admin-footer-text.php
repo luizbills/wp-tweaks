@@ -20,7 +20,7 @@ function wp_tweaks_custom_admin_footer_text () {
 		$text = str_replace( $placeholder, $value, $text );
 	}
 
-	$text = WP_Tweaks::render_markdown( $text );
+	$text = WP_Tweaks_Markdown::render_line( $text );
 
 	echo apply_filters( 'wp_tweaks_admin_footer_text', $text );
 }

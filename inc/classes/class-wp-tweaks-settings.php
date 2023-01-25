@@ -1,23 +1,28 @@
 <?php
 
 if ( ! defined( 'WPINC' ) ) die();
-
-if ( ! class_exists( 'WP_Tweaks_Settings' ) ) :
+if ( class_exists( 'WP_Tweaks_Settings' ) ) return;
 
 class WP_Tweaks_Settings extends WP_Tweaks_Options_Page {
 	protected $parsedown = null;
 
-	public function __construct () {
+	public function __construct ( $init = true ) {
 		$this->id = 'wp-tweaks';
 		$this->menu_title = esc_html__( 'Tweaks', 'wp-tweaks' );
+		$this->page_title = esc_html__( 'Tweaks Options', 'wp-tweaks' );
 		$this->menu_parent = 'options-general.php';
 		$this->field_prefix = WP_Tweaks::PREFIX;
-
-		$this->init();
+		$this->hook_prefix = WP_Tweaks::PREFIX;
 
 		$this->strings['checkbox_enable'] = esc_html__( 'Enable', 'wp-tweaks' );
 
-		add_filter( $this->hook_prefix . 'prepare_field', 'render_markdown' );
+		$this->init();
+	}
+
+	protected function init_hooks () {
+		parent::init_hooks();
+
+		add_filter( $this->hook_prefix . 'prepare_field', [ $this, 'render_markdown' ] );
 		add_filter( 'plugin_action_links_' . plugin_basename( WP_Tweaks::FILE ), [ $this, 'add_settings_link' ] );
 	}
 
@@ -39,7 +44,7 @@ class WP_Tweaks_Settings extends WP_Tweaks_Options_Page {
 				'id' => 'custom-admin-footer-text',
 				'title' => __( 'Custom admin footer text', 'wp-tweaks' ),
 				'type' => 'textarea',
-				'default' => sprintf( '%1$s %2$s %3$s · ' . esc_html__( 'All Rights Reserved.', 'wp-tweaks' ), '{copyright}', '{current_year}', '{site_name}' ),
+				'default' => sprintf( '**%1$s %2$s %3$s · ' . esc_html__( 'All Rights Reserved.', 'wp-tweaks' ) . '**', '{copyright}', '{current_year}', '{site_name}' ),
 				/* translators: %1$s, %2$s and %3$s are variables */
 				'description' => sprintf( esc_html__( 'This field accepts Markdown and the following placeholders: %1$s prints the copyright symbol. %2$s prints the current year. %3$s prints your site name.', 'wp-tweaks' ), '`{copyright}`', '`{current_year}`', '`{site_name}`' ),
 				'height' => 100,
@@ -237,20 +242,31 @@ class WP_Tweaks_Settings extends WP_Tweaks_Options_Page {
 		return array_merge( [ $settings_link ], $links );
 	}
 
-	public function get_parsedown () {
-		if ( ! $this->parsedown ) {
-			$this->parsedown = new Parsedown();
-			$this->parsedown->setMarkupEscaped(true);
-		}
-		return $this->parsedown;
-	}
-
 	public function render_markdown ( $field ) {
 		$desc = $field['description'] ?? null;
-		$field['description'] = $desc ? $this->get_parsedown()->line( $desc ) : null;
-		if ( '' )
+		$field['description'] = $desc ? WP_Tweaks_Markdown::render_line( $desc ) : null;
 		return $field;
 	}
-}
 
-endif;
+	/**
+	 * @param array $options
+	 * @return bool
+	 */
+	public function update_options ( $options ) {
+		$updated = 0;
+		foreach ( $options as $key => $data ) {
+			error_log( $key . ' = ' . print_r( $data, true ) );
+			$updated += update_option( $key, $data['value'] ) ? 1 : 0;
+		}
+		return $updated > 0;
+	}
+
+	/**
+	 * @param string $field_id
+	 * @return mixed
+	 */
+	public function get_option ( $field_id ) {
+		$default = $this->get_field_default_value( $field_id );
+		return get_option( $this->field_prefix . $field_id, $default );
+	}
+}

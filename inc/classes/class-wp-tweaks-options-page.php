@@ -1,7 +1,4 @@
 <?php
-
-if ( ! class_exists( 'WP_Tweaks_Options_Page' ) ) :
-
 /**
  * WP_Tweaks_Options_Page class
  * based on https://github.com/luizbills/wp-options-page
@@ -11,6 +8,10 @@ if ( ! class_exists( 'WP_Tweaks_Options_Page' ) ) :
  * @version 1.0.0
  * @see https://github.com/luizbills/wp-options-page
  */
+
+if ( ! defined( 'WPINC' ) ) die();
+if ( class_exists( 'WP_Tweaks_Options_Page' ) ) return;
+
 class WP_Tweaks_Options_Page {
 	/**
 	 * @var string
@@ -235,15 +236,25 @@ class WP_Tweaks_Options_Page {
 		$this->option_name = $this->option_name ?? $this->id . '_options';
 		$this->field_prefix = $this->field_prefix ?? $this->id . '_';
 		$this->hook_prefix = $this->hook_prefix ?? $this->field_prefix;
-		$this->strings = [
-			'notice_error' => '<strong>Error</strong>: %s',
-			'checkbox_enable' => 'Enable',
-			'options_updated' => '<strong>' . __( 'Settings saved.' ) . '</strong>',
-		];
 
+		$this->strings = array_merge(
+			[
+				'notice_error' => '<strong>Error</strong>: %s',
+				'checkbox_enable' => 'Enable',
+				'options_updated' => '<strong>' . __( 'Settings saved.' ) . '</strong>',
+			],
+			$this->strings
+		);
+
+		$this->init_hooks();
 		$this->init_fields();
 		$this->init_admin_menu();
+	}
 
+	/**
+	 * @return void
+	 */
+	protected function init_hooks () {
 		add_action( 'init', [ $this, 'handle_options' ] );
 		add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
 	}
@@ -861,5 +872,3 @@ class WP_Tweaks_Options_Page {
 		<?php
 	}
 }
-
-endif;

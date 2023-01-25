@@ -3,9 +3,9 @@
  * Plugin Name: WP Tweaks
  * Plugin URI: https://github.com/luizbills/wp-tweaks
  * Description: Several opinionated WordPress tweaks focused in security and performance.
- * Version: 1.9.2
+ * Version: 2.0.0
  * Requires at least: 4.0
- * Requires PHP: 5.4
+ * Requires PHP: 7.4
  * Author: Luiz Bills
  * Author URI: https://luizpb.com/en
  * License: GPLv3
@@ -19,27 +19,46 @@ if ( ! defined( 'WPINC' ) ) die();
 if ( ! class_exists( 'WP_Tweaks' ) ) :
 
 class WP_Tweaks {
-
 	const FILE = __FILE__;
 	const DIR = __DIR__;
 	const PREFIX = 'wp_tweaks_';
 
-	protected static $_instance = null;
-	protected static $_assets_dir = 'assets';
+	protected static $instance= null;
+	protected static $settings = null;
 
 	protected function __construct () {
 		$this->hooks();
 		$this->includes();
+		self::$settings = new WP_Tweaks_Settings();
+	}
+
+	public function load_tweaks () {
+		foreach ( self::$settings->get_fields() as $field ) {
+			$id = $field['id'] ?? '';
+			if ( ! $id || '_' === substr( $id, 0, 1 ) ) continue;
+			if ( apply_filters( "wp_tweaks_skip_{$id}", false ) ) continue;
+
+			$tweak_file = WP_Tweaks::DIR . "/inc/tweaks/{$id}.php";
+			if ( file_exists( $tweak_file ) && ! empty( self::get_option( $id ) ) ) {
+				include_once $tweak_file;
+			}
+
+			// debug constants warning
+			include_once WP_Tweaks::DIR . '/inc/debug-warning.php';
+		}
 	}
 
 	protected function includes () {
-		require_once self::DIR . '/inc/better-wordpress-admin-api/framework/init.php';
+		require_once self::DIR . '/inc/lib/class-parsedown.php';
 		require_once self::DIR . '/inc/helpers.php';
-		require_once self::DIR . '/inc/settings.php';
+		require_once self::DIR . '/inc/classes/class-wp-tweaks-markdown.php';
+		require_once self::DIR . '/inc/classes/class-wp-tweaks-options-page.php';
+		require_once self::DIR . '/inc/classes/class-wp-tweaks-settings.php';
 	}
 
-	public function hooks () {
+	protected function hooks () {
 		add_action( 'init', [ $this, 'load_plugin_translations' ], 0 );
+		add_action( 'init', [ $this, 'load_tweaks' ] );
 	}
 
 	public function load_plugin_translations () {
@@ -50,19 +69,15 @@ class WP_Tweaks {
 		);
 	}
 
-	public static function get_asset_url ( $file_path ) {
-		return plugins_url( self::$_assets_dir . '/' . $file_path, self::FILE );
-	}
-
 	public static function get_option ( $key ) {
-		return WP_Tweaks_Settings::get_option( $key );
+		return self::$settings->get_option( $key );
 	}
 
 	public static function get_instance () {
-		if ( null === self::$_instance ) {
-			self::$_instance = new self();
+		if ( null === self::$instance) {
+			self::$instance = new self();
 		}
-		return self::$_instance;
+		return self::$instance;
 	}
 }
 
