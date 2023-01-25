@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Tweaks\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-tweaks\n"
-"POT-Creation-Date: 2023-01-16T10:07:02-03:00\n"
-"PO-Revision-Date: 2023-01-16 10:07-0300\n"
+"POT-Creation-Date: 2023-01-25T12:29:28-03:00\n"
+"PO-Revision-Date: 2023-01-25 12:30-0300\n"
 "Last-Translator: \n"
 "Language-Team: Português do Brasil\n"
 "Language: pt_BR\n"
@@ -36,186 +36,171 @@ msgstr "Luiz Bills"
 msgid "https://luizpb.com/en"
 msgstr "https://luizpb.com/pt/"
 
-#: inc/debug-warning.php:14
-msgid "Caution!"
-msgstr "Atenção!"
-
-#: inc/debug-warning.php:15
-msgid ""
-"The following WordPress constants are enabled and it is highly recommended "
-"that you disable them in production environments."
-msgstr ""
-"As seguintes constantes do WordPress estão ativadas e é altamente "
-"recomendado que você desative-as em ambientes de produção."
-
-#: inc/settings.php:18
+#: inc/classes/class-wp-tweaks-settings.php:11
 msgid "Tweaks"
 msgstr "Ajustes"
 
-#: inc/settings.php:51
-msgid "Change menu \"Posts\" to \"Blog\""
-msgstr "Mudar menu \"Posts\" para \"Blog\""
+#: inc/classes/class-wp-tweaks-settings.php:12
+msgid "Tweaks Options"
+msgstr "Opções de Ajustes"
 
-#: inc/settings.php:54 inc/settings.php:60 inc/settings.php:74
-#: inc/settings.php:80 inc/settings.php:91 inc/settings.php:102
-#: inc/settings.php:108 inc/settings.php:114 inc/settings.php:120
-#: inc/settings.php:127 inc/settings.php:134 inc/settings.php:140
-#: inc/settings.php:146 inc/settings.php:152 inc/settings.php:158
-#: inc/settings.php:164 inc/settings.php:170 inc/settings.php:176
-#: inc/settings.php:182 inc/settings.php:188 inc/settings.php:194
-#: inc/settings.php:200 inc/settings.php:206 inc/settings.php:212
-#: inc/settings.php:218 inc/settings.php:224 inc/settings.php:230
+#: inc/classes/class-wp-tweaks-settings.php:17
 msgid "Enable"
 msgstr "Ativar"
 
-#: inc/settings.php:57
+#: inc/classes/class-wp-tweaks-settings.php:33
+msgid "Change menu \"Posts\" to \"Blog\""
+msgstr "Mudar menu \"Posts\" para \"Blog\""
+
+#: inc/classes/class-wp-tweaks-settings.php:39
 msgid "Clear uploaded file names"
 msgstr "Limpar nome dos arquivos enviados"
 
-#: inc/settings.php:63
+#: inc/classes/class-wp-tweaks-settings.php:45
 msgid "Custom admin footer text"
 msgstr "Texto do rodapé da área administrativa"
 
-#: inc/settings.php:65
+#: inc/classes/class-wp-tweaks-settings.php:47
 msgid "All Rights Reserved."
 msgstr "Todos os Direitos Reservados."
 
 #. translators: %1$s, %2$s and %3$s are variables
-#: inc/settings.php:67
+#: inc/classes/class-wp-tweaks-settings.php:49
 msgid ""
-"%1$s prints the copyright symbol. %2$s prints the current year. %3$s prints "
-"your site name."
+"This field accepts Markdown and the following placeholders: %1$s prints the "
+"copyright symbol. %2$s prints the current year. %3$s prints your site name."
 msgstr ""
-"%1$s mostra um simbolo de copyright. %2$s mostra o ano atual. %3$s mostra o "
-"nome do seu site."
+"Este campo aceita Markdown e os seguintes placeholders: %1$s mostra um "
+"simbolo de copyright. %2$s mostra o ano atual. %3$s mostra o nome do seu "
+"site."
 
-#: inc/settings.php:71
+#: inc/classes/class-wp-tweaks-settings.php:54
 msgid "Dashboard with only one column"
 msgstr "Painel com apenas uma coluna"
 
-#: inc/settings.php:77
+#: inc/classes/class-wp-tweaks-settings.php:60
 msgid "Disable author query"
 msgstr "Desativar query de autores"
 
 #. translators: %s is an example URL
-#: inc/settings.php:83
+#: inc/classes/class-wp-tweaks-settings.php:65
 msgid "disables author search via url (e.g: %s)"
 msgstr "desativa a pesquisa de autores por url (ex: %s)"
 
-#: inc/settings.php:88
+#: inc/classes/class-wp-tweaks-settings.php:71
 msgid "Disable author pages"
 msgstr "Desativar páginas de autores"
 
 #. translators: %s is an example URL
-#: inc/settings.php:94
+#: inc/classes/class-wp-tweaks-settings.php:76
 msgid "disables author pages (e.g: %s)"
 msgstr "desativa páginas de autores (ex: %s)"
 
-#: inc/settings.php:99
+#: inc/classes/class-wp-tweaks-settings.php:82
 msgid "Disable WordPress emojis"
 msgstr "Desativar emojis do WordPress"
 
-#: inc/settings.php:105
+#: inc/classes/class-wp-tweaks-settings.php:88
 msgid "Disable jQuery Migrate"
 msgstr "Desativar jQuery Migrate"
 
-#: inc/settings.php:111
+#: inc/classes/class-wp-tweaks-settings.php:94
 msgid "Remove \"meta widget\""
 msgstr "Remover \"widget meta\""
 
-#: inc/settings.php:117
+#: inc/classes/class-wp-tweaks-settings.php:100
 msgid "Remove public REST API access"
 msgstr "Remover acesso publico à REST API"
 
-#: inc/settings.php:121
+#: inc/classes/class-wp-tweaks-settings.php:103
 msgid "only logged in users will have access to REST API"
 msgstr "apenas usuários autentificados terão acesso à REST API"
 
-#: inc/settings.php:124
+#: inc/classes/class-wp-tweaks-settings.php:107
 msgid "Remove users endpoint from REST API"
 msgstr "Remover endpoint users da REST API"
 
-#: inc/settings.php:128
+#: inc/classes/class-wp-tweaks-settings.php:110
 msgid "Disable users enumeration via REST API."
 msgstr "Desativar a enumeração de usuários pela REST API."
 
-#: inc/settings.php:131
+#: inc/classes/class-wp-tweaks-settings.php:114
 msgid "Remove \"website\" field in comment form"
 msgstr "Remover campo \"site\" no formulário de comentário"
 
-#: inc/settings.php:137
+#: inc/classes/class-wp-tweaks-settings.php:120
 msgid "Remove oEmbed support"
 msgstr "Remover suporte ao oEmbed"
 
-#: inc/settings.php:143
+#: inc/classes/class-wp-tweaks-settings.php:126
 msgid "Remove XML-RPC and Pingbacks support"
 msgstr "Remover suporte à XML-RPC e Pingbacks"
 
-#: inc/settings.php:149
+#: inc/classes/class-wp-tweaks-settings.php:132
 msgid "Disallow file edit"
 msgstr "Proibir edição de arquivos"
 
-#: inc/settings.php:155
+#: inc/classes/class-wp-tweaks-settings.php:138
 msgid "Generic login error message"
 msgstr "Mensagem de erro genérica no login"
 
-#: inc/settings.php:161
+#: inc/classes/class-wp-tweaks-settings.php:144
 msgid "Show admin bar for admin users only"
 msgstr "Mostrar barra de administrador apenas para administradores"
 
-#: inc/settings.php:167
+#: inc/classes/class-wp-tweaks-settings.php:150
 msgid "Hide WordPress update nag to all but admins"
 msgstr "Mostrar notificação de atualizações apenas para administradores"
 
-#: inc/settings.php:173
+#: inc/classes/class-wp-tweaks-settings.php:156
 msgid "Hide WordPress version in admin footer to all but admins"
 msgstr ""
 "Mostrar versão do WordPress no rodapé da área administrativa apenas para "
 "administradores"
 
-#: inc/settings.php:179
+#: inc/classes/class-wp-tweaks-settings.php:162
 msgid "Remove \"Comments\" from admin bar"
 msgstr "Remover \"Comentários\" da barra de administrador"
 
-#: inc/settings.php:185
+#: inc/classes/class-wp-tweaks-settings.php:168
 msgid "Remove \"WordPress Logo\" from admin bar"
 msgstr "Remover \"Logo do WordPress\" da barra de administrador"
 
-#: inc/settings.php:191
+#: inc/classes/class-wp-tweaks-settings.php:174
 msgid "Remove \"+ New\" button from admin bar"
 msgstr "Remover botão \"+ Novo\" da barra de administrador"
 
-#: inc/settings.php:197
+#: inc/classes/class-wp-tweaks-settings.php:180
 msgid "Remove some default dashboard widgets (useless for clients)"
 msgstr ""
 "Remover alguns widgets padrões do Painel (inúteis para usuários leigos)"
 
-#: inc/settings.php:203
+#: inc/classes/class-wp-tweaks-settings.php:186
 msgid "Remove \"Howdy\" from admin bar"
 msgstr "Remover \"Olá\" da barra de administrador"
 
-#: inc/settings.php:209
+#: inc/classes/class-wp-tweaks-settings.php:192
 msgid "Remove query string from static scripts"
 msgstr "Remover query string dos códigos estáticos"
 
-#: inc/settings.php:215
+#: inc/classes/class-wp-tweaks-settings.php:198
 msgid "Remove"
 msgstr "Remover"
 
-#: inc/settings.php:221
+#: inc/classes/class-wp-tweaks-settings.php:204
 msgid "Remove Dashboard \"welcome panel\""
 msgstr "Remover \"Boas-vindas\" do Painel"
 
-#: inc/settings.php:227
+#: inc/classes/class-wp-tweaks-settings.php:210
 msgid "Remove WordPress version number in frontend"
 msgstr "Remover versão do WordPress no frontend"
 
-#: inc/settings.php:233
+#: inc/classes/class-wp-tweaks-settings.php:216
 msgid "Security Headers"
 msgstr "Headers de Segurança"
 
 #. translators: %s is the securityHeaders.io URL
-#: inc/settings.php:244
+#: inc/classes/class-wp-tweaks-settings.php:227
 msgid ""
 "You can utilise this headers to make your site more secure. Once you have "
 "setup each header, check it using [securityHeaders.io](%s)."
@@ -223,27 +208,39 @@ msgstr ""
 "Você pode utilizar esses headers para tornar seu site mais seguro. Após "
 "configurar cada header, confira-os usando [securityHeaders.io](%s)."
 
-#: inc/settings.php:258
+#: inc/classes/class-wp-tweaks-settings.php:241
 msgid "Settings"
 msgstr "Configurações"
 
-#: inc/tweaks/change-posts-menu-name.php:13
+#: inc/debug-warning.php:15
+msgid "Caution!"
+msgstr "Atenção!"
+
+#: inc/debug-warning.php:16
+msgid ""
+"The following WordPress constants are enabled and it is highly recommended "
+"that you disable them in production environments."
+msgstr ""
+"As seguintes constantes do WordPress estão ativadas e é altamente "
+"recomendado que você desative-as em ambientes de produção."
+
+#: inc/tweaks/change-posts-menu-name.php:14
 msgid "Blog"
 msgstr "Blog"
 
-#: inc/tweaks/disable-xmlrpc.php:36
+#: inc/tweaks/disable-xmlrpc.php:37
 msgid "Pingbacks are not supported"
 msgstr "Pingbacks não são suportados"
 
-#: inc/tweaks/disable-xmlrpc.php:37
+#: inc/tweaks/disable-xmlrpc.php:38
 msgid "Not Allowed!"
 msgstr "Não permitido!"
 
-#: inc/tweaks/generic-login-errors.php:9
+#: inc/tweaks/generic-login-errors.php:11
 msgid "ERROR"
 msgstr "ERRO"
 
-#: inc/tweaks/generic-login-errors.php:9
+#: inc/tweaks/generic-login-errors.php:11
 msgid "Incorrect email address or password."
 msgstr "Usuário ou senha incorretos."
 
