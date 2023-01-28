@@ -19,54 +19,83 @@
 # ----- START EDITING HERE -----
 
 # The slug of your WordPress.org plugin
+# You need publish your plugin first: https://wordpress.org/plugins/developers/add/
 WP_PLUGIN_SLUG="wp-tweaks"
 
-# GITHUB user who owns the repo
+# The GITHUB repository
+# format: username/repository (example: luizbills/wp-tweaks)
 GITHUB_REPO_SLUG="luizbills/wp-tweaks"
 
-# main Github branch
-MAIN_BRANCH="master";
+# The main Github repository branch
+MAIN_BRANCH="master"
 
-# folder with plugin icon, banner and screenshots used in https://wordpress.org
+# directory with plugin icon, banner and screenshots used in https://wordpress.org
 PLUGIN_ASSETS_DIR=".wordpress-org"
 
 # ----- STOP EDITING HERE -----
 
+# Parse cli arguments
+ONLY_TRUNK="no"
+POSITIONAL_ARGS=()
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    --only-trunk)
+      ONLY_TRUNK="yes"
+      shift
+      ;;
+    -*|--*)
+      echo "Unknown option $1"
+      exit 1
+      ;;
+	*)
+      POSITIONAL_ARGS+=("$1") # save positional arg
+      shift # past argument
+      ;;
+  esac
+done
+set -- "${POSITIONAL_ARGS[@]}" # restore positional parameters
+
 set -e
 clear >$( tty ) # clear the terminal
 
-REMOTE_README_TXT="https://raw.githubusercontent.com/${GITHUB_REPO_SLUG}/${MAIN_BRANCH}/readme.txt"
-STABLE_TAG=$( curl -m 3 -s $REMOTE_README_TXT | sed -n 's/Stable tag: \([0-9]\.[0-9]\.[0-9]*\).*/\1/p' )
-
-trim_spaces() {
-    # Usage: trim_spaces "   example   string    "
-    : "${1#"${1%%[![:space:]]*}"}"
-    : "${_%"${_##*[![:space:]]}"}"
-    printf '%s\n' "$_"
-}
-STABLE_TAG=$( trim_spaces $STABLE_TAG )
-
-# ASK INFO
 echo "--------------------------------------------"
 echo "      Github to WordPress.org RELEASER      "
 echo "--------------------------------------------"
-read -p "RELEASE VERSION$( [ $STABLE_TAG ] && echo " [$STABLE_TAG]" || echo "" ): " VERSION
 
-VERSION=${VERSION:-$STABLE_TAG}
+if [ "$ONLY_TRUNK" == "yes" ];
+then
+	read -p "PRESS [ENTER] TO BEGIN UPDATING THE \"trunk\""
+else
+	REMOTE_README_TXT="https://raw.githubusercontent.com/${GITHUB_REPO_SLUG}/${MAIN_BRANCH}/readme.txt"
+	STABLE_TAG=$( curl -m 3 -s $REMOTE_README_TXT | sed -n 's/Stable tag: \([0-9]\.[0-9]\.[0-9]*\).*/\1/p' )
 
-echo "--------------------------------------------"
-echo ""
-echo "Before continuing, confirm that you have done the following ..."
-echo ""
-read -p " - Added a changelog for "${VERSION}"?"
-read -p " - Set version in the main file to "${VERSION}"?"
-read -p " - Set stable tag in the readme.txt file to "${VERSION}"?"
-read -p " - Updated the POT file?"
-read -p " - Committed all changes up to GITHUB?"
-echo ""
-read -p "PRESS [ENTER] TO BEGIN RELEASING "${VERSION}
+	trim_spaces() {
+		# Usage: trim_spaces "   example   string    "
+		: "${1#"${1%%[![:space:]]*}"}"
+		: "${_%"${_##*[![:space:]]}"}"
+		printf '%s\n' "$_"
+	}
+	STABLE_TAG=$( trim_spaces $STABLE_TAG )
 
-clear >$( tty ) # clear the terminal
+	# ASK INFO
+	read -p "RELEASE VERSION$( [ $STABLE_TAG ] && echo " [$STABLE_TAG]" || echo "" ): " VERSION
+
+	VERSION=${VERSION:-$STABLE_TAG}
+
+	echo "--------------------------------------------"
+	echo ""
+	echo "Before continuing, confirm that you have done the following:"
+	echo ""
+	read -p " - Added a changelog for "${VERSION}"?"
+	read -p " - Set version in the main file to "${VERSION}"?"
+	read -p " - Set stable tag in the readme.txt file to "${VERSION}"?"
+	read -p " - Updated the POT file?"
+	read -p " - Committed all changes up to GITHUB?"
+	echo ""
+	read -p "PRESS [ENTER] TO BEGIN RELEASING "${VERSION}
+
+	clear >$( tty ) # clear the terminal
+fi
 
 SVN_REPO="http://plugins.svn.wordpress.org/${WP_PLUGIN_SLUG}/"
 GIT_REPO="https://github.com/${GITHUB_REPO_SLUG}.git"
@@ -101,14 +130,14 @@ git checkout ${BRANCH} || { echo "Unable to checkout branch."; exit 1; }
 
 if [[ -f "composer.json" ]];
 then
-	echo "Installing composer packages"
-	composer install --no-dev || { echo "Unable to install composer packages."; exit 1; }
+	echo "Installing composer packages..."
+	composer install --no-ansi --no-dev --no-interaction --no-plugins --no-progress --no-scripts --optimize-autoloader || { echo "Unable to install composer packages."; exit 1; }
 fi
 
 if [[ -f "package.json" ]];
 then
-	echo "Installing composer packages"
-	npm install || { echo "Unable to install npm packages."; exit 1; }
+	echo "Installing NPM packages..."
+	npm ci --no-progress || { echo "Unable to install npm packages."; exit 1; }
 fi
 
 echo "Looking for PHP syntax errors"
@@ -172,13 +201,16 @@ cp -a "${TEMP_GITHUB_REPO}/." trunk/
 
 if [[ -d "trunk/${PLUGIN_ASSETS_DIR}" ]];
 then
-	echo "Checking Plugin icon, banner and screenshots ..."
+	echo "Checking Plugin icon, banner and screenshots..."
 	rm -Rf assets/
 	mv trunk/$PLUGIN_ASSETS_DIR assets
 fi
 
-# DELETE VERSION TAG
-rm -Rf tags/${VERSION}
+if [ "$ONLY_TRUNK" == "no" ];
+then
+	# DELETE VERSION TAG
+	rm -Rf tags/${VERSION}
+fi
 
 # DO THE ADD ALL NOT KNOWN FILES UNIX COMMAND
 svn add --force * --auto-props --parents --depth infinity -q
@@ -192,9 +224,12 @@ do
     svn rm --force "$MISSING_PATH"
 done
 
-# COPY TRUNK TO TAGS/$VERSION
-echo "Copying trunk to new tag"
-svn copy trunk tags/${VERSION} || { echo "Unable to create tag."; exit 1; }
+if [ "$ONLY_TRUNK" == "no" ];
+then
+	# COPY TRUNK TO TAGS/$VERSION
+	echo "Copying trunk to new tag"
+	svn copy trunk tags/${VERSION} || { echo "Unable to create tag."; exit 1; }
+fi
 
 clear >$( tty ) # clear the terminal
 
@@ -204,20 +239,32 @@ svn status
 
 # PROMPT USER
 echo ""
-read -p "PRESS [ENTER] TO COMMIT RELEASE "${VERSION}" TO WORDPRESS.ORG"
+if [ "$ONLY_TRUNK" == "no" ];
+then
+	read -p "PRESS [ENTER] TO COMMIT RELEASE "${VERSION}" TO WORDPRESS.ORG"
+else
+	read -p "PRESS [ENTER] TO UPDATE THE \"trunk\" ON WORDPRESS.ORG"
+fi
 echo ""
-
 clear >$( tty ) # clear the terminal
 
 # DEPLOY
 echo ""
 echo "Committing to WordPress.org...this may take a while..."
-svn commit -m "Release "${VERSION}", see readme.txt for the changelog." || { echo "Unable to commit."; exit 1; }
+
+if [ "$ONLY_TRUNK" == "no" ];
+then
+	COMMIT_MESSAGE="Release "${VERSION}", see readme.txt for the changelog."
+else
+	COMMIT_MESSAGE="Update trunk."
+fi
+
+svn commit -m "$COMMIT_MESSAGE" || { echo "Unable to commit."; exit 1; }
 
 # REMOVE THE TEMP DIRS
-echo "CLEANING UP"
+echo "CLEANING UP..."
 rm -Rf "$TEMP_GITHUB_REPO"
 rm -Rf "$TEMP_SVN_REPO"
 
 # DONE, BYE
-echo "RELEASER DONE :D"
+echo "RELEASER DONE!"
