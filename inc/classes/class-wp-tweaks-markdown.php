@@ -3,8 +3,6 @@
 if ( ! defined( 'WPINC' ) ) die();
 if ( class_exists( 'WP_Tweaks_Markdown' ) ) return;
 
-use Parsedown;
-
 class WP_Tweaks_Markdown {
 	protected static $instance = null;
 
@@ -23,10 +21,6 @@ class WP_Tweaks_Markdown {
 			self::$instance = new self();
 		}
 		return self::$instance;
-	}
-
-	public static function render_block ( $string ) {
-		return self::get_instance()->parsedown->text( $string );
 	}
 
 	public static function render_line ( $string ) {
