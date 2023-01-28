@@ -37,10 +37,18 @@ class WP_Tweaks {
 	}
 
 	public function includes () {
-		require self::DIR . '/vendor/autoload.php';
+		$this->include_autoload();
 		require_once self::DIR . '/inc/helpers.php';
 		require_once self::DIR . '/inc/classes/class-wp-tweaks-markdown.php';
 		require_once self::DIR . '/inc/classes/class-wp-tweaks-settings.php';
+	}
+
+	protected function include_autoload () {
+		$autoload = self::DIR . '/vendor/autoload.php';
+		if ( ! file_exists( $autoload ) ) {
+			wp_die( '<strong>Error</strong>: Composer packages are not installed. Please install the plugin via WordPress Repository or run "<code>composer install</code>".' );
+		}
+		require $autoload;
 	}
 
 	public function load_tweaks () {
