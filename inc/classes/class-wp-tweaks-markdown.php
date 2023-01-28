@@ -3,6 +3,8 @@
 if ( ! defined( 'WPINC' ) ) die();
 if ( class_exists( 'WP_Tweaks_Markdown' ) ) return;
 
+use Parsedown;
+
 class WP_Tweaks_Markdown {
 	protected static $instance = null;
 

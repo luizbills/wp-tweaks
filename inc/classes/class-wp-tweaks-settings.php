@@ -3,7 +3,7 @@
 if ( ! defined( 'WPINC' ) ) die();
 if ( class_exists( 'WP_Tweaks_Settings' ) ) return;
 
-class WP_Tweaks_Settings extends WP_Tweaks_Options_Page {
+class WP_Tweaks_Settings extends WP_Options_Page {
 	protected $parsedown = null;
 
 	public function __construct ( $init = true ) {
@@ -21,9 +21,14 @@ class WP_Tweaks_Settings extends WP_Tweaks_Options_Page {
 
 	protected function init_hooks () {
 		parent::init_hooks();
-
-		add_filter( $this->hook_prefix . 'prepare_field', [ $this, 'render_markdown' ] );
-		add_filter( 'plugin_action_links_' . plugin_basename( WP_Tweaks::FILE ), [ $this, 'add_settings_link' ] );
+		add_filter(
+			$this->hook_prefix . 'prepare_field',
+			[ $this, 'render_markdown' ]
+		);
+		add_filter(
+			'plugin_action_links_' . plugin_basename( WP_Tweaks::FILE ),
+			[ $this, 'add_settings_link' ]
+		);
 	}
 
 	public function get_fields () {

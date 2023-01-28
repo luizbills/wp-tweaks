@@ -1,0 +1,12 @@
+{
+  "require": {
+    "php": ">=7.4",
+    "luizbills/wp-options-page": "^0.1.0",
+    "erusev/parsedown": "^1.7"
+  },
+  "scripts": {
+    "deploy": "./scripts/deploy",
+    "update-trunk": "./scripts/deploy --only-trunk",
+    "make-pot": "./scripts/makepot"
+  }
+}

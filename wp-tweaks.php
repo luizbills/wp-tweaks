@@ -37,10 +37,9 @@ class WP_Tweaks {
 	}
 
 	public function includes () {
-		require_once self::DIR . '/inc/lib/class-parsedown.php';
+		require self::DIR . '/vendor/autoload.php';
 		require_once self::DIR . '/inc/helpers.php';
 		require_once self::DIR . '/inc/classes/class-wp-tweaks-markdown.php';
-		require_once self::DIR . '/inc/classes/class-wp-tweaks-options-page.php';
 		require_once self::DIR . '/inc/classes/class-wp-tweaks-settings.php';
 	}
 
