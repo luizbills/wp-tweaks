@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "197e7fc24ae9d6026f810c788f3ceeb9",
+    "content-hash": "2d1d617c4164f56faa3a261891ad0355",
     "packages": [
         {
             "name": "erusev/parsedown",
@@ -58,16 +58,16 @@
         },
         {
             "name": "luizbills/wp-options-page",
-            "version": "v0.1.0",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luizbills/wp-options-page.git",
-                "reference": "ebff63f96ef35d12cd8eb9602123f58329a836df"
+                "reference": "836b50111eb663500866f4c33e0d57eb286c6f28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luizbills/wp-options-page/zipball/ebff63f96ef35d12cd8eb9602123f58329a836df",
-                "reference": "ebff63f96ef35d12cd8eb9602123f58329a836df",
+                "url": "https://api.github.com/repos/luizbills/wp-options-page/zipball/836b50111eb663500866f4c33e0d57eb286c6f28",
+                "reference": "836b50111eb663500866f4c33e0d57eb286c6f28",
                 "shasum": ""
             },
             "require": {
@@ -102,15 +102,15 @@
             "support": {
                 "docs": "https://github.com/luizbills/wp-options-page/wiki",
                 "issues": "https://github.com/luizbills/wp-options-page/issues",
-                "source": "https://github.com/luizbills/wp-options-page/tree/v0.1.0"
+                "source": "https://github.com/luizbills/wp-options-page/tree/v0.2.0"
             },
             "funding": [
                 {
                     "url": "https://www.luizpb.com/donate/",
-                    "type": "other"
+                    "type": "donate"
                 }
             ],
-            "time": "2023-01-28T15:01:22+00:00"
+            "time": "2023-01-30T18:11:36+00:00"
         }
     ],
     "packages-dev": [],
