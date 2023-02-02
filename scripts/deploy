@@ -27,7 +27,7 @@ WP_PLUGIN_SLUG="wp-tweaks"
 GITHUB_REPO_SLUG="luizbills/wp-tweaks"
 
 # The main Github repository branch
-MAIN_BRANCH="master"
+MAIN_BRANCH="main"
 
 # directory with plugin icon, banner and screenshots used in https://wordpress.org
 PLUGIN_ASSETS_DIR=".wordpress-org"
