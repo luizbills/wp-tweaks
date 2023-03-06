@@ -21,9 +21,13 @@ class WP_Tweaks_Settings extends WP_Options_Page {
 
 	protected function init_hooks () {
 		parent::init_hooks();
-		add_filter(
-			$this->hook_prefix . 'prepare_field',
+		$this->add_filter(
+			'prepare_field',
 			[ $this, 'render_markdown' ]
+		);
+		$this->add_filter(
+			'prepare_field_content_editor',
+			[ $this, 'prepare_field_content_editor' ]
 		);
 		add_filter(
 			'plugin_action_links_' . plugin_basename( WP_Tweaks::FILE ),
@@ -48,11 +52,12 @@ class WP_Tweaks_Settings extends WP_Options_Page {
 			[
 				'id' => 'custom-admin-footer-text',
 				'title' => __( 'Custom admin footer text', 'wp-tweaks' ),
-				'type' => 'textarea',
-				'default' => sprintf( '**%1$s %2$s %3$s · ' . esc_html__( 'All Rights Reserved.', 'wp-tweaks' ) . '**', '{copyright}', '{current_year}', '{site_name}' ),
+				'type' => 'content_editor',
+				'default' => sprintf( '%1$s %2$s %3$s · ' . esc_html__( 'All Rights Reserved.', 'wp-tweaks' ), '{copyright}', '{current_year}', '{site_name}' ),
 				/* translators: %1$s, %2$s and %3$s are variables */
-				'description' => sprintf( esc_html__( 'This field accepts Markdown and the following placeholders: %1$s prints the copyright symbol. %2$s prints the current year. %3$s prints your site name.', 'wp-tweaks' ), '`{copyright}`', '`{current_year}`', '`{site_name}`' ),
-				'height' => 100,
+				'description' => sprintf( esc_html__( 'This field accepts the following placeholders: %1$s prints the copyright symbol. %2$s prints the current year. %3$s prints your site name.', 'wp-tweaks' ), '`{copyright}`', '`{current_year}`', '`{site_name}`' ),
+				'rows' => 3,
+				'wpautop' => false,
 			],
 			[
 				'id' => 'dashboard-single-column-layout',
@@ -253,10 +258,6 @@ class WP_Tweaks_Settings extends WP_Options_Page {
 		return $field;
 	}
 
-	public function handle_options () {
-		parent::handle_options();
-	}
-
 	public function update_options ( $options ) {
 		$updated = 0;
 		foreach ( $options as $key => $data ) {
@@ -268,5 +269,37 @@ class WP_Tweaks_Settings extends WP_Options_Page {
 	public function get_option ( $field_id ) {
 		$default = $this->get_field_default_value( $field_id );
 		return get_option( $this->field_prefix . $field_id, $default );
+	}
+
+	protected function render_field_content_editor ( $field ) {
+		$id = $field['id'];
+		$value = $this->get_field_value( $field );
+		$name = $field['name'];
+		$settings = [
+			'textarea_rows' => $field['rows'] ?? 5,
+			'wpautop' => $field['wpautop'] ?? true,
+		];
+		$desc = $field['description'];
+		$describedby = $desc ? 'aria-describedby="' . \esc_attr( $id ) . '-description"' : '';
+
+		$this->open_wrapper( $field );
+		\wp_editor( $value, $name, $settings );
+
+		if ( $desc ) : ?>
+		<p class="description" id="<?php echo \esc_attr( $name ); ?>-description"><?php echo $desc ?></p>
+		<?php endif; ?>
+
+		<?php $this->do_action( 'after_field_input', $field ); ?>
+
+		<?php $this->close_wrapper( $field );
+	}
+
+	public function prepare_field_content_editor ( $field ) {
+		error_log( print_r( $_POST, true ) );
+		if ( 'content_editor' === $field['type'] ) {
+			$field['__sanitize'] = null;
+			//error_log( print_r( $field, true ) );
+		}
+		return $field;
 	}
 }
