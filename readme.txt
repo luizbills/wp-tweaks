@@ -58,7 +58,6 @@ Support this plugin on [https://luizpb.com/donate/](https://luizpb.com/donate/)
 = 2.0.0 - 2023-01-25 =
 
 * The plugin now requires PHP 7.4+
-* The "Custom admin footer text" option now accepts Markdown.
 * Clear the plugin options when the plugin is uninstalled.
 
 = 1.9.2 - 2023-01-18 =
