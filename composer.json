@@ -1,7 +1,7 @@
 {
   "require": {
     "php": ">=7.4",
-    "luizbills/wp-options-page": "^0",
+    "luizbills/wp-options-page": "^0@dev",
     "erusev/parsedown": "^1.7"
   },
   "scripts": {

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Tweaks\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-tweaks\n"
-"POT-Creation-Date: 2023-01-25T12:29:28-03:00\n"
-"PO-Revision-Date: 2023-01-25 12:30-0300\n"
+"POT-Creation-Date: 2023-03-05T21:08:55-03:00\n"
+"PO-Revision-Date: 2023-03-05 21:09-0300\n"
 "Last-Translator: \n"
 "Language-Team: Português do Brasil\n"
 "Language: pt_BR\n"
@@ -48,159 +48,158 @@ msgstr "Opções de Ajustes"
 msgid "Enable"
 msgstr "Ativar"
 
-#: inc/classes/class-wp-tweaks-settings.php:33
+#: inc/classes/class-wp-tweaks-settings.php:42
 msgid "Change menu \"Posts\" to \"Blog\""
 msgstr "Mudar menu \"Posts\" para \"Blog\""
 
-#: inc/classes/class-wp-tweaks-settings.php:39
+#: inc/classes/class-wp-tweaks-settings.php:48
 msgid "Clear uploaded file names"
 msgstr "Limpar nome dos arquivos enviados"
 
-#: inc/classes/class-wp-tweaks-settings.php:45
+#: inc/classes/class-wp-tweaks-settings.php:54
 msgid "Custom admin footer text"
 msgstr "Texto do rodapé da área administrativa"
 
-#: inc/classes/class-wp-tweaks-settings.php:47
+#: inc/classes/class-wp-tweaks-settings.php:56
 msgid "All Rights Reserved."
 msgstr "Todos os Direitos Reservados."
 
 #. translators: %1$s, %2$s and %3$s are variables
-#: inc/classes/class-wp-tweaks-settings.php:49
+#: inc/classes/class-wp-tweaks-settings.php:58
 msgid ""
-"This field accepts Markdown and the following placeholders: %1$s prints the "
-"copyright symbol. %2$s prints the current year. %3$s prints your site name."
+"This field accepts the following placeholders: %1$s prints the copyright "
+"symbol. %2$s prints the current year. %3$s prints your site name."
 msgstr ""
-"Este campo aceita Markdown e os seguintes placeholders: %1$s mostra um "
-"simbolo de copyright. %2$s mostra o ano atual. %3$s mostra o nome do seu "
-"site."
+"Este campo aceita os seguintes placeholders: %1$s mostra um simbolo de "
+"copyright. %2$s mostra o ano atual. %3$s mostra o nome do seu site."
 
-#: inc/classes/class-wp-tweaks-settings.php:54
+#: inc/classes/class-wp-tweaks-settings.php:64
 msgid "Dashboard with only one column"
 msgstr "Painel com apenas uma coluna"
 
-#: inc/classes/class-wp-tweaks-settings.php:60
+#: inc/classes/class-wp-tweaks-settings.php:70
 msgid "Disable author query"
 msgstr "Desativar query de autores"
 
 #. translators: %s is an example URL
-#: inc/classes/class-wp-tweaks-settings.php:65
+#: inc/classes/class-wp-tweaks-settings.php:75
 msgid "disables author search via url (e.g: %s)"
 msgstr "desativa a pesquisa de autores por url (ex: %s)"
 
-#: inc/classes/class-wp-tweaks-settings.php:71
+#: inc/classes/class-wp-tweaks-settings.php:81
 msgid "Disable author pages"
 msgstr "Desativar páginas de autores"
 
 #. translators: %s is an example URL
-#: inc/classes/class-wp-tweaks-settings.php:76
+#: inc/classes/class-wp-tweaks-settings.php:86
 msgid "disables author pages (e.g: %s)"
 msgstr "desativa páginas de autores (ex: %s)"
 
-#: inc/classes/class-wp-tweaks-settings.php:82
+#: inc/classes/class-wp-tweaks-settings.php:92
 msgid "Disable WordPress emojis"
 msgstr "Desativar emojis do WordPress"
 
-#: inc/classes/class-wp-tweaks-settings.php:88
+#: inc/classes/class-wp-tweaks-settings.php:98
 msgid "Disable jQuery Migrate"
 msgstr "Desativar jQuery Migrate"
 
-#: inc/classes/class-wp-tweaks-settings.php:94
+#: inc/classes/class-wp-tweaks-settings.php:104
 msgid "Remove \"meta widget\""
 msgstr "Remover \"widget meta\""
 
-#: inc/classes/class-wp-tweaks-settings.php:100
+#: inc/classes/class-wp-tweaks-settings.php:110
 msgid "Remove public REST API access"
 msgstr "Remover acesso publico à REST API"
 
-#: inc/classes/class-wp-tweaks-settings.php:103
+#: inc/classes/class-wp-tweaks-settings.php:113
 msgid "only logged in users will have access to REST API"
 msgstr "apenas usuários autentificados terão acesso à REST API"
 
-#: inc/classes/class-wp-tweaks-settings.php:107
+#: inc/classes/class-wp-tweaks-settings.php:117
 msgid "Remove users endpoint from REST API"
 msgstr "Remover endpoint users da REST API"
 
-#: inc/classes/class-wp-tweaks-settings.php:110
+#: inc/classes/class-wp-tweaks-settings.php:120
 msgid "Disable users enumeration via REST API."
 msgstr "Desativar a enumeração de usuários pela REST API."
 
-#: inc/classes/class-wp-tweaks-settings.php:114
+#: inc/classes/class-wp-tweaks-settings.php:124
 msgid "Remove \"website\" field in comment form"
 msgstr "Remover campo \"site\" no formulário de comentário"
 
-#: inc/classes/class-wp-tweaks-settings.php:120
+#: inc/classes/class-wp-tweaks-settings.php:130
 msgid "Remove oEmbed support"
 msgstr "Remover suporte ao oEmbed"
 
-#: inc/classes/class-wp-tweaks-settings.php:126
+#: inc/classes/class-wp-tweaks-settings.php:136
 msgid "Remove XML-RPC and Pingbacks support"
 msgstr "Remover suporte à XML-RPC e Pingbacks"
 
-#: inc/classes/class-wp-tweaks-settings.php:132
+#: inc/classes/class-wp-tweaks-settings.php:142
 msgid "Disallow file edit"
 msgstr "Proibir edição de arquivos"
 
-#: inc/classes/class-wp-tweaks-settings.php:138
+#: inc/classes/class-wp-tweaks-settings.php:148
 msgid "Generic login error message"
 msgstr "Mensagem de erro genérica no login"
 
-#: inc/classes/class-wp-tweaks-settings.php:144
+#: inc/classes/class-wp-tweaks-settings.php:154
 msgid "Show admin bar for admin users only"
 msgstr "Mostrar barra de administrador apenas para administradores"
 
-#: inc/classes/class-wp-tweaks-settings.php:150
+#: inc/classes/class-wp-tweaks-settings.php:160
 msgid "Hide WordPress update nag to all but admins"
 msgstr "Mostrar notificação de atualizações apenas para administradores"
 
-#: inc/classes/class-wp-tweaks-settings.php:156
+#: inc/classes/class-wp-tweaks-settings.php:166
 msgid "Hide WordPress version in admin footer to all but admins"
 msgstr ""
 "Mostrar versão do WordPress no rodapé da área administrativa apenas para "
 "administradores"
 
-#: inc/classes/class-wp-tweaks-settings.php:162
+#: inc/classes/class-wp-tweaks-settings.php:172
 msgid "Remove \"Comments\" from admin bar"
 msgstr "Remover \"Comentários\" da barra de administrador"
 
-#: inc/classes/class-wp-tweaks-settings.php:168
+#: inc/classes/class-wp-tweaks-settings.php:178
 msgid "Remove \"WordPress Logo\" from admin bar"
 msgstr "Remover \"Logo do WordPress\" da barra de administrador"
 
-#: inc/classes/class-wp-tweaks-settings.php:174
+#: inc/classes/class-wp-tweaks-settings.php:184
 msgid "Remove \"+ New\" button from admin bar"
 msgstr "Remover botão \"+ Novo\" da barra de administrador"
 
-#: inc/classes/class-wp-tweaks-settings.php:180
+#: inc/classes/class-wp-tweaks-settings.php:190
 msgid "Remove some default dashboard widgets (useless for clients)"
 msgstr ""
 "Remover alguns widgets padrões do Painel (inúteis para usuários leigos)"
 
-#: inc/classes/class-wp-tweaks-settings.php:186
+#: inc/classes/class-wp-tweaks-settings.php:196
 msgid "Remove \"Howdy\" from admin bar"
 msgstr "Remover \"Olá\" da barra de administrador"
 
-#: inc/classes/class-wp-tweaks-settings.php:192
+#: inc/classes/class-wp-tweaks-settings.php:202
 msgid "Remove query string from static scripts"
 msgstr "Remover query string dos códigos estáticos"
 
-#: inc/classes/class-wp-tweaks-settings.php:198
+#: inc/classes/class-wp-tweaks-settings.php:208
 msgid "Remove"
 msgstr "Remover"
 
-#: inc/classes/class-wp-tweaks-settings.php:204
+#: inc/classes/class-wp-tweaks-settings.php:214
 msgid "Remove Dashboard \"welcome panel\""
 msgstr "Remover \"Boas-vindas\" do Painel"
 
-#: inc/classes/class-wp-tweaks-settings.php:210
+#: inc/classes/class-wp-tweaks-settings.php:220
 msgid "Remove WordPress version number in frontend"
 msgstr "Remover versão do WordPress no frontend"
 
-#: inc/classes/class-wp-tweaks-settings.php:216
+#: inc/classes/class-wp-tweaks-settings.php:226
 msgid "Security Headers"
 msgstr "Headers de Segurança"
 
 #. translators: %s is the securityHeaders.io URL
-#: inc/classes/class-wp-tweaks-settings.php:227
+#: inc/classes/class-wp-tweaks-settings.php:237
 msgid ""
 "You can utilise this headers to make your site more secure. Once you have "
 "setup each header, check it using [securityHeaders.io](%s)."
@@ -208,7 +207,7 @@ msgstr ""
 "Você pode utilizar esses headers para tornar seu site mais seguro. Após "
 "configurar cada header, confira-os usando [securityHeaders.io](%s)."
 
-#: inc/classes/class-wp-tweaks-settings.php:241
+#: inc/classes/class-wp-tweaks-settings.php:251
 msgid "Settings"
 msgstr "Configurações"
 
