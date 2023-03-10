@@ -23,5 +23,5 @@ function wp_tweaks_custom_admin_footer_text () {
 	// remove <p> tags
 	$text = str_replace( [ '<p>', '</p>' ], '', $text );
 
-	echo apply_filters( 'wp_tweaks_admin_footer_text', $text );
+	return apply_filters( 'wp_tweaks_admin_footer_text', $text );
 }
