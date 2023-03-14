@@ -21,7 +21,7 @@ function wp_tweaks_custom_admin_footer_text () {
 	}
 
 	// remove <p> tags
-	$text = str_replace( [ '<p>', '</p>' ], '', $text );
+	$text = str_replace( [ '<p>', '<p ', '</p>' ], [ '<span>', '<span ', '</span><br>' ], $text );
 
-	return apply_filters( 'wp_tweaks_admin_footer_text', $text );
+	return \esc_unsafe_html( (string) apply_filters( 'wp_tweaks_admin_footer_text', $text ) );
 }
