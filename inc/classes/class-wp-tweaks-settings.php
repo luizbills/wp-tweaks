@@ -146,6 +146,12 @@ class WP_Tweaks_Settings extends \WP_Options_Page {
 				'default' => true,
 			],
 			[
+				'id' => 'display-php-version',
+				'title' => __( 'Show PHP version in admin footer', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => true,
+			],
+			[
 				'id' => 'generic-login-errors',
 				'title' => __( 'Generic login error message', 'wp-tweaks' ),
 				'type' => 'checkbox',
