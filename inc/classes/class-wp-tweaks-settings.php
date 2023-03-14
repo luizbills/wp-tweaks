@@ -3,7 +3,7 @@
 if ( ! defined( 'WPINC' ) ) die();
 if ( class_exists( 'WP_Tweaks_Settings' ) ) return;
 
-class WP_Tweaks_Settings extends WP_Options_Page {
+class WP_Tweaks_Settings extends \WP_Options_Page {
 	protected $parsedown = null;
 
 	public function __construct ( $init = true ) {
