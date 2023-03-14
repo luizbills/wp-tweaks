@@ -3,7 +3,7 @@
 if ( ! defined( 'WPINC' ) ) die();
 if ( class_exists( 'WP_Tweaks_Settings' ) ) return;
 
-class WP_Tweaks_Settings extends WP_Options_Page {
+class WP_Tweaks_Settings extends \WP_Options_Page {
 	protected $parsedown = null;
 
 	public function __construct ( $init = true ) {
@@ -41,7 +41,7 @@ class WP_Tweaks_Settings extends WP_Options_Page {
 				'id' => 'change-posts-menu-name',
 				'title' => __( 'Change menu "Posts" to "Blog"', 'wp-tweaks' ),
 				'type' => 'checkbox',
-				'default' => ''
+				'default' => false
 			],
 			[
 				'id' => 'clear-file-name',
@@ -56,8 +56,10 @@ class WP_Tweaks_Settings extends WP_Options_Page {
 				'default' => sprintf( '%1$s %2$s %3$s · ' . esc_html__( 'All Rights Reserved.', 'wp-tweaks' ), '{copyright}', '{current_year}', '{site_name}' ),
 				/* translators: %1$s, %2$s and %3$s are variables */
 				'description' => sprintf( esc_html__( 'This field accepts the following placeholders: %1$s prints the copyright symbol. %2$s prints the current year. %3$s prints your site name.', 'wp-tweaks' ), '`{copyright}`', '`{current_year}`', '`{site_name}`' ),
-				'rows' => 3,
-				'wpautop' => false,
+				'editor_settings' => [
+					'textarea_rows' => 3,
+					'wpautop' => false,
+				]
 			],
 			[
 				'id' => 'dashboard-single-column-layout',
@@ -80,7 +82,7 @@ class WP_Tweaks_Settings extends WP_Options_Page {
 				'id' => 'disable-author-pages',
 				'title' => __( 'Disable author pages', 'wp-tweaks' ),
 				'type' => 'checkbox',
-				'default' => '',
+				'default' => false,
 				'description' => sprintf(
 					/* translators: %s is an example URL */
 					esc_html__( 'disables author pages (e.g: %s)', 'wp-tweaks' ),
@@ -109,7 +111,7 @@ class WP_Tweaks_Settings extends WP_Options_Page {
 				'id' => 'disable-public-rest-api',
 				'title' => __( 'Remove public REST API access', 'wp-tweaks' ),
 				'type' => 'checkbox',
-				'default' => '',
+				'default' => false,
 				'description' => esc_html__( 'only logged in users will have access to REST API', 'wp-tweaks' )
 			],
 			[
@@ -129,7 +131,7 @@ class WP_Tweaks_Settings extends WP_Options_Page {
 				'id' => 'disable-wp-embed',
 				'title' => __( 'Remove oEmbed support', 'wp-tweaks' ),
 				'type' => 'checkbox',
-				'default' => '',
+				'default' => false,
 			],
 			[
 				'id' => 'disable-xmlrpc',
@@ -144,6 +146,12 @@ class WP_Tweaks_Settings extends WP_Options_Page {
 				'default' => true,
 			],
 			[
+				'id' => 'display-php-version',
+				'title' => __( 'Show PHP version in admin footer', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => true,
+			],
+			[
 				'id' => 'generic-login-errors',
 				'title' => __( 'Generic login error message', 'wp-tweaks' ),
 				'type' => 'checkbox',
@@ -154,6 +162,7 @@ class WP_Tweaks_Settings extends WP_Options_Page {
 				'title' => __( 'Show admin bar for admin users only', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => true,
+				'description' => 'Only for administrator users.'
 			],
 			[
 				'id' => 'hide-update-notice',
@@ -171,7 +180,7 @@ class WP_Tweaks_Settings extends WP_Options_Page {
 				'id' => 'remove-admin-bar-comments',
 				'title' => __( 'Remove "Comments" from admin bar', 'wp-tweaks' ),
 				'type' => 'checkbox',
-				'default' => 'off',
+				'default' => false,
 			],
 			[
 				'id' => 'remove-admin-bar-logo',
@@ -254,7 +263,7 @@ class WP_Tweaks_Settings extends WP_Options_Page {
 
 	public function render_markdown ( $field ) {
 		$desc = $field['description'] ?? null;
-		$field['description'] = $desc ? WP_Tweaks_Markdown::render_line( $desc ) : null;
+		$field['description'] = $desc ? \WP_Tweaks_Markdown::render_line( $desc ) : null;
 		return $field;
 	}
 
@@ -272,34 +281,31 @@ class WP_Tweaks_Settings extends WP_Options_Page {
 	}
 
 	protected function render_field_content_editor ( $field ) {
-		$id = $field['id'];
 		$value = $this->get_field_value( $field );
 		$name = $field['name'];
-		$settings = [
-			'textarea_rows' => $field['rows'] ?? 5,
-			'wpautop' => $field['wpautop'] ?? true,
-		];
 		$desc = $field['description'];
-		$describedby = $desc ? 'aria-describedby="' . \esc_attr( $id ) . '-description"' : '';
+		$args = $field['editor_settings'] ?? [];
 
-		$this->open_wrapper( $field );
-		\wp_editor( $value, $name, $settings );
+		$args['textarea_rows'] = $args['textarea_rows'] ?? 5;
+		$args['wpautop'] = $args['wpautop'] ?? true;
+
+		unset( $args['textarea_name'] );
+
+		$this->open_wrapper( $field );;
+
+		\wp_editor( $value, $name, $args );
+
+		$this->do_action( 'after_field_input', $field, $this );
 
 		if ( $desc ) : ?>
-		<p class="description" id="<?php echo \esc_attr( $name ); ?>-description"><?php echo $desc ?></p>
+		<p class="description"><?php echo $desc ?></p>
 		<?php endif; ?>
-
-		<?php $this->do_action( 'after_field_input', $field ); ?>
 
 		<?php $this->close_wrapper( $field );
 	}
 
 	public function prepare_field_content_editor ( $field ) {
-		error_log( print_r( $_POST, true ) );
-		if ( 'content_editor' === $field['type'] ) {
-			$field['__sanitize'] = null;
-			//error_log( print_r( $field, true ) );
-		}
+		$field['@sanitize'] = null;
 		return $field;
 	}
 }

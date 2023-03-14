@@ -58,16 +58,16 @@
         },
         {
             "name": "luizbills/wp-options-page",
-            "version": "v0.3.0-RC2",
+            "version": "v0.3.0-RC5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luizbills/wp-options-page.git",
-                "reference": "87047d533b11923480545bfffff7c8228e36b738"
+                "reference": "14b1ed36bb05e27e0bcb5399ca8bea6477bf069a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luizbills/wp-options-page/zipball/87047d533b11923480545bfffff7c8228e36b738",
-                "reference": "87047d533b11923480545bfffff7c8228e36b738",
+                "url": "https://api.github.com/repos/luizbills/wp-options-page/zipball/14b1ed36bb05e27e0bcb5399ca8bea6477bf069a",
+                "reference": "14b1ed36bb05e27e0bcb5399ca8bea6477bf069a",
                 "shasum": ""
             },
             "require": {
@@ -106,7 +106,7 @@
             "support": {
                 "docs": "https://github.com/luizbills/wp-options-page/wiki",
                 "issues": "https://github.com/luizbills/wp-options-page/issues",
-                "source": "https://github.com/luizbills/wp-options-page/tree/v0.3.0-RC2"
+                "source": "https://github.com/luizbills/wp-options-page/tree/v0.3.0-RC5"
             },
             "funding": [
                 {
@@ -114,7 +114,7 @@
                     "type": "donate"
                 }
             ],
-            "time": "2023-03-06T00:06:20+00:00"
+            "time": "2023-03-10T19:45:56+00:00"
         }
     ],
     "packages-dev": [],
