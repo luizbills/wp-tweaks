@@ -112,7 +112,7 @@ class WP_Tweaks_Settings extends \WP_Options_Page {
 				'title' => __( 'Remove public REST API access', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => false,
-				'description' => esc_html__( 'only logged in users will have access to REST API', 'wp-tweaks' )
+				'description' => esc_html__( 'Only logged in users will have access to REST API.', 'wp-tweaks' )
 			],
 			[
 				'id' => 'disable-rest-api-users-endpoint',
@@ -150,6 +150,7 @@ class WP_Tweaks_Settings extends \WP_Options_Page {
 				'title' => __( 'Show PHP version in admin footer', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => true,
+				'description' => __( 'For admin users only.', 'wp-tweaks' ),
 			],
 			[
 				'id' => 'generic-login-errors',
@@ -288,20 +289,16 @@ class WP_Tweaks_Settings extends \WP_Options_Page {
 
 		$args['textarea_rows'] = $args['textarea_rows'] ?? 5;
 		$args['wpautop'] = $args['wpautop'] ?? true;
-
 		unset( $args['textarea_name'] );
 
-		$this->open_wrapper( $field );;
-
+		// render field
 		\wp_editor( $value, $name, $args );
 
 		$this->do_action( 'after_field_input', $field, $this );
 
 		if ( $desc ) : ?>
 		<p class="description"><?php echo $desc ?></p>
-		<?php endif; ?>
-
-		<?php $this->close_wrapper( $field );
+		<?php endif;
 	}
 
 	public function prepare_field_content_editor ( $field ) {
