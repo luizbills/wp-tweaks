@@ -163,7 +163,6 @@ class WP_Tweaks_Settings extends \WP_Options_Page {
 				'title' => __( 'Show admin bar for admin users only', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => true,
-				'description' => 'Only for administrator users.'
 			],
 			[
 				'id' => 'hide-update-notice',
