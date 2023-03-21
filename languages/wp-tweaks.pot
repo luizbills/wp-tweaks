@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-03-16T11:36:52-03:00\n"
+"POT-Creation-Date: 2023-03-21T18:52:54-03:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: wp-tweaks\n"
@@ -149,60 +149,60 @@ msgstr ""
 msgid "Show admin bar for admin users only"
 msgstr ""
 
-#: inc/classes/class-wp-tweaks-settings.php:170
+#: inc/classes/class-wp-tweaks-settings.php:169
 msgid "Hide WordPress update nag to all but admins"
 msgstr ""
 
-#: inc/classes/class-wp-tweaks-settings.php:176
+#: inc/classes/class-wp-tweaks-settings.php:175
 msgid "Hide WordPress version in admin footer to all but admins"
 msgstr ""
 
-#: inc/classes/class-wp-tweaks-settings.php:182
+#: inc/classes/class-wp-tweaks-settings.php:181
 msgid "Remove \"Comments\" from admin bar"
 msgstr ""
 
-#: inc/classes/class-wp-tweaks-settings.php:188
+#: inc/classes/class-wp-tweaks-settings.php:187
 msgid "Remove \"WordPress Logo\" from admin bar"
 msgstr ""
 
-#: inc/classes/class-wp-tweaks-settings.php:194
+#: inc/classes/class-wp-tweaks-settings.php:193
 msgid "Remove \"+ New\" button from admin bar"
 msgstr ""
 
-#: inc/classes/class-wp-tweaks-settings.php:200
+#: inc/classes/class-wp-tweaks-settings.php:199
 msgid "Remove some default dashboard widgets (useless for clients)"
 msgstr ""
 
-#: inc/classes/class-wp-tweaks-settings.php:206
+#: inc/classes/class-wp-tweaks-settings.php:205
 msgid "Remove \"Howdy\" from admin bar"
 msgstr ""
 
-#: inc/classes/class-wp-tweaks-settings.php:212
+#: inc/classes/class-wp-tweaks-settings.php:211
 msgid "Remove query string from static scripts"
 msgstr ""
 
-#: inc/classes/class-wp-tweaks-settings.php:218
+#: inc/classes/class-wp-tweaks-settings.php:217
 msgid "Remove"
 msgstr ""
 
-#: inc/classes/class-wp-tweaks-settings.php:224
+#: inc/classes/class-wp-tweaks-settings.php:223
 msgid "Remove Dashboard \"welcome panel\""
 msgstr ""
 
-#: inc/classes/class-wp-tweaks-settings.php:230
+#: inc/classes/class-wp-tweaks-settings.php:229
 msgid "Remove WordPress version number in frontend"
 msgstr ""
 
-#: inc/classes/class-wp-tweaks-settings.php:236
+#: inc/classes/class-wp-tweaks-settings.php:235
 msgid "Security Headers"
 msgstr ""
 
 #. translators: %s is the securityHeaders.io URL
-#: inc/classes/class-wp-tweaks-settings.php:247
+#: inc/classes/class-wp-tweaks-settings.php:246
 msgid "You can utilise this headers to make your site more secure. Once you have setup each header, check it using [securityHeaders.io](%s)."
 msgstr ""
 
-#: inc/classes/class-wp-tweaks-settings.php:261
+#: inc/classes/class-wp-tweaks-settings.php:260
 msgid "Settings"
 msgstr ""
 
@@ -226,10 +226,6 @@ msgstr ""
 msgid "Not Allowed!"
 msgstr ""
 
-#: inc/tweaks/generic-login-errors.php:11
-msgid "ERROR"
-msgstr ""
-
-#: inc/tweaks/generic-login-errors.php:11
-msgid "Incorrect email address or password."
+#: inc/tweaks/generic-login-errors.php:31
+msgid "Incorrect username or password."
 msgstr ""
