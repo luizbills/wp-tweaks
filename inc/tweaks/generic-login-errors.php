@@ -19,9 +19,11 @@ function wp_tweaks_login_errors ( $errors ) {
 		'invalid_email',
 	];
 
-	foreach ( $login_errors as $error_code ) {
-		if ( empty( $errors->get_error_message() ) ) continue;
-		$errors->remove( $error_code );
+	foreach ( $login_errors as $code ) {
+		if ( 0 === count( $errors->get_error_messages( $code ) ) ) {
+			continue;
+		}
+		$errors->remove( $code );
 		$has_login_error = true;
 	}
 
