@@ -10,16 +10,27 @@ add_filter( 'wp_login_errors', 'wp_tweaks_login_errors', 99 );
 function wp_tweaks_login_errors ( $errors ) {
 	if ( ! is_wp_error( $errors ) ) return new WP_Error();
 
-	$errors->remove( 'empty_username' );
-	$errors->remove( 'invalid_username' );
-	$errors->remove( 'empty_password' );
-	$errors->remove( 'incorrect_password' );
-	$errors->remove( 'invalid_email' );
+	$has_login_error = false;
+	$login_errors = [
+		'empty_username',
+		'invalid_username',
+		'empty_password',
+		'incorrect_password',
+		'invalid_email',
+	];
 
-	$errors->add(
-		'invalid_login',
-		esc_html__( 'Incorrect email address or password.', 'wp-tweaks' )
-	);
+	foreach ( $login_errors as $error_code ) {
+		if ( empty( $errors->get_error_message() ) ) continue;
+		$errors->remove( $error_code );
+		$has_login_error = true;
+	}
+
+	if ( $has_login_error ) {
+		$errors->add(
+			'invalid_login',
+			esc_html__( 'Incorrect username or password.', 'wp-tweaks' )
+		);
+	}
 
 	return $errors;
 }

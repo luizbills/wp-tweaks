@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Tweaks\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-tweaks\n"
-"POT-Creation-Date: 2023-03-21T18:42:15-03:00\n"
-"PO-Revision-Date: 2023-03-21 18:43-0300\n"
+"POT-Creation-Date: 2023-03-21T18:52:54-03:00\n"
+"PO-Revision-Date: 2023-03-21 18:53-0300\n"
 "Last-Translator: \n"
 "Language-Team: Português do Brasil\n"
 "Language: pt_BR\n"
@@ -243,8 +243,8 @@ msgstr "Pingbacks não são suportados"
 msgid "Not Allowed!"
 msgstr "Não permitido!"
 
-#: inc/tweaks/generic-login-errors.php:21
-msgid "Incorrect email address or password."
+#: inc/tweaks/generic-login-errors.php:31
+msgid "Incorrect username or password."
 msgstr "Nome de usuário ou senha incorretos."
 
 #~ msgid "ERROR"
