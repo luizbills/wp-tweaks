@@ -6,8 +6,8 @@
  */
 if ( ! defined( 'WPINC' ) ) die();
 
-add_filter( 'wp_login_errors', 'wp_tweaks_login_errors', 99 );
-function wp_tweaks_login_errors ( $errors ) {
+add_filter( 'wp_login_errors', 'wp_tweaks_login_error', 99 );
+function wp_tweaks_login_error ( $errors ) {
 	if ( ! is_wp_error( $errors ) ) return new WP_Error();
 
 	$has_login_error = false;
@@ -29,8 +29,11 @@ function wp_tweaks_login_errors ( $errors ) {
 
 	if ( $has_login_error ) {
 		$errors->add(
-			'invalid_login',
-			esc_html__( 'Incorrect username or password.', 'wp-tweaks' )
+			'invalid',
+			apply_filters(
+				'wp_tweaks_login_error',
+				esc_html__( 'Incorrect username or password.', 'wp-tweaks' )
+			)
 		);
 	}
 
