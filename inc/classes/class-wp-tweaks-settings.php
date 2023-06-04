@@ -301,7 +301,7 @@ class WP_Tweaks_Settings extends \WP_Options_Page {
 	}
 
 	public function prepare_field_content_editor ( $field ) {
-		$field['@sanitize'] = null;
+		$field['@sanitize'] = 'wp_kses_post';
 		return $field;
 	}
 }
