@@ -29,7 +29,7 @@ function wp_tweaks_add_debug_warning () {
 		}
 		?>
 		<style>
-			.wpt_notice {
+			#message-wp-tweaks {
 				border-left-color: #fab005;
 			}
 			.wpt_constant {
@@ -45,7 +45,7 @@ function wp_tweaks_add_debug_warning () {
 				border-radius: 4px;
 			}
 		</style>
-		<div class='notice notice-warning wpt_notice'><p><?php echo $content ?></p></div>
+		<div id='message-wp-tweaks' class='notice notice-warning'><p><?php echo $content ?></p></div>
 		<?php
 	}
 }
