@@ -48,7 +48,7 @@ final class WP_Tweaks {
 
 	private function hooks () {
 		add_action( 'init', [ $this, 'load_plugin_translations' ], 0 );
-		add_action( 'init', [ $this, 'load_tweaks' ], 10 );
+		add_action( 'init', [ $this, 'load_tweaks' ], 5 );
 	}
 
 	private function autoload () {
@@ -71,9 +71,9 @@ final class WP_Tweaks {
 			if ( ! $id || '_' === substr( $id, 0, 1 ) ) continue;
 			if ( apply_filters( "wp_tweaks_skip_{$id}", false ) ) continue;
 
-			$tweak_file = WP_Tweaks::DIR . "/includes/tweaks/{$id}.php";
-			if ( file_exists( $tweak_file ) && ! empty( self::get_option( $id ) ) ) {
-				include_once $tweak_file;
+			$option = self::get_option( $id );
+			if ( ! empty( $option ) ) {
+				include_once WP_Tweaks::DIR . "/includes/tweaks/{$id}.php";
 			}
 		}
 	}
