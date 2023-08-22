@@ -17,7 +17,7 @@ class Settings extends WP_Options_Page {
 	}
 
 	private function __construct () {
-		add_action( 'init', [ $this, 'init' ] );
+		add_action( 'init', [ $this, 'init' ], 1 );
 	}
 
 	public function init () {
@@ -172,6 +172,19 @@ class Settings extends WP_Options_Page {
 				'title' => __( 'Generic login error message', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => true,
+			],
+			[
+				'id' => 'heartbeat',
+				'title' => __( 'Heartbeat API', 'wp-tweaks' ),
+				'type' => 'select',
+				'options' => [
+					'' => __( 'Default', 'wp-tweaks' ),
+					'60' => __( '60 seconds', 'wp-tweaks' ),
+					'120' => __( '120 seconds', 'wp-tweaks' ),
+					'disable' => __( 'Disable', 'wp-tweaks' ),
+				],
+				'default' => '',
+				'description' => __( 'Search for "What is WordPress Heartbeat?" in your browser to learn more.', 'wp-tweaks' )
 			],
 			[
 				'id' => 'hide-admin-bar',
