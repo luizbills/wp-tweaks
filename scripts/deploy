@@ -154,27 +154,19 @@ echo "No syntax errors found"
 
 # REMOVE UNWANTED FILES & FOLDERS
 echo "Removing unwanted files"
-rm -Rf .git
-rm -Rf .github
+find $TEMP_GITHUB_REPO -maxdepth 1 -type d -iname ".*" -exec rm -rf {} \; # delete hidden folders
+find $TEMP_GITHUB_REPO -maxdepth 1 -type f -iname ".*" -exec rm -rf {} \; # delete hidden files
 rm -Rf tests
 rm -Rf docs
 rm -Rf scripts
 rm -Rf node_modules
-rm -f .gitattributes
-rm -f .gitignore
-rm -f .gitmodules
-rm -f .travis.yml
 rm -f package-lock.json
 rm -f composer.lock
 rm -f phpunit.xml
 rm -f phpunit.xml.dist
 rm -f README.md
-rm -f .coveralls.yml
-rm -f .editorconfig
 rm -f CONTRIBUTING.md
-rm -f .gitpod.dockerfile
-rm -f .gitpod.yml
-rm -f .prettierrc.json
+rm -f phpstan.neon
 
 echo ""
 read -p "PRESS [ENTER] TO DEPLOY BRANCH "${BRANCH}
