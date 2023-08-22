@@ -1,8 +1,17 @@
 {
   "require": {
     "php": ">=7.4",
-    "luizbills/wp-options-page": "^0@dev",
-    "erusev/parsedown": "^1.7"
+    "ext-mbstring": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tweaks\\": [
+        "classes/"
+      ],
+      "Tweaks\\Dependencies\\": [
+        "dependencies/"
+      ]
+    }
   },
   "scripts": {
     "deploy": "./scripts/deploy",

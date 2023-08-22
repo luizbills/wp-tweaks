@@ -18,54 +18,63 @@ if ( ! defined( 'WPINC' ) ) die();
 
 if ( ! class_exists( 'WP_Tweaks' ) ) :
 
-class WP_Tweaks {
+final class WP_Tweaks {
 	const FILE = __FILE__;
 	const DIR = __DIR__;
 	const PREFIX = 'wp_tweaks_';
 
-	protected static $instance= null;
-	protected static $settings = null;
+	private static $settings = null;
+	private static $instance = null;
 
-	protected function __construct () {
-		$this->includes();
-		$this->hooks();
+	public static function instance () {
+		if ( ! self::$instance ) self::$instance = new self();
+		return self::$instance;
 	}
 
-	protected function hooks () {
+	private function __construct () {
+		if ( ! $this->autoload() ) {
+			return add_action( 'admin_notices', function () {
+				echo '<div class="notice notice-error"><p><strong>Error</strong>: Missing <code>vendor</code> directory. Please reinstall the <strong>WP Tweaks</strong> plugin via WordPress Repository.</p></div>';
+			} );
+		}
+		$this->includes();
+		$this->hooks();
+		self::$settings = \Tweaks\Settings::instance();
+	}
+
+	public function includes () {
+		include self::DIR . '/includes/helpers.php';
+	}
+
+	private function hooks () {
 		add_action( 'init', [ $this, 'load_plugin_translations' ], 0 );
 		add_action( 'init', [ $this, 'load_tweaks' ], 10 );
 	}
 
-	public function includes () {
-		$this->include_autoload();
-		require_once self::DIR . '/inc/helpers.php';
-		require_once self::DIR . '/inc/classes/class-wp-tweaks-markdown.php';
-		require_once self::DIR . '/inc/classes/class-wp-tweaks-settings.php';
-	}
-
-	protected function include_autoload () {
+	private function autoload () {
 		$autoload = self::DIR . '/vendor/autoload.php';
-		if ( ! file_exists( $autoload ) ) {
-			wp_die( '<strong>Error</strong>: Composer packages are not installed. Please install the plugin via WordPress Repository or run "<code>composer install</code>".' );
+		if ( file_exists( $autoload ) ) {
+			include $autoload;
+			\Tweaks\Settings::instance();
+			return true;
 		}
-		require $autoload;
+		return false;
 	}
 
 	public function load_tweaks () {
-		self::$settings = new WP_Tweaks_Settings();
+		// debug constants warning
+		include_once WP_Tweaks::DIR . '/includes/debug-warning.php';
 
+		// user selected tweaks
 		foreach ( self::$settings->get_fields() as $field ) {
 			$id = $field['id'] ?? '';
 			if ( ! $id || '_' === substr( $id, 0, 1 ) ) continue;
 			if ( apply_filters( "wp_tweaks_skip_{$id}", false ) ) continue;
 
-			$tweak_file = WP_Tweaks::DIR . "/inc/tweaks/{$id}.php";
+			$tweak_file = WP_Tweaks::DIR . "/includes/tweaks/{$id}.php";
 			if ( file_exists( $tweak_file ) && ! empty( self::get_option( $id ) ) ) {
 				include_once $tweak_file;
 			}
-
-			// debug constants warning
-			include_once WP_Tweaks::DIR . '/inc/debug-warning.php';
 		}
 	}
 
@@ -80,17 +89,10 @@ class WP_Tweaks {
 	public static function get_option ( $key ) {
 		return self::$settings->get_option( $key );
 	}
-
-	public static function get_instance () {
-		if ( null === self::$instance) {
-			self::$instance = new self();
-		}
-		return self::$instance;
-	}
 }
 
 function wp_tweaks () {
-	return WP_Tweaks::get_instance();
+	return \WP_Tweaks::instance();
 }
 
 wp_tweaks();

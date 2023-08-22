@@ -1,9 +1,10 @@
 <?php
 
-if ( ! defined( 'WPINC' ) ) die();
-if ( class_exists( 'WP_Tweaks_Markdown' ) ) return;
+namespace Tweaks;
 
-class WP_Tweaks_Markdown {
+use Tweaks\Dependencies\Parsedown;
+
+class Markdown {
 	protected static $instance = null;
 
 	/**
