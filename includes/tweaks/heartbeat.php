@@ -6,6 +6,7 @@
  */
 if ( ! defined( 'WPINC' ) ) die();
 
+/** @var string $option */
 if ( 'disable' === $option ) {
 	add_action( 'init', 'wp_tweaks_disable_heartbeat' );
 	function wp_tweaks_disable_heartbeat () {

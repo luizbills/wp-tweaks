@@ -33,9 +33,10 @@ final class WP_Tweaks {
 
 	private function __construct () {
 		if ( ! $this->autoload() ) {
-			return add_action( 'admin_notices', function () {
+			add_action( 'admin_notices', function () {
 				echo '<div class="notice notice-error"><p><strong>Error</strong>: Missing <code>vendor</code> directory. Please reinstall the <strong>WP Tweaks</strong> plugin via WordPress Repository.</p></div>';
 			} );
+			return;
 		}
 		$this->includes();
 		$this->hooks();
