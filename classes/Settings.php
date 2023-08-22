@@ -1,12 +1,26 @@
 <?php
 
-if ( ! defined( 'WPINC' ) ) die();
-if ( class_exists( 'WP_Tweaks_Settings' ) ) return;
+namespace Tweaks;
 
-class WP_Tweaks_Settings extends \WP_Options_Page {
+use WP_Tweaks;
+use Tweaks\Markdown;
+use Tweaks\Dependencies\WP_Options_Page;
+
+
+class Settings extends WP_Options_Page {
 	protected $parsedown = null;
 
-	public function __construct ( $init = true ) {
+	private static $instance = null;
+	public static function instance () {
+		if ( ! self::$instance ) self::$instance = new self();
+		return self::$instance;
+	}
+
+	private function __construct () {
+		add_action( 'init', [ $this, 'init' ], 1 );
+	}
+
+	public function init () {
 		$this->id = 'wp-tweaks';
 		$this->menu_title = esc_html__( 'Tweaks', 'wp-tweaks' );
 		$this->page_title = esc_html__( 'Tweaks Options', 'wp-tweaks' );
@@ -16,7 +30,8 @@ class WP_Tweaks_Settings extends \WP_Options_Page {
 
 		$this->strings['checkbox_enable'] = esc_html__( 'Enable', 'wp-tweaks' );
 
-		$this->init();
+		// register the page
+		parent::init();
 	}
 
 	protected function init_hooks () {
@@ -159,6 +174,19 @@ class WP_Tweaks_Settings extends \WP_Options_Page {
 				'default' => true,
 			],
 			[
+				'id' => 'heartbeat',
+				'title' => __( 'Heartbeat API', 'wp-tweaks' ),
+				'type' => 'select',
+				'options' => [
+					'' => __( 'Default', 'wp-tweaks' ),
+					'60' => __( '60 seconds', 'wp-tweaks' ),
+					'120' => __( '120 seconds', 'wp-tweaks' ),
+					'disable' => __( 'Disable', 'wp-tweaks' ),
+				],
+				'default' => '',
+				'description' => __( 'Search for "What is WordPress Heartbeat?" in your browser to learn more.', 'wp-tweaks' )
+			],
+			[
 				'id' => 'hide-admin-bar',
 				'title' => __( 'Show admin bar for admin users only', 'wp-tweaks' ),
 				'type' => 'checkbox',
@@ -263,7 +291,7 @@ class WP_Tweaks_Settings extends \WP_Options_Page {
 
 	public function render_markdown ( $field ) {
 		$desc = $field['description'] ?? null;
-		$field['description'] = $desc ? \WP_Tweaks_Markdown::render_line( $desc ) : null;
+		$field['description'] = $desc ? Markdown::render_line( $desc ) : null;
 		return $field;
 	}
 
