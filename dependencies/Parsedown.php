@@ -2,18 +2,17 @@
 
 namespace Tweaks\Dependencies;
 
-#
-#
-# Parsedown
-# http://parsedown.org
-#
-# (c) Emanuil Rusev
-# http://erusev.com
-#
-# For the full license information, view the LICENSE file that was distributed
-# with this source code.
-#
-#
+/**
+ * Parsedown
+ * http://parsedown.org
+ * https://github.com/erusev/parsedown
+ *
+ * (c) Emanuil Rusev
+ * http://erusev.com
+ *
+ * For the full license information, view the LICENSE file that was distributed
+ * with this source code.
+ */
 
 class Parsedown
 {
