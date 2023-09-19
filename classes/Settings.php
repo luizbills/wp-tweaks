@@ -6,7 +6,6 @@ use WP_Tweaks;
 use Tweaks\Markdown;
 use Tweaks\Dependencies\WP_Options_Page;
 
-
 class Settings extends WP_Options_Page {
 	protected $parsedown = null;
 
@@ -262,13 +261,13 @@ class Settings extends WP_Options_Page {
 				'id' => 'security-headers',
 				'title' => __( 'Security Headers', 'wp-tweaks' ),
 				'type' => 'checkboxes',
-				'options' => [
+				'options' => apply_filters( 'wp_tweaks_security_headers_options', [
 					'x-frame-options' => 'X-Frame-Options',
 					'strict-transport-security' => 'Strict-Transport-Security',
 					'x-content-type-options' => 'X-Content-Type-Options',
 					'x-xss-protection' => 'X-XSS-Protection',
 					'content-security-policy' => 'Content-Security-Policy',
-				],
+				] ),
 				'description' => sprintf(
 					/* translators: %s is the securityHeaders.io URL */
 					esc_html__( 'You can utilise this headers to make your site more secure. Once you have setup each header, check it using [securityHeaders.io](%s).', 'wp-tweaks' ),
