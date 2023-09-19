@@ -83,13 +83,20 @@ class Settings extends WP_Options_Page {
 				'default' => true,
 			],
 			[
+				'id' => 'disable-comments',
+				'title' => __( 'Disable comments', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => false,
+				'description' => esc_html__( 'Hides and disables new comments on pages and blog posts.', 'wp-tweaks' )
+			],
+			[
 				'id' => 'disable-author-query',
 				'title' => __( 'Disable author query', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => true,
 				'description' => sprintf(
 					/* translators: %s is an example URL */
-					esc_html__( 'disables author search via url (e.g: %s)', 'wp-tweaks' ),
+					esc_html__( 'Disables author search via url (e.g: %s)', 'wp-tweaks' ),
 					home_url( '?author=1' )
 				)
 			],
@@ -100,7 +107,7 @@ class Settings extends WP_Options_Page {
 				'default' => false,
 				'description' => sprintf(
 					/* translators: %s is an example URL */
-					esc_html__( 'disables author pages (e.g: %s)', 'wp-tweaks' ),
+					esc_html__( 'Disables author pages (e.g: %s)', 'wp-tweaks' ),
 					home_url( '/author/admin' )
 				)
 			],
