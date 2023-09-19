@@ -16,15 +16,19 @@ function wp_tweaks_add_debug_warning () {
 		$message = esc_html__( 'The following WordPress constants are enabled and it is highly recommended that you disable them in production environments.', 'wp-tweaks' );
 		$content = "<strong>$title</strong><br>$message<br>";
 		$constants = [ 'WP_DEBUG', 'SAVEQUERIES' ];
+
 		if ( $wp_debug ) {
 			$constants[] = 'WP_DEBUG_LOG';
 			$constants[] = 'WP_DEBUG_DISPLAY';
 		}
+
 		$constants[] = 'SCRIPT_DEBUG';
+		$constants[] = 'WP_DEVELOPMENT_MODE';
 
 		foreach ( $constants as $name ) {
-			if ( defined( $name ) && constant( $name ) ) {
-				$content .= '<span class="wpt_constant">' . esc_html( $name ) . "</span>";
+			$value = defined( $name ) ? constant( $name ) : null;
+			if ( ! empty( $value ) ) {
+				$content .= '<span class="wpt_constant">' . $name . "</span>";
 			}
 		}
 		?>
