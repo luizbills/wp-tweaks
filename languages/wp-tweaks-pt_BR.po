@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Tweaks\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-tweaks\n"
-"POT-Creation-Date: 2023-09-19T20:35:57-03:00\n"
-"PO-Revision-Date: 2023-09-19 20:36-0300\n"
+"POT-Creation-Date: 2023-09-19T21:19:10-03:00\n"
+"PO-Revision-Date: 2023-09-19 21:21-0300\n"
 "Last-Translator: \n"
 "Language-Team: Português do Brasil\n"
 "Language: pt_BR\n"
@@ -36,36 +36,36 @@ msgstr "Luiz Bills"
 msgid "https://luizpb.com/en"
 msgstr "https://luizpb.com/pt/"
 
-#: classes/Settings.php:25
+#: classes/Settings.php:24
 msgid "Tweaks"
 msgstr "Ajustes"
 
-#: classes/Settings.php:26
+#: classes/Settings.php:25
 msgid "Tweaks Options"
 msgstr "Opções de Ajustes"
 
-#: classes/Settings.php:31
+#: classes/Settings.php:30
 msgid "Enable"
 msgstr "Ativar"
 
-#: classes/Settings.php:57
+#: classes/Settings.php:56
 msgid "Change menu \"Posts\" to \"Blog\""
 msgstr "Mudar menu \"Posts\" para \"Blog\""
 
-#: classes/Settings.php:63
+#: classes/Settings.php:62
 msgid "Clear uploaded file names"
 msgstr "Limpar nome dos arquivos enviados"
 
-#: classes/Settings.php:69
+#: classes/Settings.php:68
 msgid "Custom admin footer text"
 msgstr "Texto do rodapé da área administrativa"
 
-#: classes/Settings.php:71
+#: classes/Settings.php:70
 msgid "All Rights Reserved."
 msgstr "Todos os Direitos Reservados."
 
 #. translators: %1$s, %2$s and %3$s are variables
-#: classes/Settings.php:73
+#: classes/Settings.php:72
 msgid ""
 "This field accepts the following placeholders: %1$s prints the copyright "
 "symbol. %2$s prints the current year. %3$s prints your site name."
@@ -73,176 +73,190 @@ msgstr ""
 "Este campo aceita os seguintes placeholders: %1$s mostra um simbolo de "
 "copyright. %2$s mostra o ano atual. %3$s mostra o nome do seu site."
 
-#: classes/Settings.php:81
+#: classes/Settings.php:80
 msgid "Dashboard with only one column"
 msgstr "Painel com apenas uma coluna"
 
-#: classes/Settings.php:87
+#: classes/Settings.php:86
 msgid "Disable comments"
 msgstr "Desativar comentários"
 
-#: classes/Settings.php:90
+#: classes/Settings.php:89
 msgid "Hides and disables new comments on pages and blog posts."
 msgstr "Oculta e desativa novos comentários em páginas e postagens de blog."
 
-#: classes/Settings.php:94
+#: classes/Settings.php:93
 msgid "Disable author query"
 msgstr "Desativar query de autores"
 
 #. translators: %s is an example URL
-#: classes/Settings.php:99
+#: classes/Settings.php:98
 msgid "Disables author search via url (e.g: %s)"
 msgstr "Desativa a pesquisa de autores por url (ex: %s)"
 
-#: classes/Settings.php:105
+#: classes/Settings.php:104
 msgid "Disable author pages"
 msgstr "Desativar páginas de autores"
 
 #. translators: %s is an example URL
-#: classes/Settings.php:110
+#: classes/Settings.php:109
 msgid "Disables author pages (e.g: %s)"
 msgstr "Desativa páginas de autores (ex: %s)"
 
-#: classes/Settings.php:116
+#: classes/Settings.php:115
 msgid "Disable WordPress emojis"
 msgstr "Desativar emojis do WordPress"
 
-#: classes/Settings.php:122
+#: classes/Settings.php:121
 msgid "Disable jQuery Migrate"
 msgstr "Desativar jQuery Migrate"
 
-#: classes/Settings.php:128
+#: classes/Settings.php:127
 msgid "Remove \"meta widget\""
 msgstr "Remover \"widget meta\""
 
-#: classes/Settings.php:134
+#: classes/Settings.php:133
 msgid "Remove public REST API access"
 msgstr "Remover acesso publico à REST API"
 
-#: classes/Settings.php:137
+#: classes/Settings.php:136
 msgid "Only logged in users will have access to REST API."
 msgstr "Apenas usuários autentificados terão acesso à REST API."
 
-#: classes/Settings.php:141
+#: classes/Settings.php:140
 msgid "Remove users endpoint from REST API"
 msgstr "Remover endpoint users da REST API"
 
-#: classes/Settings.php:144
+#: classes/Settings.php:143
 msgid "Disable users enumeration via REST API."
 msgstr "Desativar a enumeração de usuários pela REST API."
 
-#: classes/Settings.php:148
+#: classes/Settings.php:147
 msgid "Remove \"website\" field in comment form"
 msgstr "Remover campo \"site\" no formulário de comentário"
 
-#: classes/Settings.php:154
+#: classes/Settings.php:153
 msgid "Remove oEmbed support"
 msgstr "Remover suporte ao oEmbed"
 
-#: classes/Settings.php:160
+#: classes/Settings.php:159
 msgid "Remove XML-RPC and Pingbacks support"
 msgstr "Remover suporte à XML-RPC e Pingbacks"
 
-#: classes/Settings.php:166
+#: classes/Settings.php:165
 msgid "Disallow file edit"
 msgstr "Proibir edição de arquivos"
 
-#: classes/Settings.php:172
+#: classes/Settings.php:171
 msgid "Show PHP version in admin footer"
 msgstr "Mostrar versão do PHP no rodapé da administração"
 
-#: classes/Settings.php:175
+#: classes/Settings.php:174
 msgid "For admin users only."
 msgstr "Apenas para administradores."
 
-#: classes/Settings.php:179
+#: classes/Settings.php:178
 msgid "Generic login error message"
 msgstr "Mensagem de erro genérica no login"
 
-#: classes/Settings.php:185
+#: classes/Settings.php:184
 msgid "Heartbeat API"
 msgstr "API de Heartbeat"
 
-#: classes/Settings.php:188
+#: classes/Settings.php:187
 msgid "Default"
 msgstr "Padrão"
 
-#: classes/Settings.php:189
+#: classes/Settings.php:188
 msgid "60 seconds"
 msgstr "60 segundos"
 
-#: classes/Settings.php:190
+#: classes/Settings.php:189
 msgid "120 seconds"
 msgstr "120 segundos"
 
-#: classes/Settings.php:191
+#: classes/Settings.php:190
 msgid "Disable"
 msgstr "Desativar"
 
-#: classes/Settings.php:194
+#: classes/Settings.php:193
 msgid ""
 "Search for \"What is WordPress Heartbeat?\" in your browser to learn more."
 msgstr ""
 "Pesquise por \"O que é Heartbeat do WordPress?\" no seu navegador para saber "
 "mais."
 
-#: classes/Settings.php:198
+#: classes/Settings.php:197
 msgid "Show admin bar for admin users only"
 msgstr "Mostrar barra de administrador apenas para administradores"
 
-#: classes/Settings.php:204
+#: classes/Settings.php:203
+msgid "Hide annoying messages"
+msgstr "Ocultar mensagens inconvenientes"
+
+#. translators: %s is the securityHeaders.io URL
+#: classes/Settings.php:208
+msgid ""
+"Hide almost all annoying messages that keep appearing. But it will show them "
+"on the [Plugins](%s) page, just to make sure they are visible somewhere."
+msgstr ""
+"Oculta quase todas as mensagens inconvenientes que ficam aparecendo. Mas irá "
+"mostra-las na página de [Plugins](%s), apenas para garantir que elas estarão "
+"visíveis em algum lugar."
+
+#: classes/Settings.php:214
 msgid "Hide WordPress update nag to all but admins"
 msgstr "Mostrar notificação de atualizações apenas para administradores"
 
-#: classes/Settings.php:210
+#: classes/Settings.php:220
 msgid "Hide WordPress version in admin footer to all but admins"
 msgstr ""
 "Mostrar versão do WordPress no rodapé da área administrativa apenas para "
 "administradores"
 
-#: classes/Settings.php:216
+#: classes/Settings.php:226
 msgid "Remove \"Comments\" from admin bar"
 msgstr "Remover \"Comentários\" da barra de administrador"
 
-#: classes/Settings.php:222
+#: classes/Settings.php:232
 msgid "Remove \"WordPress Logo\" from admin bar"
 msgstr "Remover \"Logo do WordPress\" da barra de administrador"
 
-#: classes/Settings.php:228
+#: classes/Settings.php:238
 msgid "Remove \"+ New\" button from admin bar"
 msgstr "Remover botão \"+ Novo\" da barra de administrador"
 
-#: classes/Settings.php:234
+#: classes/Settings.php:244
 msgid "Remove some default dashboard widgets (useless for clients)"
 msgstr ""
 "Remover alguns widgets padrões do Painel (inúteis para usuários leigos)"
 
-#: classes/Settings.php:240
+#: classes/Settings.php:250
 msgid "Remove \"Howdy\" from admin bar"
 msgstr "Remover \"Olá\" da barra de administrador"
 
-#: classes/Settings.php:246
+#: classes/Settings.php:256
 msgid "Remove query string from static scripts"
 msgstr "Remover query string dos códigos estáticos"
 
-#: classes/Settings.php:252
+#: classes/Settings.php:262
 msgid "Remove"
 msgstr "Remover"
 
-#: classes/Settings.php:258
+#: classes/Settings.php:268
 msgid "Remove Dashboard \"welcome panel\""
 msgstr "Remover \"Boas-vindas\" do Painel"
 
-#: classes/Settings.php:264
+#: classes/Settings.php:274
 msgid "Remove WordPress version number in frontend"
 msgstr "Remover versão do WordPress no frontend"
 
-#: classes/Settings.php:270
+#: classes/Settings.php:280
 msgid "Security Headers"
 msgstr "Headers de Segurança"
 
 #. translators: %s is the securityHeaders.io URL
-#: classes/Settings.php:281
+#: classes/Settings.php:291
 msgid ""
 "You can utilise this headers to make your site more secure. Once you have "
 "setup each header, check it using [securityHeaders.io](%s)."
@@ -250,7 +264,7 @@ msgstr ""
 "Você pode utilizar esses headers para tornar seu site mais seguro. Após "
 "configurar cada header, confira-os usando [securityHeaders.io](%s)."
 
-#: classes/Settings.php:295
+#: classes/Settings.php:305
 msgid "Settings"
 msgstr "Configurações"
 
