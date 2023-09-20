@@ -286,6 +286,7 @@ class Settings extends WP_Options_Page {
 					'x-xss-protection'          => 'X-XSS-Protection',
 					'content-security-policy'   => 'Content-Security-Policy',
 					'referrer-policy'           => 'Referrer-Policy',
+					'permissions-policy'        => 'Permissions-Policy'
 				] ),
 				'description' => sprintf(
 					/* translators: %s is the securityHeaders.io URL. Please preserve the markdown syntax. */

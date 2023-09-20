@@ -18,6 +18,7 @@ function wp_tweaks_security_headers ( $headers ) {
 			'content-security-policy'   => "default-src https:; font-src https: data:; img-src https: data:; script-src https: 'unsafe-inline'; style-src https: 'unsafe-inline'",
 			'x-frame-options'           => 'sameorigin',
 			'referrer-policy'           => 'strict-origin-when-cross-origin',
+			'permissions-policy'        => 'geolocation=(), microphone=(), camera=()'
 		]
 	);
 
