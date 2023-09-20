@@ -280,15 +280,17 @@ class Settings extends WP_Options_Page {
 				'title' => __( 'Security Headers', 'wp-tweaks' ),
 				'type' => 'checkboxes',
 				'options' => apply_filters( 'wp_tweaks_security_headers_options', [
-					'x-frame-options' => 'X-Frame-Options',
+					'x-frame-options'           => 'X-Frame-Options',
 					'strict-transport-security' => 'Strict-Transport-Security',
-					'x-content-type-options' => 'X-Content-Type-Options',
-					'x-xss-protection' => 'X-XSS-Protection',
-					'content-security-policy' => 'Content-Security-Policy',
+					'x-content-type-options'    => 'X-Content-Type-Options',
+					'x-xss-protection'          => 'X-XSS-Protection',
+					'content-security-policy'   => 'Content-Security-Policy',
+					'referrer-policy'           => 'Referrer-Policy',
+					'permissions-policy'        => 'Permissions-Policy'
 				] ),
 				'description' => sprintf(
-					/* translators: %s is the securityHeaders.io URL */
-					esc_html__( 'You can utilise this headers to make your site more secure. Once you have setup each header, check it using [securityHeaders.io](%s).', 'wp-tweaks' ),
+					/* translators: %s is the securityHeaders.io URL. Please preserve the markdown syntax. */
+					esc_html__( 'Only activate these options if you are sure of what you are doing and don\'t forget to test your site. This headers are used to make your site more secure. Once you have setup each header, check it using [securityHeaders.io](%s).', 'wp-tweaks' ),
 					add_query_arg(
 						[
 							'q' => home_url(),
