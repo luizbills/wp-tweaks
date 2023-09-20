@@ -15,7 +15,7 @@ function wp_tweaks_security_headers ( $headers ) {
 			'strict-transport-security' => 'max-age=31536000; includeSubDomains; preload',
 			'x-content-type-options' => 'nosniff',
 			'x-xss-protection' => '1; mode=block',
-			'content-security-policy' => "default-src 'self'; connect-src *; font-src * data:; frame-src *; img-src * data:; media-src *; object-src *; script-src * 'unsafe-inline' 'unsafe-eval'; style-src * 'unsafe-inline'",
+			'content-security-policy' => "default-src https:; font-src https: data:; img-src https: data:; script-src https: 'unsafe-inline'; style-src https: 'unsafe-inline'",
 			'x-frame-options' => 'sameorigin'
 		]
 	);
