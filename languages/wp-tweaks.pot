@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Tweaks 2.0.0\n"
+"Project-Id-Version: WP Tweaks 2.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-tweaks\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-09-19T21:21:12-03:00\n"
+"POT-Creation-Date: 2023-09-20T13:26:26-03:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: wp-tweaks\n"
@@ -238,12 +238,12 @@ msgstr ""
 msgid "Security Headers"
 msgstr ""
 
-#. translators: %s is the securityHeaders.io URL
-#: classes/Settings.php:291
-msgid "You can utilise this headers to make your site more secure. Once you have setup each header, check it using [securityHeaders.io](%s)."
+#. translators: %s is the securityHeaders.io URL. Please preserve the markdown syntax.
+#: classes/Settings.php:293
+msgid "Only activate these options if you are sure of what you are doing and don't forget to test your site. This headers are used to make your site more secure. Once you have setup each header, check it using [securityHeaders.io](%s)."
 msgstr ""
 
-#: classes/Settings.php:305
+#: classes/Settings.php:307
 msgid "Settings"
 msgstr ""
 

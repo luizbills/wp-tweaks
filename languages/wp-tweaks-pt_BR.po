@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Tweaks\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-tweaks\n"
-"POT-Creation-Date: 2023-09-19T21:19:10-03:00\n"
-"PO-Revision-Date: 2023-09-19 21:21-0300\n"
+"POT-Creation-Date: 2023-09-20T13:26:26-03:00\n"
+"PO-Revision-Date: 2023-09-20 13:27-0300\n"
 "Last-Translator: \n"
 "Language-Team: Português do Brasil\n"
 "Language: pt_BR\n"
@@ -194,7 +194,7 @@ msgstr "Mostrar barra de administrador apenas para administradores"
 msgid "Hide annoying messages"
 msgstr "Ocultar mensagens inconvenientes"
 
-#. translators: %s is the securityHeaders.io URL
+#. translators: %s is the Plugins page URL
 #: classes/Settings.php:208
 msgid ""
 "Hide almost all annoying messages that keep appearing. But it will show them "
@@ -255,16 +255,20 @@ msgstr "Remover versão do WordPress no frontend"
 msgid "Security Headers"
 msgstr "Headers de Segurança"
 
-#. translators: %s is the securityHeaders.io URL
-#: classes/Settings.php:291
+#. translators: %s is the securityHeaders.io URL. Please preserve the markdown syntax.
+#: classes/Settings.php:293
 msgid ""
-"You can utilise this headers to make your site more secure. Once you have "
-"setup each header, check it using [securityHeaders.io](%s)."
+"Only activate these options if you are sure of what you are doing and don't "
+"forget to test your site. This headers are used to make your site more "
+"secure. Once you have setup each header, check it using [securityHeaders.io]"
+"(%s)."
 msgstr ""
-"Você pode utilizar esses headers para tornar seu site mais seguro. Após "
-"configurar cada header, confira-os usando [securityHeaders.io](%s)."
+"Só ative essas opções se você tiver certeza do que está fazendo e não "
+"esqueça de depois testar seu site. Esses cabeçalhos são usados para tornar "
+"seu site mais seguro. Depois de configurar cada cabeçalho, verifique-os "
+"usando [securityHeaders.io](%s)."
 
-#: classes/Settings.php:305
+#: classes/Settings.php:307
 msgid "Settings"
 msgstr "Configurações"
 
