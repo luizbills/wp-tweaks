@@ -199,6 +199,17 @@ class Settings extends WP_Options_Page {
 				'default' => true,
 			],
 			[
+				'id' => 'hide-admin-notices',
+				'title' => __( 'Hide annoying messages', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => true,
+				'description' =>  sprintf(
+					/* translators: %s is the Plugins page URL */
+					esc_html__( 'Hide almost all annoying messages that keep appearing. But it will show them on the [Plugins](%s) page, just to make sure they are visible somewhere.', 'wp-tweaks' ),
+					admin_url( '/plugins.php' )
+				),
+			],
+			[
 				'id' => 'hide-update-notice',
 				'title' => __( 'Hide WordPress update nag to all but admins', 'wp-tweaks' ),
 				'type' => 'checkbox',
