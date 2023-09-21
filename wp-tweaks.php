@@ -3,7 +3,7 @@
  * Plugin Name: WP Tweaks
  * Plugin URI: https://github.com/luizbills/wp-tweaks
  * Description: Several opinionated WordPress tweaks focused in security and performance.
- * Version: 2.1.0
+ * Version: 2.1.1
  * Requires at least: 4.0
  * Requires PHP: 7.4
  * Author: Luiz Bills

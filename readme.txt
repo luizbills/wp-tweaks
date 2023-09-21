@@ -55,11 +55,10 @@ Support this plugin on [https://luizpb.com/donate/](https://luizpb.com/donate/)
 
 == Changelog ==
 
-= 2.1.0 - 2023-09-19 =
+= 2.1.1 - 2023-09-21 =
 
-* Option to disable comments (only in pages and blog posts)
-* Option to hide annoying messages in admin panel
-* Warns when **WP_DEVELOPMENT_MODE** constant is activated
+* New Security Header: 'Referrer-Policy' with value `strict-origin-when-cross-origin`.
+* New Security Header: 'Permissions-Policy' with value `geolocation=(), microphone=(), camera=(), interest-cohort=()`.
 
 = 2.0.0 - 2023-08-22 =
 
