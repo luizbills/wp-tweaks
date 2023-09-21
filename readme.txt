@@ -5,7 +5,7 @@ Donate link: https://www.luizpb.com/donate/
 Requires at least: 4.0
 Tested up to: 6.3
 Requires PHP: 7.4
-Stable tag: 2.1.0
+Stable tag: 2.2.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -54,6 +54,11 @@ Support this plugin on [https://luizpb.com/donate/](https://luizpb.com/donate/)
 1. Go to Settings > Tweaks to configure the plugin.
 
 == Changelog ==
+
+= 2.2.0 - 2023-09-21 =
+
+- New security header: "Referrer-Policy" (value: `strict-origin-when-cross-origin`)
+- New security header: "Permissions-Policy" (value: `geolocation=(), microphone=(), camera=(), interest-cohort=()`)
 
 = 2.1.0 - 2023-09-19 =
 
