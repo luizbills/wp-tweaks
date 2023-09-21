@@ -55,6 +55,11 @@ Support this plugin on [https://luizpb.com/donate/](https://luizpb.com/donate/)
 
 == Changelog ==
 
+= 2.2.0 - 2023-09-19 =
+
+- New security header: "Referrer-Policy" (value: `strict-origin-when-cross-origin`)
+- New security header: "Permissions-Policy" (value: `geolocation=(), microphone=(), camera=(), interest-cohort=()`)
+
 = 2.1.0 - 2023-09-19 =
 
 * Option to disable comments (only in pages and blog posts)
