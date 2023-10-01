@@ -89,6 +89,12 @@ class Settings extends WP_Options_Page {
 				'description' => esc_html__( 'Hides and disables new comments on pages and blog posts.', 'wp-tweaks' )
 			],
 			[
+				'id' => 'disable-cron',
+				'title' => __( 'Disable WP CRON', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => false,
+			],
+			[
 				'id' => 'disable-author-query',
 				'title' => __( 'Disable author query', 'wp-tweaks' ),
 				'type' => 'checkbox',
