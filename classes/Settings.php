@@ -143,6 +143,13 @@ class Settings extends WP_Options_Page {
 				'description' => esc_html__( 'Disable users enumeration via REST API.', 'wp-tweaks' )
 			],
 			[
+				'id' => 'disable-rss',
+				'title' => __( 'Disable RSS feeds', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => false,
+				'description' => esc_html__( "Disable RSS feed if your site doesn't have a blog.", 'wp-tweaks' )
+			],
+			[
 				'id' => 'disable-website-field',
 				'title' => __( 'Remove "website" field in comment form', 'wp-tweaks' ),
 				'type' => 'checkbox',
