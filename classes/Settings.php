@@ -147,7 +147,7 @@ class Settings extends WP_Options_Page {
 				'title' => __( 'Disable right click', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => false,
-				'description' => esc_html__( 'Disable right click, copy, cut and paste. Only on front-end.', 'wp-tweaks' )
+				'description' => esc_html__( 'Disable right click, also copy and cut commands. Only on front-end.', 'wp-tweaks' )
 			],
 			[
 				'id' => 'disable-website-field',

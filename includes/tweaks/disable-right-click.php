@@ -1,6 +1,6 @@
 <?php
 /**
- * Disable right click, copy, cut and paste commands.
+ * Disable right click, also copy and cut commands.
  *
  * @package wp-tweaks
  */
