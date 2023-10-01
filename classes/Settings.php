@@ -252,6 +252,12 @@ class Settings extends WP_Options_Page {
 				'default' => true,
 			],
 			[
+				'id' => 'remove-lang-switcher',
+				'title' => __( 'Remove language switcher from login page', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => false,
+			],
+			[
 				'id' => 'remove-query-strings',
 				'title' => __( 'Remove query string from static scripts', 'wp-tweaks' ),
 				'type' => 'checkbox',
