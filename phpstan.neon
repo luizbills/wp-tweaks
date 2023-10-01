@@ -6,5 +6,6 @@ parameters:
 
     paths:
         - wp-tweaks.php
+        - uninstall.php
         - classes/
         - includes/
