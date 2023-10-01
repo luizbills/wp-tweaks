@@ -143,6 +143,13 @@ class Settings extends WP_Options_Page {
 				'description' => esc_html__( 'Disable users enumeration via REST API.', 'wp-tweaks' )
 			],
 			[
+				'id' => 'disable-right-click',
+				'title' => __( 'Disable right click', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => false,
+				'description' => esc_html__( 'Disable right click, copy, cut and paste. Only on front-end.', 'wp-tweaks' )
+			],
+			[
 				'id' => 'disable-website-field',
 				'title' => __( 'Remove "website" field in comment form', 'wp-tweaks' ),
 				'type' => 'checkbox',
