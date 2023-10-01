@@ -155,12 +155,12 @@ class Settings extends WP_Options_Page {
 				'default' => false,
 				'description' => esc_html__( 'Disable right click, also copy and cut commands. Only on front-end.', 'wp-tweaks' )
 			],
-      [
-        'id' => 'disable-rss',
-				'title' => __( 'Disable RSS feeds', 'wp-tweaks' ),
+			[
+				'id' => 'disable-rss',
+				'title' => __( 'Disable RSS feed', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => false,
-				'description' => esc_html__( "Disable RSS feed if your site doesn't have a blog.", 'wp-tweaks' )
+				'description' => esc_html__( "Tip: Disable RSS feed if your site doesn't have a blog.", 'wp-tweaks' )
 			],
 			[
 				'id' => 'disable-website-field',
