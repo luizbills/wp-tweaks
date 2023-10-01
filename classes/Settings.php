@@ -89,6 +89,12 @@ class Settings extends WP_Options_Page {
 				'description' => esc_html__( 'Hides and disables new comments on pages and blog posts.', 'wp-tweaks' )
 			],
 			[
+				'id' => 'disable-cron',
+				'title' => __( 'Disable WP CRON', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => false,
+			],
+			[
 				'id' => 'disable-author-query',
 				'title' => __( 'Disable author query', 'wp-tweaks' ),
 				'type' => 'checkbox',
@@ -148,6 +154,13 @@ class Settings extends WP_Options_Page {
 				'type' => 'checkbox',
 				'default' => false,
 				'description' => esc_html__( 'Disable right click, also copy and cut commands. Only on front-end.', 'wp-tweaks' )
+			],
+      [
+        'id' => 'disable-rss',
+				'title' => __( 'Disable RSS feeds', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => false,
+				'description' => esc_html__( "Disable RSS feed if your site doesn't have a blog.", 'wp-tweaks' )
 			],
 			[
 				'id' => 'disable-website-field',
@@ -257,6 +270,12 @@ class Settings extends WP_Options_Page {
 				'title' => __( 'Remove "Howdy" from admin bar', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => true,
+			],
+			[
+				'id' => 'remove-lang-switcher',
+				'title' => __( 'Remove language switcher from login page', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => false,
 			],
 			[
 				'id' => 'remove-query-strings',
