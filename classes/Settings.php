@@ -149,7 +149,14 @@ class Settings extends WP_Options_Page {
 				'description' => esc_html__( 'Disable users enumeration via REST API.', 'wp-tweaks' )
 			],
 			[
-				'id' => 'disable-rss',
+				'id' => 'disable-right-click',
+				'title' => __( 'Disable right click', 'wp-tweaks' ),
+				'type' => 'checkbox',
+				'default' => false,
+				'description' => esc_html__( 'Disable right click, also copy and cut commands. Only on front-end.', 'wp-tweaks' )
+			],
+      [
+        'id' => 'disable-rss',
 				'title' => __( 'Disable RSS feeds', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => false,
