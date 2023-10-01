@@ -5,7 +5,7 @@ Donate link: https://www.luizpb.com/donate/
 Requires at least: 4.0
 Tested up to: 6.3
 Requires PHP: 7.4
-Stable tag: 2.2.0
+Stable tag: 2.3.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -54,6 +54,13 @@ Support this plugin on [https://luizpb.com/donate/](https://luizpb.com/donate/)
 1. Go to Settings > Tweaks to configure the plugin.
 
 == Changelog ==
+
+= 2.3.0 - 2023-10-01 =
+
+- Option to disable RSS feeds
+- Option to disable right click in frontend
+- Option to remove language switcher from login page
+- Option to disable WP CRON (via `DISABLE_WP_CRON` constant)
 
 = 2.2.0 - 2023-09-21 =
 
