@@ -93,6 +93,7 @@ class Settings extends WP_Options_Page {
 				'title' => __( 'Disable WP CRON', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => false,
+				'description' => esc_html__( 'When enabling this option, be sure to create an external cron job.', 'wp-tweaks' ),
 			],
 			[
 				'id' => 'disable-author-query',

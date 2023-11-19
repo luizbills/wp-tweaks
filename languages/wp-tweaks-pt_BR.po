@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Tweaks\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-tweaks\n"
-"POT-Creation-Date: 2023-10-01T15:13:32-03:00\n"
-"PO-Revision-Date: 2023-10-01 15:15-0300\n"
+"POT-Creation-Date: 2023-11-19T10:23:00-03:00\n"
+"PO-Revision-Date: 2023-11-19 10:23-0300\n"
 "Last-Translator: \n"
 "Language-Team: Português do Brasil\n"
 "Language: pt_BR\n"
@@ -81,143 +81,143 @@ msgstr "Painel com apenas uma coluna"
 msgid "Disable comments"
 msgstr "Desativar comentários"
 
-#: classes/Settings.php:89
-msgid "Hides and disables new comments on pages and blog posts."
-msgstr "Oculta e desativa novos comentários em páginas e postagens de blog."
-
 #: classes/Settings.php:93
 msgid "Disable WP CRON"
 msgstr "Desativar WP CRON"
 
-#: classes/Settings.php:99
+#: classes/Settings.php:96
+msgid "When enabling this option, be sure to create an external cron job."
+msgstr "Ao ativar essa opção, tenha certeza de criar um cron job externo."
+
+#: classes/Settings.php:100
 msgid "Disable author query"
 msgstr "Desativar query de autores"
 
 #. translators: %s is an example URL
-#: classes/Settings.php:104
+#: classes/Settings.php:105
 msgid "Disables author search via url (e.g: %s)"
 msgstr "Desativa a pesquisa de autores por url (ex: %s)"
 
-#: classes/Settings.php:110
+#: classes/Settings.php:111
 msgid "Disable author pages"
 msgstr "Desativar páginas de autores"
 
 #. translators: %s is an example URL
-#: classes/Settings.php:115
+#: classes/Settings.php:116
 msgid "Disables author pages (e.g: %s)"
 msgstr "Desativa páginas de autores (ex: %s)"
 
-#: classes/Settings.php:121
+#: classes/Settings.php:122
 msgid "Disable WordPress emojis"
 msgstr "Desativar emojis do WordPress"
 
-#: classes/Settings.php:127
+#: classes/Settings.php:128
 msgid "Disable jQuery Migrate"
 msgstr "Desativar jQuery Migrate"
 
-#: classes/Settings.php:133
+#: classes/Settings.php:134
 msgid "Remove \"meta widget\""
 msgstr "Remover \"widget meta\""
 
-#: classes/Settings.php:139
+#: classes/Settings.php:140
 msgid "Remove public REST API access"
 msgstr "Remover acesso publico à REST API"
 
-#: classes/Settings.php:142
+#: classes/Settings.php:143
 msgid "Only logged in users will have access to REST API."
 msgstr "Apenas usuários autentificados terão acesso à REST API."
 
-#: classes/Settings.php:146
+#: classes/Settings.php:147
 msgid "Remove users endpoint from REST API"
 msgstr "Remover endpoint users da REST API"
 
-#: classes/Settings.php:149
+#: classes/Settings.php:150
 msgid "Disable users enumeration via REST API."
 msgstr "Desativar a enumeração de usuários pela REST API."
 
-#: classes/Settings.php:153
+#: classes/Settings.php:154
 msgid "Disable right click"
 msgstr "Desativar click direito"
 
-#: classes/Settings.php:156
+#: classes/Settings.php:157
 msgid "Disable right click, also copy and cut commands. Only on front-end."
 msgstr ""
 "Desativa o clique direito e também os comandos de copiar e cortar. Apenas no "
 "front-end."
 
-#: classes/Settings.php:160
+#: classes/Settings.php:161
 msgid "Disable RSS feed"
 msgstr "Desativar feed RSS"
 
-#: classes/Settings.php:163
+#: classes/Settings.php:164
 msgid "Tip: Disable RSS feed if your site doesn't have a blog."
 msgstr "Dica: Desative o feed RSS se o seu site não tem blog."
 
-#: classes/Settings.php:167
+#: classes/Settings.php:168
 msgid "Remove \"website\" field in comment form"
 msgstr "Remover campo \"site\" no formulário de comentário"
 
-#: classes/Settings.php:173
+#: classes/Settings.php:174
 msgid "Remove oEmbed support"
 msgstr "Remover suporte ao oEmbed"
 
-#: classes/Settings.php:179
+#: classes/Settings.php:180
 msgid "Remove XML-RPC and Pingbacks support"
 msgstr "Remover suporte à XML-RPC e Pingbacks"
 
-#: classes/Settings.php:185
+#: classes/Settings.php:186
 msgid "Disallow file edit"
 msgstr "Proibir edição de arquivos"
 
-#: classes/Settings.php:191
+#: classes/Settings.php:192
 msgid "Show PHP version in admin footer"
 msgstr "Mostrar versão do PHP no rodapé da administração"
 
-#: classes/Settings.php:194
+#: classes/Settings.php:195
 msgid "For admin users only."
 msgstr "Apenas para administradores."
 
-#: classes/Settings.php:198
+#: classes/Settings.php:199
 msgid "Generic login error message"
 msgstr "Mensagem de erro genérica no login"
 
-#: classes/Settings.php:204
+#: classes/Settings.php:205
 msgid "Heartbeat API"
 msgstr "API de Heartbeat"
 
-#: classes/Settings.php:207
+#: classes/Settings.php:208
 msgid "Default"
 msgstr "Padrão"
 
-#: classes/Settings.php:208
+#: classes/Settings.php:209
 msgid "60 seconds"
 msgstr "60 segundos"
 
-#: classes/Settings.php:209
+#: classes/Settings.php:210
 msgid "120 seconds"
 msgstr "120 segundos"
 
-#: classes/Settings.php:210
+#: classes/Settings.php:211
 msgid "Disable"
 msgstr "Desativar"
 
-#: classes/Settings.php:213
+#: classes/Settings.php:214
 msgid ""
 "Search for \"What is WordPress Heartbeat?\" in your browser to learn more."
 msgstr ""
 "Pesquise por \"O que é Heartbeat do WordPress?\" no seu navegador para saber "
 "mais."
 
-#: classes/Settings.php:217
+#: classes/Settings.php:218
 msgid "Show admin bar for admin users only"
 msgstr "Mostrar barra de administrador apenas para administradores"
 
-#: classes/Settings.php:223
+#: classes/Settings.php:224
 msgid "Hide annoying messages"
 msgstr "Ocultar mensagens inconvenientes"
 
 #. translators: %s is the Plugins page URL
-#: classes/Settings.php:228
+#: classes/Settings.php:229
 msgid ""
 "Hide almost all annoying messages that keep appearing. But it will show them "
 "on the [Plugins](%s) page, just to make sure they are visible somewhere."
@@ -226,63 +226,63 @@ msgstr ""
 "mostra-las na página de [Plugins](%s), apenas para garantir que elas estarão "
 "visíveis em algum lugar."
 
-#: classes/Settings.php:234
+#: classes/Settings.php:235
 msgid "Hide WordPress update nag to all but admins"
 msgstr "Mostrar notificação de atualizações apenas para administradores"
 
-#: classes/Settings.php:240
+#: classes/Settings.php:241
 msgid "Hide WordPress version in admin footer to all but admins"
 msgstr ""
 "Mostrar versão do WordPress no rodapé da área administrativa apenas para "
 "administradores"
 
-#: classes/Settings.php:246
+#: classes/Settings.php:247
 msgid "Remove \"Comments\" from admin bar"
 msgstr "Remover \"Comentários\" da barra de administrador"
 
-#: classes/Settings.php:252
+#: classes/Settings.php:253
 msgid "Remove \"WordPress Logo\" from admin bar"
 msgstr "Remover \"Logo do WordPress\" da barra de administrador"
 
-#: classes/Settings.php:258
+#: classes/Settings.php:259
 msgid "Remove \"+ New\" button from admin bar"
 msgstr "Remover botão \"+ Novo\" da barra de administrador"
 
-#: classes/Settings.php:264
+#: classes/Settings.php:265
 msgid "Remove some default dashboard widgets (useless for clients)"
 msgstr ""
 "Remover alguns widgets padrões do Painel (inúteis para usuários leigos)"
 
-#: classes/Settings.php:270
+#: classes/Settings.php:271
 msgid "Remove \"Howdy\" from admin bar"
 msgstr "Remover \"Olá\" da barra de administrador"
 
-#: classes/Settings.php:276
+#: classes/Settings.php:277
 msgid "Remove language switcher from login page"
 msgstr "Remover seletor de idioma da página de login"
 
-#: classes/Settings.php:282
+#: classes/Settings.php:283
 msgid "Remove query string from static scripts"
 msgstr "Remover query string dos códigos estáticos"
 
-#: classes/Settings.php:288
+#: classes/Settings.php:289
 msgid "Remove"
 msgstr "Remover"
 
-#: classes/Settings.php:294
+#: classes/Settings.php:295
 msgid "Remove Dashboard \"welcome panel\""
 msgstr "Remover \"Boas-vindas\" do Painel"
 
-#: classes/Settings.php:300
+#: classes/Settings.php:301
 msgid "Remove WordPress version number in frontend"
 msgstr "Remover versão do WordPress no frontend"
 
-#: classes/Settings.php:306
+#: classes/Settings.php:307
 msgid "Security Headers"
 msgstr "Headers de Segurança"
 
 #. translators: %s is the securityHeaders.io URL. Please preserve the markdown syntax.
-#: classes/Settings.php:319
+#: classes/Settings.php:320
 msgid ""
 "Only activate these options if you are sure of what you are doing and don't "
 "forget to test your site. This headers are used to make your site more "
@@ -294,7 +294,7 @@ msgstr ""
 "seu site mais seguro. Depois de configurar cada cabeçalho, verifique-os "
 "usando [securityHeaders.io](%s)."
 
-#: classes/Settings.php:333
+#: classes/Settings.php:334
 msgid "Settings"
 msgstr "Configurações"
 
@@ -325,6 +325,13 @@ msgstr "Não permitido!"
 #: includes/tweaks/generic-login-errors.php:35
 msgid "Incorrect username or password."
 msgstr "Nome de usuário ou senha incorretos."
+
+#~ msgid "Be sure to create an external cron job when enabling this option."
+#~ msgstr ""
+#~ "Tenha certeza de criar um \"cron job\" externo ao ativar essa opção."
+
+#~ msgid "Hides and disables new comments on pages and blog posts."
+#~ msgstr "Oculta e desativa novos comentários em páginas e postagens de blog."
 
 #~ msgid "ERROR"
 #~ msgstr "ERRO"
