@@ -8,7 +8,8 @@
 add_action( 'admin_head', 'wp_tweaks_hide_admin_notices', 20 );
 function wp_tweaks_hide_admin_notices () {
 	global $pagenow;
-	if ( 'plugins.php' === $pagenow ) return;
+	$ignored_pages = [ 'plugins.php', 'post.php', 'post-new.php' ];
+	if ( in_array( $pagenow, $ignored_pages, true ) ) return;
 
 	$display = apply_filters(
 		'wp_tweaks_hide_admin_notices_css_display',
@@ -23,6 +24,8 @@ function wp_tweaks_hide_admin_notices () {
 		}
 
 		/* Notices with this selectors, will always appears */
+		#setting-error-settings_updated,
+		.notice-success.settings-error,
 		.notice.error,
 		.notice.updated,
 		.notice.update-message,
