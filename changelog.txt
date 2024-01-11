@@ -1,3 +1,12 @@
+= 2.3.2 - 2024-01-11 =
+
+- Fix: admin notices in `post.php` and `post-new.php`
+
+= 2.3.1 - 2023-12-16 =
+
+- Fix: message about "connection lost" when "hide admin notices" is enabled
+- Fix: don't hide "Settings saved" messages.
+
 = 2.3.0 - 2023-11-19 =
 
 - Option to disable RSS feeds

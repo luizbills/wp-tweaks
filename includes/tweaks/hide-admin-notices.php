@@ -8,7 +8,7 @@
 add_action( 'admin_head', 'wp_tweaks_hide_admin_notices', 20 );
 function wp_tweaks_hide_admin_notices () {
 	global $pagenow;
-	$ignored_pages = [ 'plugins.php', 'post.php', 'post-new.php' ];
+	$ignored_pages = [ 'plugins.php' ];
 	if ( in_array( $pagenow, $ignored_pages, true ) ) return;
 
 	$display = apply_filters(
@@ -19,19 +19,20 @@ function wp_tweaks_hide_admin_notices () {
 	ob_start();	?>
 
 	<style>
-		.notice:not(.hidden) {
-			display: none!important;
-		}
-
 		/* Notices with this selectors, will always appears */
 		#setting-error-settings_updated,
+		#lost-connection-notice,
 		.notice-success.settings-error,
 		.notice.error,
 		.notice.updated,
 		.notice.update-message,
 		.notice[id^="message"],
-		.notice.inline:not(.hidden) {
+		.notice:not(.hidden) {
 			display: <?php echo esc_html( $display ); ?>;
+		}
+
+		#wpwrap .notice.hidden {
+			display: none!important;
 		}
 	</style>
 
