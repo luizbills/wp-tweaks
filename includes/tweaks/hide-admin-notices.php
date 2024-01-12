@@ -8,31 +8,38 @@
 add_action( 'admin_head', 'wp_tweaks_hide_admin_notices', 20 );
 function wp_tweaks_hide_admin_notices () {
 	global $pagenow;
-	$ignored_pages = [ 'plugins.php' ];
+	$ignored_pages = apply_filters(
+		'wp_tweaks_hide_admin_notices_ignored_pages',
+		[ 'plugins.php', 'site-health.php' ]
+	);
+
 	if ( in_array( $pagenow, $ignored_pages, true ) ) return;
 
-	$display = apply_filters(
+	$css_display = apply_filters(
 		'wp_tweaks_hide_admin_notices_css_display',
-		'block!important'
+		'block'
 	);
 
 	ob_start();	?>
 
-	<style>
-		/* Notices with this selectors, will always appears */
-		#setting-error-settings_updated,
-		#lost-connection-notice,
-		.notice-success.settings-error,
-		.notice.error,
-		.notice.updated,
-		.notice.update-message,
-		.notice[id^="message"],
-		.notice:not(.hidden) {
-			display: <?php echo esc_html( $display ); ?>;
+	<style id="wp_tweaks_hide_admin_notices">
+		.notice:not(.inline) {
+			display: none;
 		}
 
-		#wpwrap .notice.hidden {
-			display: none!important;
+		#wpwrap .wrap .updated,
+		#wpwrap .wrap .notice.update-message,
+		#wpwrap .wrap .notice[id="message"],
+		#wpwrap .wrap .notice[id="message1"],
+		#wpwrap .wrap .notice[id="message2"],
+		#wpwrap .wrap .notice[id="message3"],
+		#wpwrap .wrap .notice[id="message4"],
+		#wpwrap .wrap .notice[id="message5"],
+		#wpwrap .wrap .notice[id="message6"],
+		#wpwrap .wrap .notice[id="message7"],
+		#wpwrap .wrap .notice[id="message8"],
+		#wpwrap .wrap .notice[id^="setting-error"] {
+			display: <?= esc_html( $css_display ) ?>;
 		}
 	</style>
 
@@ -41,4 +48,3 @@ function wp_tweaks_hide_admin_notices () {
 		ob_get_clean()
 	);
 }
-
