@@ -5,7 +5,7 @@ Donate link: https://www.luizpb.com/donate/
 Requires at least: 4.0
 Tested up to: 6.4
 Requires PHP: 7.4
-Stable tag: 2.3.2
+Stable tag: 2.3.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -54,6 +54,10 @@ Support this plugin on [https://luizpb.com/donate/](https://luizpb.com/donate/)
 1. Go to Settings > Tweaks to configure the plugin.
 
 == Changelog ==
+
+= 2.3.3 - 2024-01-12 =
+
+- More fixes related to admin notices. Sorry.
 
 = 2.3.2 - 2024-01-11 =
 
