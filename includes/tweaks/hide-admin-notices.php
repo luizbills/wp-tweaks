@@ -27,6 +27,7 @@ function wp_tweaks_hide_admin_notices () {
 			display: none;
 		}
 
+		/* allowlist */
 		#wpwrap .wrap .updated,
 		#wpwrap .wrap .notice.update-message,
 		#wpwrap .wrap .notice[id="message"],
@@ -48,3 +49,20 @@ function wp_tweaks_hide_admin_notices () {
 		ob_get_clean()
 	);
 }
+
+// don't hide WP Crontrol notices
+add_filter( 'wp_tweaks_hide_admin_notices_css_rules', function ( $css ) {
+	if ( defined( "Crontrol\\WP_CRONTROL_VERSION" ) ) {
+		$custom_css = "
+		#wpwrap .wrap .notice#crontrol-late-message,
+		#wpwrap .wrap .notice#crontrol-status-notice,
+		#wpwrap .wrap .notice#crontrol-status-error,
+		#wpwrap .wrap .notice#crontrol-timezon-warning,
+		#wpwrap .wrap .notice#crontrol-event-not-found,
+		#wpwrap .wrap .notice#crontrol-message,
+		";
+		$find = '/* allowlist */';
+		$css = str_replace( $find, "{$find}{$custom_css}", $css );
+	}
+	return $css;
+} );
