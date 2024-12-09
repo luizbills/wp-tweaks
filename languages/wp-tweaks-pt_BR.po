@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Tweaks\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-tweaks\n"
-"POT-Creation-Date: 2023-11-19T10:23:00-03:00\n"
-"PO-Revision-Date: 2023-11-19 10:23-0300\n"
+"POT-Creation-Date: 2024-12-09T12:43:40+00:00\n"
+"PO-Revision-Date: 2024-12-09 09:44-0300\n"
 "Last-Translator: \n"
 "Language-Team: Português do Brasil\n"
 "Language: pt_BR\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Loco-Version: 2.6.1; wp-5.9.3\n"
 
 #. Plugin Name of the plugin
@@ -80,6 +80,10 @@ msgstr "Painel com apenas uma coluna"
 #: classes/Settings.php:86
 msgid "Disable comments"
 msgstr "Desativar comentários"
+
+#: classes/Settings.php:89
+msgid "Hides and disables new comments on pages and blog posts."
+msgstr "Oculta e desativa novos comentários em páginas e postagens de blog."
 
 #: classes/Settings.php:93
 msgid "Disable WP CRON"
@@ -185,7 +189,7 @@ msgstr "Mensagem de erro genérica no login"
 msgid "Heartbeat API"
 msgstr "API de Heartbeat"
 
-#: classes/Settings.php:208
+#: classes/Settings.php:208 classes/Settings.php:250
 msgid "Default"
 msgstr "Padrão"
 
@@ -197,7 +201,7 @@ msgstr "60 segundos"
 msgid "120 seconds"
 msgstr "120 segundos"
 
-#: classes/Settings.php:211
+#: classes/Settings.php:211 classes/Settings.php:254
 msgid "Disable"
 msgstr "Desativar"
 
@@ -237,52 +241,64 @@ msgstr ""
 "administradores"
 
 #: classes/Settings.php:247
+msgid "Post Revisions"
+msgstr "Revisões de Postagem"
+
+#: classes/Settings.php:257
+msgid ""
+"Limit or disable the number of posts revisions that WordPress stores in the "
+"database."
+msgstr ""
+"Limite ou desative o número de revisões de postagem que o WordPress armazena "
+"no banco de dados."
+
+#: classes/Settings.php:261
 msgid "Remove \"Comments\" from admin bar"
 msgstr "Remover \"Comentários\" da barra de administrador"
 
-#: classes/Settings.php:253
+#: classes/Settings.php:267
 msgid "Remove \"WordPress Logo\" from admin bar"
 msgstr "Remover \"Logo do WordPress\" da barra de administrador"
 
-#: classes/Settings.php:259
+#: classes/Settings.php:273
 msgid "Remove \"+ New\" button from admin bar"
 msgstr "Remover botão \"+ Novo\" da barra de administrador"
 
-#: classes/Settings.php:265
+#: classes/Settings.php:279
 msgid "Remove some default dashboard widgets (useless for clients)"
 msgstr ""
 "Remover alguns widgets padrões do Painel (inúteis para usuários leigos)"
 
-#: classes/Settings.php:271
+#: classes/Settings.php:285
 msgid "Remove \"Howdy\" from admin bar"
 msgstr "Remover \"Olá\" da barra de administrador"
 
-#: classes/Settings.php:277
+#: classes/Settings.php:291
 msgid "Remove language switcher from login page"
 msgstr "Remover seletor de idioma da página de login"
 
-#: classes/Settings.php:283
+#: classes/Settings.php:297
 msgid "Remove query string from static scripts"
 msgstr "Remover query string dos códigos estáticos"
 
-#: classes/Settings.php:289
+#: classes/Settings.php:303
 msgid "Remove"
 msgstr "Remover"
 
-#: classes/Settings.php:295
+#: classes/Settings.php:309
 msgid "Remove Dashboard \"welcome panel\""
 msgstr "Remover \"Boas-vindas\" do Painel"
 
-#: classes/Settings.php:301
+#: classes/Settings.php:315
 msgid "Remove WordPress version number in frontend"
 msgstr "Remover versão do WordPress no frontend"
 
-#: classes/Settings.php:307
+#: classes/Settings.php:321
 msgid "Security Headers"
 msgstr "Headers de Segurança"
 
 #. translators: %s is the securityHeaders.io URL. Please preserve the markdown syntax.
-#: classes/Settings.php:320
+#: classes/Settings.php:334
 msgid ""
 "Only activate these options if you are sure of what you are doing and don't "
 "forget to test your site. This headers are used to make your site more "
@@ -294,7 +310,7 @@ msgstr ""
 "seu site mais seguro. Depois de configurar cada cabeçalho, verifique-os "
 "usando [securityHeaders.io](%s)."
 
-#: classes/Settings.php:334
+#: classes/Settings.php:348
 msgid "Settings"
 msgstr "Configurações"
 
@@ -329,9 +345,6 @@ msgstr "Nome de usuário ou senha incorretos."
 #~ msgid "Be sure to create an external cron job when enabling this option."
 #~ msgstr ""
 #~ "Tenha certeza de criar um \"cron job\" externo ao ativar essa opção."
-
-#~ msgid "Hides and disables new comments on pages and blog posts."
-#~ msgstr "Oculta e desativa novos comentários em páginas e postagens de blog."
 
 #~ msgid "ERROR"
 #~ msgstr "ERRO"
