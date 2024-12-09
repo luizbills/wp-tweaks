@@ -1,4 +1,4 @@
-= next - XXXX-XX-XX =
+= 2.4.0 - 2024-12-09 =
 
 - Option to limit or disable post revisions.
 
