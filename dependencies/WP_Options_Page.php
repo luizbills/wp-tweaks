@@ -7,7 +7,7 @@ namespace Tweaks\Dependencies;
  *
  * @package WP_Options_Page
  * @author Luiz Bills <luizbills@pm.me>
- * @version 0.6.1
+ * @version 0.7.0
  * @see https://github.com/luizbills/wp-options-page
  */
 class WP_Options_Page {
@@ -17,7 +17,7 @@ class WP_Options_Page {
 	 * @since 0.6.0
 	 * @var string
 	 */
-	const VERSION = '0.6.1';
+	const VERSION = '0.7.0';
 
 	/**
 	 * The ID (also the slug) of the page. Should be unique for this menu page and only include lowercase alphanumeric, dashes, and underscores characters to be compatible with `sanitize_key()`.
@@ -929,7 +929,7 @@ class WP_Options_Page {
 		$name = $field['name'];
 		$desc = $field['description'];
 		$value = $this->get_field_value( $field );
-		$options = $field['options'] ?? [];
+		$options = $this->parse_options( $field['options'] ?? [] );
 
 		$atts = $field['attributes'] ?? [];
 		$atts['id'] = $name;
@@ -963,7 +963,7 @@ class WP_Options_Page {
 		$name = $field['name'];
 		$desc = $field['description'];
 		$value = $this->get_field_value( $field );
-		$options = $field['options'] ?? [];
+		$options = $this->parse_options( $field['options'] ?? [] );
 
 		$atts = $field['attributes'] ?? [];
 		$atts['type'] = 'radio';
@@ -1049,7 +1049,7 @@ class WP_Options_Page {
 		$name = $field['name'];
 		$title = $field['title'] ?? $id;
 		$desc = $field['description'];
-		$options = $field['options'];
+		$options = $this->parse_options( $field['options'] ?? [] );
 		$value = $this->get_field_value( $field );
 		$value = is_array( $value ) ? $value : [ $value ];
 
@@ -1221,5 +1221,17 @@ class WP_Options_Page {
 			$list[] = $attr;
 		}
 		return \implode( ' ', $list );
+	}
+
+	/**
+	 * @since 0.7.0
+	 * @param array $options
+	 * @return array
+	 */
+	protected function parse_options ( $options ) {
+		if ( is_callable( $options ) ) {
+			$options = (array) call_user_func( $options );
+		}
+		return $options;
 	}
 }

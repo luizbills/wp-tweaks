@@ -192,7 +192,7 @@ class Settings extends WP_Options_Page {
 				'title' => __( 'Show PHP version in admin footer', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => true,
-				'description' => __( 'For admin users only.', 'wp-tweaks' ),
+				'description' => esc_html__( 'For admin users only.', 'wp-tweaks' ),
 			],
 			[
 				'id' => 'generic-login-errors',
@@ -211,7 +211,7 @@ class Settings extends WP_Options_Page {
 					'disable' => __( 'Disable', 'wp-tweaks' ),
 				],
 				'default' => '',
-				'description' => __( 'Search for "What is WordPress Heartbeat?" in your browser to learn more.', 'wp-tweaks' )
+				'description' => esc_html__( 'Search for "What is WordPress Heartbeat?" in your browser to learn more.', 'wp-tweaks' )
 			],
 			[
 				'id' => 'hide-admin-bar',
@@ -241,6 +241,20 @@ class Settings extends WP_Options_Page {
 				'title' => __( 'Hide WordPress version in admin footer to all but admins', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => true,
+			],
+			[
+				'id' => 'post-revisions',
+				'title' => __( 'Post Revisions', 'wp-tweaks' ),
+				'type' => 'select',
+				'options' => [
+					'' => __( 'Default', 'wp-tweaks' ),
+					'1' => 1,
+					'3' => 3,
+					'5' => 5,
+					'0' => __( 'Disable', 'wp-tweaks' ),
+				],
+				'default' => '',
+				'description' => esc_html__( 'Limit or disable the number of posts revisions that WordPress stores in the database.', 'wp-tweaks' )
 			],
 			[
 				'id' => 'remove-admin-bar-comments',
