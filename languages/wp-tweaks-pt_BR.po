@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Tweaks\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-tweaks\n"
-"POT-Creation-Date: 2024-12-09T12:43:40+00:00\n"
-"PO-Revision-Date: 2024-12-09 09:44-0300\n"
+"POT-Creation-Date: 2025-04-26T10:32:31-03:00\n"
+"PO-Revision-Date: 2025-04-26 10:35-0300\n"
 "Last-Translator: \n"
 "Language-Team: Português do Brasil\n"
 "Language: pt_BR\n"
@@ -11,28 +11,33 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Loco-Version: 2.6.1; wp-5.9.3\n"
 
 #. Plugin Name of the plugin
+#: wp-tweaks.php
 msgid "WP Tweaks"
 msgstr "WP Ajustes"
 
 #. Plugin URI of the plugin
+#: wp-tweaks.php
 msgid "https://github.com/luizbills/wp-tweaks"
 msgstr "https://github.com/luizbills/wp-tweaks"
 
 #. Description of the plugin
+#: wp-tweaks.php
 msgid ""
 "Several opinionated WordPress tweaks focused in security and performance."
 msgstr ""
 "Vários ajustes opinativos no WordPress focados em segurança e desempenho."
 
 #. Author of the plugin
+#: wp-tweaks.php
 msgid "Luiz Bills"
 msgstr "Luiz Bills"
 
 #. Author URI of the plugin
+#: wp-tweaks.php
 msgid "https://luizpb.com/en"
 msgstr "https://luizpb.com/pt/"
 
@@ -136,8 +141,9 @@ msgid "Remove users endpoint from REST API"
 msgstr "Remover endpoint users da REST API"
 
 #: classes/Settings.php:150
-msgid "Disable users enumeration via REST API."
-msgstr "Desativar a enumeração de usuários pela REST API."
+msgid "Disable user enumeration via REST API for non-logged in users."
+msgstr ""
+"Desativar a enumeração de usuário pela REST API para usuários deslogados."
 
 #: classes/Settings.php:154
 msgid "Disable right click"
