@@ -147,7 +147,7 @@ class Settings extends WP_Options_Page {
 				'title' => __( 'Remove users endpoint from REST API', 'wp-tweaks' ),
 				'type' => 'checkbox',
 				'default' => true,
-				'description' => esc_html__( 'Disable users enumeration via REST API.', 'wp-tweaks' )
+				'description' => esc_html__( 'Disable user enumeration via REST API for non-logged in users.', 'wp-tweaks' )
 			],
 			[
 				'id' => 'disable-right-click',

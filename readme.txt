@@ -3,9 +3,9 @@ Contributors: luizbills
 Tags: security, performance, tweaks, optimization, xmlrpc, emoji
 Donate link: https://www.luizpb.com/donate/
 Requires at least: 4.0
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 2.4.0
+Stable tag: 2.4.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -54,6 +54,10 @@ Support this plugin on [https://luizpb.com/donate/](https://luizpb.com/donate/)
 1. Go to Settings > Tweaks to configure the plugin.
 
 == Changelog ==
+
+= 2.4.1 - 2025-04-26 =
+
+- Fix: missing author field in visual editor.
 
 = 2.4.0 - 2024-12-09 =
 
